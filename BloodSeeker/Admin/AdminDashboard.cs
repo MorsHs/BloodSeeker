@@ -16,7 +16,15 @@ namespace BloodSeeker.Admin
         {
             InitializeComponent();
         }
-
+        public void changePanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            guna2Panel3.Controls.Clear();
+            guna2Panel3.Controls.Add(form);
+            form.Show();
+        }
         private void guna2CircleButton8_MouseHover(object sender, EventArgs e)
         {
             pnl_clientInfo.Show();
@@ -36,7 +44,7 @@ namespace BloodSeeker.Admin
             pnl_inventory.Hide();
             pnl_logout.Hide();
             pnl_settings.Hide();
-           
+            changePanel(new Dashboard());
         }
 
         private void guna2CircleButton11_Click(object sender, EventArgs e)
@@ -122,6 +130,16 @@ namespace BloodSeeker.Admin
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_appointment_Click(object sender, EventArgs e)
+        {
+            changePanel(new AdminAppointments());
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            changePanel(new Dashboard());
         }
     }
 }
