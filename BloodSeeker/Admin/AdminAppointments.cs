@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace BloodSeeker.Admin
         public AdminAppointments()
         {
             InitializeComponent();
+           
         }
 
         private void AdminAppointments_Load(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace BloodSeeker.Admin
         
         private void addDay(int month, int year)
         {
+            monthlbl.Text = new DateTimeFormatInfo().GetMonthName(month).ToString()+ " "+ year.ToString();
             flowLayoutPanel1.Controls.Clear();
             _year = year;
             _month = month;
@@ -35,7 +38,6 @@ namespace BloodSeeker.Admin
             int week = Convert.ToInt32(start_of_month.DayOfWeek.ToString("d"));
             for(int i = 1;i < week; i++)
             {
-                MessageBox.Show(week+"");
                 CalendarButton calendarButton = new CalendarButton("");
                 flowLayoutPanel1.Controls.Add(calendarButton);
                 

@@ -18,6 +18,22 @@ namespace BloodSeeker.Components.Calendar
             InitializeComponent();
             this.day = day;
             label1.Text = this.day;
+            positionMover();
+        }
+        public void positionMover()
+        {
+            if (day == "")
+            {
+                label1.Text = this.day;
+            }
+            else if (Convert.ToInt32(day) < 10)
+            {
+                label1.Location = new Point(13, 12);
+            }
+            else
+            {
+                label1.Location = new Point(7, 12);
+            }
         }
     }
 }
