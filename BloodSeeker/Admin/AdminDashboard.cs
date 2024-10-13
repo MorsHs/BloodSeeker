@@ -218,6 +218,7 @@ namespace BloodSeeker.Admin
        
         private void btnHome_Click(object sender, EventArgs e)
         {
+            changePanel(new Dashboard());
             btnHome.FillColor = Color.FromArgb(20, 132, 205);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
             btn_history.FillColor = Color.FromArgb(83, 0, 0);

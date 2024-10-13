@@ -18,9 +18,20 @@ namespace BloodSeeker.Components.Calendar
         {
             InitializeComponent();
             this.day = day;
+            buttonDisabler();
             label1.Text = this.day;
             checkboxProperties();
             positionMover();
+        }
+
+        public void buttonDisabler()
+        {
+            if(day == "")
+            {
+                panel1.Enabled = false;
+                label1.Enabled = false;
+                checkboxclicked.Enabled = false;
+            }
         }
         public void positionMover()
         {
