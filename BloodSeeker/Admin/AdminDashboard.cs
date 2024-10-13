@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BloodSeeker.Admin
@@ -24,8 +18,8 @@ namespace BloodSeeker.Admin
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            guna2Panel3.Controls.Clear();
-            guna2Panel3.Controls.Add(form);
+            panel1.Controls.Clear();
+            panel1.Controls.Add(form);
             form.Show();
         }
         private void guna2CircleButton8_MouseHover(object sender, EventArgs e)
@@ -45,8 +39,8 @@ namespace BloodSeeker.Admin
             pnl_clientInfo.Hide();
             pnl_history.Hide();
             pnl_inventory.Hide();
-            pnl_logout.Hide();
             pnl_settings.Hide();
+            pnl_logout.Hide();
             changePanel(new Dashboard());
         }
 
@@ -200,7 +194,6 @@ namespace BloodSeeker.Admin
 
         private void btn_appointment_Click(object sender, EventArgs e)
         {          
-            Appointments appntmnts = new Appointments();       
             btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
@@ -210,12 +203,6 @@ namespace BloodSeeker.Admin
             btn_settings.FillColor = Color.FromArgb(83, 0, 0);
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-
-
-            appntmnts.TopLevel = false;
-            Dashboardpanel.Controls.Add(appntmnts);
-            appntmnts.BringToFront();
-            appntmnts.Show();
         }
 
         private void btnHome_EnabledChanged(object sender, EventArgs e)
@@ -286,14 +273,14 @@ namespace BloodSeeker.Admin
 
         }
 
-        private void btn_appointment_Click(object sender, EventArgs e)
-        {
-            changePanel(new AdminAppointments());
-        }
-
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             changePanel(new Dashboard());
+        }
+
+        private void btn_appointment_Click_1(object sender, EventArgs e)
+        {
+            changePanel(new AdminAppointments());
         }
     }
 }
