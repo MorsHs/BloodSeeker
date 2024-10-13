@@ -140,19 +140,11 @@
     <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-=======
-    <Compile Include="Admin\Appointments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Appointments.Designer.cs">
-      <DependentUpon>Appointments.cs</DependentUpon>
->>>>>>> main
     </Compile>
     <Compile Include="Client\ClienntLogin.cs">
       <SubType>Form</SubType>
@@ -208,13 +200,8 @@
     <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Admin\Appointments.resx">
-      <DependentUpon>Appointments.cs</DependentUpon>
->>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClienntLogin.resx">
       <DependentUpon>ClienntLogin.cs</DependentUpon>
