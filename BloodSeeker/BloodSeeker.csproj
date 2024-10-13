@@ -107,6 +107,12 @@
     <Compile Include="Client\ClientDashboard.Designer.cs">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Appointment Bar\Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Appointment Bar\Appointment.Designer.cs">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Calendar\CalendarButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Appointment Bar\Appointment.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Calendar\CalendarButton.resx">
       <DependentUpon>CalendarButton.cs</DependentUpon>

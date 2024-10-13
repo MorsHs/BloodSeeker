@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BloodSeeker.Components.Appointment_Bar;
 namespace BloodSeeker.Admin
 {
     public partial class AdminAppointments : Form
@@ -46,6 +46,12 @@ namespace BloodSeeker.Admin
             {
                 CalendarButton calendarButton = new CalendarButton(i + "");
                 flowLayoutPanel1.Controls.Add(calendarButton);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                Appointment appointment = new Appointment();
+                flowPanel2.Controls.Add(appointment);
             }
         }
     }

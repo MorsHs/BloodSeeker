@@ -40,10 +40,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.monthlbl = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.flowPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,13 +80,18 @@
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.monthlbl);
             this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.flowPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(1087, 470);
-            this.splitContainer1.SplitterDistance = 437;
+            this.splitContainer1.SplitterDistance = 412;
             this.splitContainer1.TabIndex = 1;
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(413, 0);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(399, 0);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 470);
             this.guna2VSeparator1.TabIndex = 9;
@@ -162,7 +170,7 @@
             // 
             this.monthlbl.AutoSize = true;
             this.monthlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthlbl.Location = new System.Drawing.Point(38, 41);
+            this.monthlbl.Location = new System.Drawing.Point(138, 41);
             this.monthlbl.Name = "monthlbl";
             this.monthlbl.Size = new System.Drawing.Size(109, 24);
             this.monthlbl.TabIndex = 1;
@@ -176,6 +184,24 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(380, 332);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label2.Location = new System.Drawing.Point(34, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Timeline";
+            // 
+            // flowPanel2
+            // 
+            this.flowPanel2.AutoScroll = true;
+            this.flowPanel2.Location = new System.Drawing.Point(17, 115);
+            this.flowPanel2.Name = "flowPanel2";
+            this.flowPanel2.Size = new System.Drawing.Size(639, 345);
+            this.flowPanel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -205,6 +231,8 @@
             this.guna2CustomGradientPanel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -226,5 +254,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowPanel2;
     }
 }
