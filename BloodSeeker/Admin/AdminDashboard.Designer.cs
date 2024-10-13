@@ -32,14 +32,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_aboutme = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnCreate = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnHome = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_inventory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_history = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_info = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_appointment = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnHome = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnl_aboutme = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -84,7 +85,6 @@
             this.guna2Elipse14 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse15 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse16 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnl_aboutme.SuspendLayout();
@@ -132,6 +132,13 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1542, 1127);
             this.guna2CustomGradientPanel1.TabIndex = 4;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(203, 129);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1166, 600);
+            this.panel1.TabIndex = 19;
             // 
             // guna2Panel1
             // 
@@ -201,6 +208,32 @@
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             this.btnCreate.MouseLeave += new System.EventHandler(this.btnCreate_MouseLeave);
             this.btnCreate.MouseHover += new System.EventHandler(this.btnCreate_MouseHover);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(0, 3);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHome.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnHome.Size = new System.Drawing.Size(43, 43);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.UseTransparentBackground = true;
+            this.btnHome.EnabledChanged += new System.EventHandler(this.btnHome_EnabledChanged);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnAppointment_MouseLeave);
+            this.btnHome.MouseHover += new System.EventHandler(this.btnAppointment_MouseHover);
             // 
             // btn_inventory
             // 
@@ -295,7 +328,7 @@
             this.btn_appointment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_appointment.ForeColor = System.Drawing.Color.White;
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
             this.btn_appointment.Location = new System.Drawing.Point(0, 52);
             this.btn_appointment.Name = "btn_appointment";
@@ -308,32 +341,6 @@
             this.btn_appointment.Click += new System.EventHandler(this.btn_appointment_Click_1);
             this.btn_appointment.MouseLeave += new System.EventHandler(this.btn_appointment_MouseLeave);
             this.btn_appointment.MouseHover += new System.EventHandler(this.btn_appointment_MouseHover);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHome.BackgroundImage")));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 3);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHome.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnHome.Size = new System.Drawing.Size(43, 43);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.UseTransparentBackground = true;
-            this.btnHome.EnabledChanged += new System.EventHandler(this.btnHome_EnabledChanged);
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            this.btnHome.MouseLeave += new System.EventHandler(this.btnAppointment_MouseLeave);
-            this.btnHome.MouseHover += new System.EventHandler(this.btnAppointment_MouseHover);
             // 
             // pnl_aboutme
             // 
@@ -757,13 +764,6 @@
             // guna2Elipse16
             // 
             this.guna2Elipse16.BorderRadius = 40;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(203, 129);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 600);
-            this.panel1.TabIndex = 19;
             // 
             // AdminDashboard
             // 

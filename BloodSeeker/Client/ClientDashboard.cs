@@ -16,5 +16,29 @@ namespace BloodSeeker.Client
         {
             InitializeComponent();
         }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void changePanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            guna2Panel3.Controls.Clear();
+            guna2Panel3.Controls.Add(form);
+            form.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            changePanel(new ClienntLogin());
+        }
     }
 }
