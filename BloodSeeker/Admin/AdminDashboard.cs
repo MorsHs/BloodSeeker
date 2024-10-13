@@ -19,7 +19,15 @@ namespace BloodSeeker.Admin
             btnHome.FillColor = Color.FromArgb(20, 132, 205);
 
         }
-
+        public void changePanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            guna2Panel3.Controls.Clear();
+            guna2Panel3.Controls.Add(form);
+            form.Show();
+        }
         private void guna2CircleButton8_MouseHover(object sender, EventArgs e)
         {
             pnl_clientInfo.Show();
@@ -39,9 +47,7 @@ namespace BloodSeeker.Admin
             pnl_inventory.Hide();
             pnl_logout.Hide();
             pnl_settings.Hide();
-            pnl_aboutme.Hide();
-            pnl_create.Hide();
-           
+            changePanel(new Dashboard());
         }
 
         private void guna2CircleButton11_Click(object sender, EventArgs e)
@@ -277,28 +283,17 @@ namespace BloodSeeker.Admin
 
         private void btn_aboutme_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(20, 132, 205);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+
         }
 
-        private void btn_settings_Click(object sender, EventArgs e)
+        private void btn_appointment_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(20, 132, 205);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+            changePanel(new AdminAppointments());
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            changePanel(new Dashboard());
         }
     }
 }
