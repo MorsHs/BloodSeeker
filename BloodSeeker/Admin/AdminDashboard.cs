@@ -172,25 +172,7 @@ namespace BloodSeeker.Admin
             pnl_inventory.Hide();
         }
 
-        private void btnCreate_MouseHover(object sender, EventArgs e)
-        {
-            pnl_create.Show();
-        }
-
-        private void btnCreate_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_create.Hide();
-        }
-
-        private void guna2CircleButton3_MouseHover(object sender, EventArgs e)
-        {
-            pnl_aboutme.Show();
-        }
-
-        private void guna2CircleButton3_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_aboutme.Hide();
-        }
+    
 
         private void btn_appointment_Click(object sender, EventArgs e)
         {          

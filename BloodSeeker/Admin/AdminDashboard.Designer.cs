@@ -41,13 +41,8 @@
             this.btn_history = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_info = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_appointment = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pnl_aboutme = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnl_create = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_logout = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -87,9 +82,7 @@
             this.guna2Elipse16 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.pnl_aboutme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.pnl_create.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.pnl_logout.SuspendLayout();
@@ -103,15 +96,10 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_aboutme);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_create);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_logout);
@@ -123,21 +111,24 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_appointment);
             this.guna2CustomGradientPanel1.Controls.Add(this.label10);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-10, -3);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1542, 1127);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1386, 788);
             this.guna2CustomGradientPanel1.TabIndex = 4;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Location = new System.Drawing.Point(203, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 600);
+            this.panel1.Size = new System.Drawing.Size(1156, 600);
             this.panel1.TabIndex = 19;
             // 
             // guna2Panel1
@@ -179,8 +170,7 @@
             this.btn_aboutme.TabIndex = 9;
             this.btn_aboutme.UseTransparentBackground = true;
             this.btn_aboutme.Click += new System.EventHandler(this.btn_aboutme_Click);
-            this.btn_aboutme.MouseLeave += new System.EventHandler(this.guna2CircleButton3_MouseLeave);
-            this.btn_aboutme.MouseHover += new System.EventHandler(this.guna2CircleButton3_MouseHover);
+
             // 
             // btnCreate
             // 
@@ -206,8 +196,6 @@
             this.btnCreate.TabIndex = 8;
             this.btnCreate.UseTransparentBackground = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            this.btnCreate.MouseLeave += new System.EventHandler(this.btnCreate_MouseLeave);
-            this.btnCreate.MouseHover += new System.EventHandler(this.btnCreate_MouseHover);
             // 
             // btnHome
             // 
@@ -342,27 +330,6 @@
             this.btn_appointment.MouseLeave += new System.EventHandler(this.btn_appointment_MouseLeave);
             this.btn_appointment.MouseHover += new System.EventHandler(this.btn_appointment_MouseHover);
             // 
-            // pnl_aboutme
-            // 
-            this.pnl_aboutme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnl_aboutme.BorderColor = System.Drawing.Color.White;
-            this.pnl_aboutme.Controls.Add(this.label2);
-            this.pnl_aboutme.Location = new System.Drawing.Point(58, 439);
-            this.pnl_aboutme.Name = "pnl_aboutme";
-            this.pnl_aboutme.Size = new System.Drawing.Size(116, 40);
-            this.pnl_aboutme.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(26, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "About Me";
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -399,39 +366,6 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 17;
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // pnl_create
-            // 
-            this.pnl_create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnl_create.BorderColor = System.Drawing.Color.White;
-            this.pnl_create.Controls.Add(this.label3);
-            this.pnl_create.Controls.Add(this.label1);
-            this.pnl_create.Location = new System.Drawing.Point(58, 394);
-            this.pnl_create.Name = "pnl_create";
-            this.pnl_create.Size = new System.Drawing.Size(116, 40);
-            this.pnl_create.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(23, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Appointment";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(34, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Create";
             // 
             // guna2CirclePictureBox1
             // 
@@ -754,12 +688,10 @@
             // guna2Elipse14
             // 
             this.guna2Elipse14.BorderRadius = 15;
-            this.guna2Elipse14.TargetControl = this.pnl_create;
             // 
             // guna2Elipse15
             // 
             this.guna2Elipse15.BorderRadius = 15;
-            this.guna2Elipse15.TargetControl = this.pnl_aboutme;
             // 
             // guna2Elipse16
             // 
@@ -780,11 +712,7 @@
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
-            this.pnl_aboutme.ResumeLayout(false);
-            this.pnl_aboutme.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.pnl_create.ResumeLayout(false);
-            this.pnl_create.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.pnl_logout.ResumeLayout(false);
@@ -852,13 +780,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btn_info;
         private Guna.UI2.WinForms.Guna2CircleButton btn_appointment;
         private Guna.UI2.WinForms.Guna2CircleButton btnHome;
-        private Guna.UI2.WinForms.Guna2Panel pnl_aboutme;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel pnl_create;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse14;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse15;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse16;

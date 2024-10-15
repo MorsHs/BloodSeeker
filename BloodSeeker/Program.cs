@@ -16,7 +16,7 @@ namespace BloodSeeker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminAppointments());
+            Application.Run(new Form1());
         }
     }
 }
