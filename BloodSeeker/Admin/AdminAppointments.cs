@@ -24,35 +24,11 @@ namespace BloodSeeker.Admin
 
         private void AdminAppointments_Load(object sender, EventArgs e)
         {
-            addDay(DateTime.Now.Month,DateTime.Now.Year);
+            CalendarFrame calendarFrame = new CalendarFrame(flowPanel2);
+            splitContainer1.Panel1.Controls.Add(calendarFrame);
         }
-        
-        private void addDay(int month, int year)
-        {
-            monthlbl.Text = new DateTimeFormatInfo().GetMonthName(month).ToString()+ " "+ year.ToString();
-            flowLayoutPanel1.Controls.Clear();
-            _year = year;
-            _month = month;
-            DateTime start_of_month = new DateTime(year,month,1);
-            int day = DateTime.DaysInMonth(year,month);
-            int week = Convert.ToInt32(start_of_month.DayOfWeek.ToString("d"));
-            for(int i = 1;i < week; i++)
-            {
-                CalendarButton calendarButton = new CalendarButton("");
-                flowLayoutPanel1.Controls.Add(calendarButton);
-                
-            }
-            for (int i = 1; i < day; i++)
-            {
-                CalendarButton calendarButton = new CalendarButton(i + "");
-                flowLayoutPanel1.Controls.Add(calendarButton);
-            }
 
-            for (int i = 0; i < 10; i++)
-            {
-                Appointment appointment = new Appointment();
-                flowPanel2.Controls.Add(appointment);
-            }
-        }
+        
+      
     }
 }
