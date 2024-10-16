@@ -140,6 +140,12 @@
     <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ClientInfo.Designer.cs">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,12 @@
     <Compile Include="Components\Calendar\CalendarFrame.Designer.cs">
       <DependentUpon>CalendarFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Client Information\ClientInformationTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Client Information\ClientInformationTab.Designer.cs">
+      <DependentUpon>ClientInformationTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +218,9 @@
     <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ClientInfo.resx">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Calendar\CalendarFrame.resx">
       <DependentUpon>CalendarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Client Information\ClientInformationTab.resx">
+      <DependentUpon>ClientInformationTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
