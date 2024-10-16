@@ -34,8 +34,6 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_aboutme = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnCreate = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_inventory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_history = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -120,7 +118,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1386, 788);
             this.guna2CustomGradientPanel1.TabIndex = 4;
-            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // panel1
             // 
@@ -134,8 +131,6 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Panel1.Controls.Add(this.btn_aboutme);
-            this.guna2Panel1.Controls.Add(this.btnCreate);
             this.guna2Panel1.Controls.Add(this.btnHome);
             this.guna2Panel1.Controls.Add(this.btn_inventory);
             this.guna2Panel1.Controls.Add(this.btn_history);
@@ -145,57 +140,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(46, 240);
             this.guna2Panel1.TabIndex = 2;
-            // 
-            // btn_aboutme
-            // 
-            this.btn_aboutme.BackColor = System.Drawing.Color.Transparent;
-            this.btn_aboutme.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_aboutme.BackgroundImage")));
-            this.btn_aboutme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_aboutme.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_aboutme.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_aboutme.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_aboutme.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_aboutme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_aboutme.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_aboutme.ForeColor = System.Drawing.Color.White;
-            this.btn_aboutme.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_aboutme.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btn_aboutme.Image = ((System.Drawing.Image)(resources.GetObject("btn_aboutme.Image")));
-            this.btn_aboutme.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_aboutme.Location = new System.Drawing.Point(0, 285);
-            this.btn_aboutme.Name = "btn_aboutme";
-            this.btn_aboutme.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_aboutme.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_aboutme.Size = new System.Drawing.Size(43, 42);
-            this.btn_aboutme.TabIndex = 9;
-            this.btn_aboutme.UseTransparentBackground = true;
-            this.btn_aboutme.Click += new System.EventHandler(this.btn_aboutme_Click);
-
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreate.BackgroundImage")));
-            this.btnCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreate.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.ImageSize = new System.Drawing.Size(25, 23);
-            this.btnCreate.Location = new System.Drawing.Point(-1, 244);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreate.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnCreate.Size = new System.Drawing.Size(43, 42);
-            this.btnCreate.TabIndex = 8;
-            this.btnCreate.UseTransparentBackground = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnHome
             // 
@@ -218,7 +162,6 @@
             this.btnHome.Size = new System.Drawing.Size(43, 43);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseTransparentBackground = true;
-            this.btnHome.EnabledChanged += new System.EventHandler(this.btnHome_EnabledChanged);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnAppointment_MouseLeave);
             this.btnHome.MouseHover += new System.EventHandler(this.btnAppointment_MouseHover);
@@ -236,7 +179,7 @@
             this.btn_inventory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_inventory.ForeColor = System.Drawing.Color.White;
             this.btn_inventory.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_inventory.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventory.Image")));
             this.btn_inventory.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_inventory.Location = new System.Drawing.Point(0, 196);
@@ -263,7 +206,7 @@
             this.btn_history.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_history.ForeColor = System.Drawing.Color.White;
             this.btn_history.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btn_history.Image = ((System.Drawing.Image)(resources.GetObject("btn_history.Image")));
             this.btn_history.ImageSize = new System.Drawing.Size(24, 20);
             this.btn_history.Location = new System.Drawing.Point(0, 148);
@@ -290,7 +233,7 @@
             this.btn_info.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_info.ForeColor = System.Drawing.Color.White;
             this.btn_info.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
             this.btn_info.Location = new System.Drawing.Point(0, 100);
             this.btn_info.Name = "btn_info";
@@ -316,7 +259,7 @@
             this.btn_appointment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_appointment.ForeColor = System.Drawing.Color.White;
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
             this.btn_appointment.Location = new System.Drawing.Point(0, 52);
             this.btn_appointment.Name = "btn_appointment";
@@ -325,7 +268,6 @@
             this.btn_appointment.Size = new System.Drawing.Size(43, 42);
             this.btn_appointment.TabIndex = 1;
             this.btn_appointment.UseTransparentBackground = true;
-            this.btn_appointment.EnabledChanged += new System.EventHandler(this.btn_appointment_EnabledChanged);
             this.btn_appointment.Click += new System.EventHandler(this.btn_appointment_Click_1);
             this.btn_appointment.MouseLeave += new System.EventHandler(this.btn_appointment_MouseLeave);
             this.btn_appointment.MouseHover += new System.EventHandler(this.btn_appointment_MouseHover);
@@ -353,7 +295,6 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(378, 39);
             this.guna2TextBox1.TabIndex = 18;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2PictureBox2
             // 
@@ -404,7 +345,7 @@
             this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_logout.Location = new System.Drawing.Point(0, 51);
@@ -414,7 +355,6 @@
             this.btn_logout.Size = new System.Drawing.Size(43, 42);
             this.btn_logout.TabIndex = 9;
             this.btn_logout.UseTransparentBackground = true;
-            this.btn_logout.Click += new System.EventHandler(this.guna2CircleButton11_Click);
             this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
             this.btn_logout.MouseHover += new System.EventHandler(this.btn_logout_MouseHover);
             // 
@@ -431,7 +371,7 @@
             this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_settings.ForeColor = System.Drawing.Color.White;
             this.btn_settings.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_settings.Location = new System.Drawing.Point(0, 3);
@@ -535,7 +475,6 @@
             this.pnl_clientInfo.Name = "pnl_clientInfo";
             this.pnl_clientInfo.Size = new System.Drawing.Size(116, 43);
             this.pnl_clientInfo.TabIndex = 13;
-            this.pnl_clientInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_clientInfo_Paint);
             // 
             // label12
             // 
@@ -773,8 +712,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_aboutme;
-        private Guna.UI2.WinForms.Guna2CircleButton btnCreate;
         private Guna.UI2.WinForms.Guna2CircleButton btn_inventory;
         private Guna.UI2.WinForms.Guna2CircleButton btn_history;
         private Guna.UI2.WinForms.Guna2CircleButton btn_info;
