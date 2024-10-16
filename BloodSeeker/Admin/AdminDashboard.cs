@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using BloodSeeker.Components.Client_Information;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -133,6 +134,7 @@ namespace BloodSeeker.Admin
         {
             Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
+            changePanel(new ClientInfo());
         }
 
         private void btn_info_MouseHover(object sender, EventArgs e)
