@@ -1,11 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
+using BloodSeeker;
 
 namespace BloodSeeker
 {
-    internal class GlobaL
+    internal class Global
     {
         public string servername;
         public string databasename;
@@ -15,50 +18,70 @@ namespace BloodSeeker
         public MySqlConnection conBloodbank;
         public MySqlCommand slqCommand;
         public string strConnection;
+        
 
+
+        //DOCUMENTATION OF USING SQL.JSON
+        //MAKE A SQL.JSON AND PUT IT ON BLOODSEEKER/BLOODSEEKER THEN FILL IT WITH THIS FORMAT
+        //{
+        //  "SERVERNAME": "servername",
+        //  "DATABASENAME": "datascema name",
+        //  "USERNAME": "root",
+        //  "PASSWORD": "password",
+        //  "PORT": "3306 OR 3307 (depends on your assigned port on your mysql)"
+        //}
+        // AFTER THAT RIGHT CLICK THE sql.JSON then press "Include from Project"
         public bool fncConnectToDatabase()
         {
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sql.json");
             try
             {
-                servername = "localhost";
-                databasename = "bloodbank";
-                username = "root";
-                password = "jamycalubay@@@22";
-                port = "3306";
+                var jsonContent = File.ReadAllText(jsonFilePath);
+                var dbconfig = JObject.Parse(jsonContent);
 
-
-                //implement connection
-                strConnection = "Server=" + servername + "; " +
+                servername = dbconfig["SERVERNAME"].ToString();
+                databasename = dbconfig["DATABASENAME"].ToString();
+                username = dbconfig["USERNAME"].ToString();
+                password = dbconfig["PASSWORD"].ToString();
+                port = dbconfig["PORT"].ToString();
+                try
+                {
+                    strConnection = "Server=" + servername + "; " +
                     "Database =" + databasename + "; " +
                     "User=" + username + "; " +
                     "Password=" + password + "; " +
                     "Port =" + port + "; " +
                     "Convert Zero Datetime =true";
 
-                conBloodbank = new MySqlConnection(strConnection);
-                slqCommand = new MySqlCommand(strConnection, conBloodbank);
-                if (conBloodbank.State == ConnectionState.Closed)
-                {
-                    slqCommand.Connection = conBloodbank;
-                    conBloodbank.Open();
-                    return true;
+                    conBloodbank = new MySqlConnection(strConnection);
+                    slqCommand = new MySqlCommand(strConnection, conBloodbank);
+                    if (conBloodbank.State == ConnectionState.Closed)
+                    {
+                        slqCommand.Connection = conBloodbank;
+                        conBloodbank.Open();
+                        return true;
+                    }
+                    else
+                    {
+                        conBloodbank.Close();
+                        return false;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    conBloodbank.Close();
-                    return false;
+                    MessageBox.Show(ex.Message + "");
                 }
             }
-            catch (Exception err)
+            catch (Exception e)
             {
-                MessageBox.Show("Error Message RATATOWE " + err.Message);
+                MessageBox.Show("Database JSON Configuration not found");
             }
             return false;
         }
 
         public void checkDatabaseConnection()
         {
-            if (fncConnectToDatabase().Equals("False"))
+            if (fncConnectToDatabase() == false)
             {
                 conBloodbank.Open();
             }
