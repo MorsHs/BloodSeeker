@@ -74,17 +74,6 @@ namespace BloodSeeker.Admin
             changePanel(new Dashboard());
         }
 
-        private void guna2CircleButton11_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(20, 132, 205);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-        }
         //USED
         private void btn_settings_MouseHover(object sender, EventArgs e)
         {
@@ -183,12 +172,14 @@ namespace BloodSeeker.Admin
         {
           Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
+            changePanel(new TransacitionHistory());
         }
         //USED
         private void btn_inventory_Click(object sender, EventArgs e)
         {
             Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
+            changePanel(new Inventory());
         }
         //USED
         private void btn_appointment_Click_1(object sender, EventArgs e)
@@ -196,6 +187,11 @@ namespace BloodSeeker.Admin
             Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
             changePanel(new AdminAppointments());
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
