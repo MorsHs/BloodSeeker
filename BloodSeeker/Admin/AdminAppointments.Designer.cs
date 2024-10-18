@@ -59,7 +59,7 @@
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(52, 88);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 130);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -70,8 +70,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.flowPanel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1087, 470);
-            this.splitContainer1.SplitterDistance = 412;
+            this.splitContainer1.Size = new System.Drawing.Size(1166, 470);
+            this.splitContainer1.SplitterDistance = 441;
             this.splitContainer1.TabIndex = 1;
             // 
             // guna2VSeparator1
@@ -83,6 +83,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label2.Location = new System.Drawing.Point(34, 42);
@@ -93,6 +95,8 @@
             // 
             // flowPanel2
             // 
+            this.flowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowPanel2.AutoScroll = true;
             this.flowPanel2.Location = new System.Drawing.Point(17, 115);
             this.flowPanel2.Name = "flowPanel2";

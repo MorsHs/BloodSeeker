@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BloodSeeker.Components.Client_Information;
+using Guna.UI2.WinForms;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -22,18 +25,47 @@ namespace BloodSeeker.Admin
             panel1.Controls.Add(form);
             form.Show();
         }
+
+         public void buttonColor(Guna2CircleButton button)
+        {
+           List<Control> a =GetAllCircleButton(guna2Panel1);
+            for(int i = 0; i < a.Count; i++)
+            {
+                Guna2CircleButton currentButton = a[i] as Guna2CircleButton;
+                if(button == currentButton)
+                {
+                    currentButton.FillColor = Color.FromArgb(20, 132, 205);
+                }
+                else
+                {
+                    currentButton.FillColor = Color.FromArgb(83, 0, 0);
+                }
+            }
+            
+        }
+        public List<Control> GetAllCircleButton(Guna2Panel panel)
+        {
+            List<Control>list = new List<Control>();
+            foreach(Control button in panel.Controls)
+            {
+                if(button.GetType() == typeof(Guna2CircleButton))
+                {
+                    list.Add(button);
+                }
+               
+            }
+            return list;
+        }
+        //USED
         private void guna2CircleButton8_MouseHover(object sender, EventArgs e)
         {
             pnl_clientInfo.Show();
         }
 
-        private void guna2CircleButton1_MouseHover(object sender, EventArgs e)
-        {
-            pnl_home.Show();
-        }
-
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+            Global globe = new Global();
+            globe.fncConnectToDatabase();
             pnl_home.Hide();
             pnl_appointment.Hide();
             pnl_clientInfo.Hide();
@@ -41,43 +73,18 @@ namespace BloodSeeker.Admin
             pnl_inventory.Hide();
             pnl_settings.Hide();
             pnl_logout.Hide();
+            staffPanel.Hide();
             changePanel(new Dashboard());
         }
 
-        private void guna2CircleButton11_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(20, 132, 205);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-        }
-
-        private void guna2CircleButton1_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_home.Hide();
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnl_clientInfo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //USED
         private void btn_settings_MouseHover(object sender, EventArgs e)
         {
             pnl_settings.Show();
+            buttonColor(btn_settings);
         }
 
+        //USED
         private void btn_settings_MouseLeave(object sender, EventArgs e)
         {
             pnl_settings.Hide();
@@ -93,52 +100,33 @@ namespace BloodSeeker.Admin
             pnl_logout.Hide();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //USED
         private void btnAppointment_MouseHover(object sender, EventArgs e)
         {
             pnl_home.Show();
         }
 
+        //USED
         private void btnAppointment_MouseLeave(object sender, EventArgs e)
         {
             pnl_home.Hide();
         }
-
+        //USED
         private void btn_appointment_MouseHover(object sender, EventArgs e)
         {
             pnl_appointment.Show();
         }
-
+        //USED
         private void btn_appointment_MouseLeave(object sender, EventArgs e)
         {
             pnl_appointment.Hide();
         }
-
+        //USED
         private void btn_info_Click(object sender, EventArgs e)
         {
-            btn_info.FillColor = Color.FromArgb(20, 132, 205);
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new ClientInfo());
         }
 
         private void btn_info_MouseHover(object sender, EventArgs e)
@@ -146,124 +134,84 @@ namespace BloodSeeker.Admin
             pnl_clientInfo.Show();
         }
 
+        //USED
         private void btn_info_MouseLeave(object sender, EventArgs e)
         {
             pnl_clientInfo.Hide();
         }
-
+        //USED
         private void btn_history_MouseHover(object sender, EventArgs e)
         {
             pnl_history.Show();
         }
-
+        //USED
         private void btn_history_MouseLeave(object sender, EventArgs e)
         {
             pnl_history.Hide();
         }
 
+        //USED
         private void btn_inventory_MouseHover(object sender, EventArgs e)
         {
             pnl_inventory.Show();
 
         }
-
+        //USED
         private void btn_inventory_MouseLeave(object sender, EventArgs e)
         {
             pnl_inventory.Hide();
         }
 
-    
-
-        private void btn_appointment_Click(object sender, EventArgs e)
-        {          
-            btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor= Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-        }
-
-        private void btnHome_EnabledChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btn_appointment_EnabledChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-       
+       //USED
         private void btnHome_Click(object sender, EventArgs e)
         {
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
             changePanel(new Dashboard());
-            btnHome.FillColor = Color.FromArgb(20, 132, 205);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+           
         }
-
+        //USED
         private void btn_history_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(20, 132, 205);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+          Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new TransacitionHistory());
         }
-
+        //USED
         private void btn_inventory_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(20, 132, 205);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new Inventory());
+        }
+        //USED
+        private void btn_appointment_Click_1(object sender, EventArgs e)
+        {
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new AdminAppointments());
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btn_logout_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);
-            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
-            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
-            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
-            btnCreate.FillColor = Color.FromArgb(20, 132, 205);
-            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+            Application.Exit();
         }
 
-        private void btn_aboutme_Click(object sender, EventArgs e)
+        private void guna2CircleButton1_MouseHover(object sender, EventArgs e)
         {
+            staffPanel.Show();
+        }
 
+        private void guna2CircleButton1_MouseLeave(object sender, EventArgs e)
+        {
+            staffPanel.Hide();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            changePanel(new Dashboard());
-        }
-
-        private void btn_appointment_Click_1(object sender, EventArgs e)
-        {
-            changePanel(new AdminAppointments());
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new StaffList());
         }
     }
 }
