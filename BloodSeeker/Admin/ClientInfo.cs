@@ -25,10 +25,10 @@ namespace BloodSeeker.Admin
         }
         public void LoadClientInfo(FlowLayoutPanel panel)
         {
-            ClientInformationTab tab;
+            ClientStaffInformationTab tab;
             for (int i = 0; i < 10; i++)
             {
-                tab = new ClientInformationTab("Kent Lawrence Salarda", "Male", "kentsalarda@gail.com", "09452113248");
+                tab = new ClientStaffInformationTab("Kent Lawrence Salarda", "Male", "kentsalarda@gail.com", "09452113248");
                 panel.Controls.Add(tab);
             }
         }

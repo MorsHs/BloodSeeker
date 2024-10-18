@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace BloodSeeker.Components.Client_Information
 {
-    public partial class ClientInformationTab : UserControl
+    public partial class ClientStaffInformationTab : UserControl
     {
         private String _name;
         private String _sex;
         private String _email;
         private String _phone;
-        public ClientInformationTab(String name,String sex,String email,String phone)
+        public ClientStaffInformationTab(String name,String sex,String email,String phone)
         {
             InitializeComponent();
             _name = name;
