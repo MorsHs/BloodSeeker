@@ -58,6 +58,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -123,6 +124,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.txt_username);
             this.panel2.Controls.Add(this.cmb_option);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -273,7 +275,7 @@
             this.txt_confirmpass.Location = new System.Drawing.Point(376, 211);
             this.txt_confirmpass.Name = "txt_confirmpass";
             this.txt_confirmpass.PasswordChar = '*';
-            this.txt_confirmpass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_confirmpass.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_confirmpass.PlaceholderText = "Confirm Password";
             this.txt_confirmpass.SelectedText = "";
             this.txt_confirmpass.Size = new System.Drawing.Size(239, 33);
@@ -294,10 +296,10 @@
             this.txt_contact.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_contact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_contact.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_contact.IconLeft")));
-            this.txt_contact.Location = new System.Drawing.Point(69, 211);
+            this.txt_contact.Location = new System.Drawing.Point(69, 273);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.PasswordChar = '\0';
-            this.txt_contact.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_contact.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_contact.PlaceholderText = "Contact no.";
             this.txt_contact.SelectedText = "";
             this.txt_contact.Size = new System.Drawing.Size(239, 33);
@@ -342,7 +344,7 @@
             this.txt_pass.Location = new System.Drawing.Point(376, 150);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '*';
-            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_pass.PlaceholderText = "Password";
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(239, 33);
@@ -366,7 +368,7 @@
             this.txt_email.Location = new System.Drawing.Point(376, 94);
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
-            this.txt_email.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_email.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_email.PlaceholderText = "Email address";
             this.txt_email.SelectedText = "";
             this.txt_email.Size = new System.Drawing.Size(239, 33);
@@ -387,10 +389,10 @@
             this.txt_firstname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_firstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_firstname.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_firstname.IconLeft")));
-            this.txt_firstname.Location = new System.Drawing.Point(69, 150);
+            this.txt_firstname.Location = new System.Drawing.Point(69, 211);
             this.txt_firstname.Name = "txt_firstname";
             this.txt_firstname.PasswordChar = '\0';
-            this.txt_firstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_firstname.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_firstname.PlaceholderText = "Firstname";
             this.txt_firstname.SelectedText = "";
             this.txt_firstname.Size = new System.Drawing.Size(239, 33);
@@ -411,10 +413,10 @@
             this.txt_lastname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_lastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_lastname.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_lastname.IconLeft")));
-            this.txt_lastname.Location = new System.Drawing.Point(69, 94);
+            this.txt_lastname.Location = new System.Drawing.Point(69, 150);
             this.txt_lastname.Name = "txt_lastname";
             this.txt_lastname.PasswordChar = '\0';
-            this.txt_lastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_lastname.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_lastname.PlaceholderText = "Lastname";
             this.txt_lastname.SelectedText = "";
             this.txt_lastname.Size = new System.Drawing.Size(239, 33);
@@ -439,7 +441,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 14;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2PictureBox2
             // 
@@ -463,6 +464,30 @@
             this.label6.Size = new System.Drawing.Size(151, 32);
             this.label6.TabIndex = 18;
             this.label6.Text = "BloodSeeker";
+            // 
+            // txt_username
+            // 
+            this.txt_username.BorderRadius = 6;
+            this.txt_username.BorderThickness = 0;
+            this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_username.DefaultText = "";
+            this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_username.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_username.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_username.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_username.IconLeft")));
+            this.txt_username.Location = new System.Drawing.Point(69, 94);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.PasswordChar = '\0';
+            this.txt_username.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txt_username.PlaceholderText = "Username";
+            this.txt_username.SelectedText = "";
+            this.txt_username.Size = new System.Drawing.Size(239, 33);
+            this.txt_username.TabIndex = 16;
             // 
             // Form1
             // 
@@ -524,6 +549,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txt_username;
     }
 }
 

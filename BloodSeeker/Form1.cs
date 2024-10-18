@@ -1,5 +1,6 @@
 ﻿using BloodSeeker.Admin;
 using BloodSeeker.Client;
+using Guna.UI2.AnimatorNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,8 @@ namespace BloodSeeker
     {
         AdminLogin adminlog = new AdminLogin();
         ClienntLogin clientlog = new ClienntLogin();
-
+        SignupController controller;
+        Global globe;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +26,8 @@ namespace BloodSeeker
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-
+           controller = new SignupController(txt_lastname.Text.ToString(),txt_firstname.Text.ToString(),txt_contact.Text.ToString(),
+               txt_email.Text.ToString(),txt_pass.Text.ToString(),txt_confirmpass.Text.ToString());
         }
 
         private void link_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -33,18 +36,10 @@ namespace BloodSeeker
             
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            globe = new Global();
+            globe.fncConnectToDatabase();
             cmb_option.Hide();
         }
 
