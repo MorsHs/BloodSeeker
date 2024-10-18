@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodSeeker.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,182 @@ namespace BloodSeeker.Client
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            changePanel(new ClienntLogin());
+            changePanel(new Dashboard());
+            btnHome.FillColor = Color.FromArgb(20, 132, 205);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+        }
+
+        private void btn_appointment_Click(object sender, EventArgs e)
+        {
+            btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+
+        }
+
+        private void btn_info_Click(object sender, EventArgs e)
+        {
+            btn_info.FillColor = Color.FromArgb(20, 132, 205);
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+
+        }
+
+        private void btn_history_Click(object sender, EventArgs e)
+        {
+            btn_history.FillColor = Color.FromArgb(20, 132, 205);
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);            
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+
+        }
+
+        private void btn_inventory_Click(object sender, EventArgs e)
+        {
+            btn_inventory.FillColor = Color.FromArgb(20, 132, 205);
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);           
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            btn_settings.FillColor = Color.FromArgb(20, 132, 205);
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            btnHome.FillColor = Color.FromArgb(83, 0, 0);
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
+            btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
+            btn_logout.FillColor = Color.FromArgb(20, 132, 205);
+            btn_settings.FillColor = Color.FromArgb(83, 0, 0);
+            btnCreate.FillColor = Color.FromArgb(83, 0, 0);
+            btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
+            btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
+
+        }
+
+        private void ClientDashboard_Load(object sender, EventArgs e)
+        {
+            pnl_home.Hide();
+            pnl_appointment.Hide();
+            pnl_clientInfo.Hide();
+            pnl_history.Hide();
+            pnl_inventory.Hide();
+            pnl_settings.Hide();
+            pnl_logout.Hide();
+            changePanel(new Dashboard());
+        }
+
+        private void btnHome_MouseHover(object sender, EventArgs e)
+        {
+            pnl_home.Show();
+        }
+
+        private void btnHome_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_home.Hide();
+        }
+
+        private void btn_appointment_MouseHover(object sender, EventArgs e)
+        {
+            pnl_appointment.Show();
+        }
+
+        private void btn_appointment_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_appointment.Hide();
+        }
+
+        private void btn_info_MouseHover(object sender, EventArgs e)
+        {
+            pnl_clientInfo.Show();
+        }
+
+        private void btn_info_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_clientInfo.Hide() ;
+        }
+
+        private void btn_history_MouseHover(object sender, EventArgs e)
+        {
+            pnl_history.Show();
+        }
+
+        private void btn_history_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_history.Hide() ;
+        }
+
+        private void btn_inventory_MouseHover(object sender, EventArgs e)
+        {
+            pnl_inventory.Show();
+        }
+
+        private void btn_inventory_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_inventory.Hide();
+        }
+
+        private void btn_settings_MouseHover(object sender, EventArgs e)
+        {
+            pnl_settings.Show();
+        }
+
+        private void btn_settings_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_settings.Hide();
+        }
+
+        private void btn_logout_MouseHover(object sender, EventArgs e)
+        {
+            pnl_logout.Show();
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_logout.Hide();
         }
     }
 }

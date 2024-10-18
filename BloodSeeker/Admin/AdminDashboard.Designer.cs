@@ -117,8 +117,9 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1386, 788);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1848, 970);
             this.guna2CustomGradientPanel1.TabIndex = 4;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
@@ -126,9 +127,10 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(203, 129);
+            this.panel1.Location = new System.Drawing.Point(271, 159);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1156, 600);
+            this.panel1.Size = new System.Drawing.Size(1541, 738);
             this.panel1.TabIndex = 19;
             // 
             // guna2Panel1
@@ -141,9 +143,10 @@
             this.guna2Panel1.Controls.Add(this.btn_history);
             this.guna2Panel1.Controls.Add(this.btn_info);
             this.guna2Panel1.Controls.Add(this.btn_appointment);
-            this.guna2Panel1.Location = new System.Drawing.Point(35, 148);
+            this.guna2Panel1.Location = new System.Drawing.Point(47, 182);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(46, 240);
+            this.guna2Panel1.Size = new System.Drawing.Size(61, 295);
             this.guna2Panel1.TabIndex = 2;
             // 
             // btn_aboutme
@@ -162,15 +165,15 @@
             this.btn_aboutme.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_aboutme.Image = ((System.Drawing.Image)(resources.GetObject("btn_aboutme.Image")));
             this.btn_aboutme.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_aboutme.Location = new System.Drawing.Point(0, 285);
+            this.btn_aboutme.Location = new System.Drawing.Point(0, 351);
+            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_aboutme.Name = "btn_aboutme";
             this.btn_aboutme.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_aboutme.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_aboutme.Size = new System.Drawing.Size(43, 42);
+            this.btn_aboutme.Size = new System.Drawing.Size(57, 52);
             this.btn_aboutme.TabIndex = 9;
             this.btn_aboutme.UseTransparentBackground = true;
             this.btn_aboutme.Click += new System.EventHandler(this.btn_aboutme_Click);
-
             // 
             // btnCreate
             // 
@@ -188,11 +191,12 @@
             this.btnCreate.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
             this.btnCreate.ImageSize = new System.Drawing.Size(25, 23);
-            this.btnCreate.Location = new System.Drawing.Point(-1, 244);
+            this.btnCreate.Location = new System.Drawing.Point(-1, 300);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCreate.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnCreate.Size = new System.Drawing.Size(43, 42);
+            this.btnCreate.Size = new System.Drawing.Size(57, 52);
             this.btnCreate.TabIndex = 8;
             this.btnCreate.UseTransparentBackground = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -211,11 +215,12 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 3);
+            this.btnHome.Location = new System.Drawing.Point(0, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHome.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnHome.Size = new System.Drawing.Size(43, 43);
+            this.btnHome.Size = new System.Drawing.Size(57, 53);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseTransparentBackground = true;
             this.btnHome.EnabledChanged += new System.EventHandler(this.btnHome_EnabledChanged);
@@ -239,11 +244,12 @@
             this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_inventory.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventory.Image")));
             this.btn_inventory.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_inventory.Location = new System.Drawing.Point(0, 196);
+            this.btn_inventory.Location = new System.Drawing.Point(0, 241);
+            this.btn_inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_inventory.Name = "btn_inventory";
             this.btn_inventory.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_inventory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_inventory.Size = new System.Drawing.Size(43, 42);
+            this.btn_inventory.Size = new System.Drawing.Size(57, 52);
             this.btn_inventory.TabIndex = 7;
             this.btn_inventory.UseTransparentBackground = true;
             this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
@@ -266,11 +272,12 @@
             this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_history.Image = ((System.Drawing.Image)(resources.GetObject("btn_history.Image")));
             this.btn_history.ImageSize = new System.Drawing.Size(24, 20);
-            this.btn_history.Location = new System.Drawing.Point(0, 148);
+            this.btn_history.Location = new System.Drawing.Point(0, 182);
+            this.btn_history.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_history.Name = "btn_history";
             this.btn_history.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_history.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_history.Size = new System.Drawing.Size(43, 42);
+            this.btn_history.Size = new System.Drawing.Size(57, 52);
             this.btn_history.TabIndex = 6;
             this.btn_history.UseTransparentBackground = true;
             this.btn_history.Click += new System.EventHandler(this.btn_history_Click);
@@ -292,11 +299,12 @@
             this.btn_info.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
-            this.btn_info.Location = new System.Drawing.Point(0, 100);
+            this.btn_info.Location = new System.Drawing.Point(0, 123);
+            this.btn_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_info.Name = "btn_info";
             this.btn_info.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_info.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_info.Size = new System.Drawing.Size(43, 42);
+            this.btn_info.Size = new System.Drawing.Size(57, 52);
             this.btn_info.TabIndex = 5;
             this.btn_info.UseTransparentBackground = true;
             this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
@@ -318,11 +326,12 @@
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
-            this.btn_appointment.Location = new System.Drawing.Point(0, 52);
+            this.btn_appointment.Location = new System.Drawing.Point(0, 64);
+            this.btn_appointment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_appointment.Name = "btn_appointment";
             this.btn_appointment.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_appointment.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_appointment.Size = new System.Drawing.Size(43, 42);
+            this.btn_appointment.Size = new System.Drawing.Size(57, 52);
             this.btn_appointment.TabIndex = 1;
             this.btn_appointment.UseTransparentBackground = true;
             this.btn_appointment.EnabledChanged += new System.EventHandler(this.btn_appointment_EnabledChanged);
@@ -346,12 +355,13 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(23, 23);
-            this.guna2TextBox1.Location = new System.Drawing.Point(428, 30);
+            this.guna2TextBox1.Location = new System.Drawing.Point(571, 37);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Search";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(378, 39);
+            this.guna2TextBox1.Size = new System.Drawing.Size(504, 48);
             this.guna2TextBox1.TabIndex = 18;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
@@ -360,9 +370,10 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(34, 28);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(45, 34);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(44, 41);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(59, 50);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 17;
             this.guna2PictureBox2.TabStop = false;
@@ -373,10 +384,11 @@
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1240, 30);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1653, 37);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(54, 53);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(72, 65);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 15;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -386,9 +398,10 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel2.Controls.Add(this.btn_logout);
             this.guna2Panel2.Controls.Add(this.btn_settings);
-            this.guna2Panel2.Location = new System.Drawing.Point(32, 496);
+            this.guna2Panel2.Location = new System.Drawing.Point(43, 610);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(46, 96);
+            this.guna2Panel2.Size = new System.Drawing.Size(61, 118);
             this.guna2Panel2.TabIndex = 3;
             // 
             // btn_logout
@@ -407,11 +420,12 @@
             this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_logout.Location = new System.Drawing.Point(0, 51);
+            this.btn_logout.Location = new System.Drawing.Point(0, 63);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_logout.Size = new System.Drawing.Size(43, 42);
+            this.btn_logout.Size = new System.Drawing.Size(57, 52);
             this.btn_logout.TabIndex = 9;
             this.btn_logout.UseTransparentBackground = true;
             this.btn_logout.Click += new System.EventHandler(this.guna2CircleButton11_Click);
@@ -434,11 +448,12 @@
             this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_settings.Location = new System.Drawing.Point(0, 3);
+            this.btn_settings.Location = new System.Drawing.Point(0, 4);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_settings.Size = new System.Drawing.Size(43, 42);
+            this.btn_settings.Size = new System.Drawing.Size(57, 52);
             this.btn_settings.TabIndex = 8;
             this.btn_settings.UseTransparentBackground = true;
             this.btn_settings.MouseLeave += new System.EventHandler(this.btn_settings_MouseLeave);
@@ -448,9 +463,10 @@
             // 
             this.pnl_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_logout.Controls.Add(this.label15);
-            this.pnl_logout.Location = new System.Drawing.Point(52, 547);
+            this.pnl_logout.Location = new System.Drawing.Point(69, 673);
+            this.pnl_logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_logout.Name = "pnl_logout";
-            this.pnl_logout.Size = new System.Drawing.Size(116, 43);
+            this.pnl_logout.Size = new System.Drawing.Size(155, 53);
             this.pnl_logout.TabIndex = 14;
             // 
             // label15
@@ -458,9 +474,10 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(32, 11);
+            this.label15.Location = new System.Drawing.Point(43, 14);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 15);
+            this.label15.Size = new System.Drawing.Size(57, 20);
             this.label15.TabIndex = 1;
             this.label15.Text = "Logout";
             // 
@@ -468,9 +485,10 @@
             // 
             this.pnl_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_settings.Controls.Add(this.label14);
-            this.pnl_settings.Location = new System.Drawing.Point(52, 497);
+            this.pnl_settings.Location = new System.Drawing.Point(69, 612);
+            this.pnl_settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_settings.Name = "pnl_settings";
-            this.pnl_settings.Size = new System.Drawing.Size(116, 43);
+            this.pnl_settings.Size = new System.Drawing.Size(155, 53);
             this.pnl_settings.TabIndex = 14;
             // 
             // label14
@@ -478,9 +496,10 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(28, 13);
+            this.label14.Location = new System.Drawing.Point(37, 16);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 15);
+            this.label14.Size = new System.Drawing.Size(63, 20);
             this.label14.TabIndex = 1;
             this.label14.Text = "Settings";
             // 
@@ -489,9 +508,10 @@
             this.pnl_inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_inventory.BorderColor = System.Drawing.Color.White;
             this.pnl_inventory.Controls.Add(this.label16);
-            this.pnl_inventory.Location = new System.Drawing.Point(58, 348);
+            this.pnl_inventory.Location = new System.Drawing.Point(77, 428);
+            this.pnl_inventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_inventory.Name = "pnl_inventory";
-            this.pnl_inventory.Size = new System.Drawing.Size(116, 40);
+            this.pnl_inventory.Size = new System.Drawing.Size(155, 49);
             this.pnl_inventory.TabIndex = 13;
             // 
             // label16
@@ -499,9 +519,10 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(26, 9);
+            this.label16.Location = new System.Drawing.Point(35, 11);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 15);
+            this.label16.Size = new System.Drawing.Size(76, 20);
             this.label16.TabIndex = 1;
             this.label16.Text = "Inventory";
             // 
@@ -510,9 +531,10 @@
             this.pnl_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_history.BorderColor = System.Drawing.Color.White;
             this.pnl_history.Controls.Add(this.label13);
-            this.pnl_history.Location = new System.Drawing.Point(58, 299);
+            this.pnl_history.Location = new System.Drawing.Point(77, 368);
+            this.pnl_history.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_history.Name = "pnl_history";
-            this.pnl_history.Size = new System.Drawing.Size(116, 43);
+            this.pnl_history.Size = new System.Drawing.Size(155, 53);
             this.pnl_history.TabIndex = 13;
             // 
             // label13
@@ -520,9 +542,10 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(29, 10);
+            this.label13.Location = new System.Drawing.Point(39, 12);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 15);
+            this.label13.Size = new System.Drawing.Size(59, 20);
             this.label13.TabIndex = 1;
             this.label13.Text = "History";
             // 
@@ -531,9 +554,10 @@
             this.pnl_clientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_clientInfo.BorderColor = System.Drawing.Color.White;
             this.pnl_clientInfo.Controls.Add(this.label12);
-            this.pnl_clientInfo.Location = new System.Drawing.Point(58, 250);
+            this.pnl_clientInfo.Location = new System.Drawing.Point(77, 308);
+            this.pnl_clientInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_clientInfo.Name = "pnl_clientInfo";
-            this.pnl_clientInfo.Size = new System.Drawing.Size(116, 43);
+            this.pnl_clientInfo.Size = new System.Drawing.Size(155, 53);
             this.pnl_clientInfo.TabIndex = 13;
             this.pnl_clientInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_clientInfo_Paint);
             // 
@@ -542,9 +566,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(29, 11);
+            this.label12.Location = new System.Drawing.Point(39, 14);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 15);
+            this.label12.Size = new System.Drawing.Size(79, 20);
             this.label12.TabIndex = 1;
             this.label12.Text = "Client Info";
             // 
@@ -553,9 +578,10 @@
             this.pnl_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_home.BorderColor = System.Drawing.Color.White;
             this.pnl_home.Controls.Add(this.label9);
-            this.pnl_home.Location = new System.Drawing.Point(58, 152);
+            this.pnl_home.Location = new System.Drawing.Point(77, 187);
+            this.pnl_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(116, 42);
+            this.pnl_home.Size = new System.Drawing.Size(155, 52);
             this.pnl_home.TabIndex = 12;
             // 
             // label9
@@ -563,9 +589,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(32, 9);
+            this.label9.Location = new System.Drawing.Point(43, 11);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 15);
+            this.label9.Size = new System.Drawing.Size(50, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "Home";
             // 
@@ -574,9 +601,10 @@
             this.pnl_appointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_appointment.BorderColor = System.Drawing.Color.White;
             this.pnl_appointment.Controls.Add(this.label11);
-            this.pnl_appointment.Location = new System.Drawing.Point(58, 201);
+            this.pnl_appointment.Location = new System.Drawing.Point(77, 247);
+            this.pnl_appointment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_appointment.Name = "pnl_appointment";
-            this.pnl_appointment.Size = new System.Drawing.Size(116, 43);
+            this.pnl_appointment.Size = new System.Drawing.Size(155, 53);
             this.pnl_appointment.TabIndex = 13;
             // 
             // label11
@@ -584,9 +612,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(26, 9);
+            this.label11.Location = new System.Drawing.Point(35, 11);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 15);
+            this.label11.Size = new System.Drawing.Size(105, 20);
             this.label11.TabIndex = 1;
             this.label11.Text = "Appointments";
             // 
@@ -596,9 +625,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(1137, 48);
+            this.label10.Location = new System.Drawing.Point(1516, 59);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 21);
+            this.label10.Size = new System.Drawing.Size(118, 28);
             this.label10.TabIndex = 11;
             this.label10.Text = "Hi Afdfdeg!";
             // 
@@ -608,9 +638,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Location = new System.Drawing.Point(79, 36);
+            this.label4.Location = new System.Drawing.Point(105, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
+            this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "BloodSeeker";
             // 
@@ -699,11 +730,12 @@
             // 
             // AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1848, 970);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
