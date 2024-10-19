@@ -1,6 +1,6 @@
 ﻿namespace BloodSeeker.Components.Client_Information
 {
-    partial class ClientInformationTab
+    partial class ClientStaffInformationTab
     {
         /// <summary> 
         /// Required designer variable.

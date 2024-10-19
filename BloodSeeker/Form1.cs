@@ -1,5 +1,6 @@
 ﻿using BloodSeeker.Admin;
 using BloodSeeker.Client;
+using Guna.UI2.AnimatorNS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,18 +74,10 @@ namespace BloodSeeker
             
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            globe = new Global();
+            globe.fncConnectToDatabase();
             cmb_option.Hide();
         }
 

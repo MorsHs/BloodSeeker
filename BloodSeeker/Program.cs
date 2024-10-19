@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BloodSeeker.Admin;
+using BloodSeeker.Client;
 namespace BloodSeeker
 {
     internal static class Program

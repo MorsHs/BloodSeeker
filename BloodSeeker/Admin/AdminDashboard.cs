@@ -71,6 +71,7 @@ namespace BloodSeeker.Admin
             pnl_inventory.Hide();
             pnl_settings.Hide();
             pnl_logout.Hide();
+            staffPanel.Hide();
             changePanel(new Dashboard());
         }
 
@@ -192,6 +193,23 @@ namespace BloodSeeker.Admin
         private void btn_logout_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2CircleButton1_MouseHover(object sender, EventArgs e)
+        {
+            staffPanel.Show();
+        }
+
+        private void guna2CircleButton1_MouseLeave(object sender, EventArgs e)
+        {
+            staffPanel.Hide();
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new StaffList());
         }
     }
 }

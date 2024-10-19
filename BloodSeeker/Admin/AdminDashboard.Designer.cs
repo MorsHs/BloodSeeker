@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_inventory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_history = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -78,6 +79,9 @@
             this.guna2Elipse14 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse15 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse16 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.staffPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Elipse17 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -91,6 +95,7 @@
             this.pnl_clientInfo.SuspendLayout();
             this.pnl_home.SuspendLayout();
             this.pnl_appointment.SuspendLayout();
+            this.staffPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -98,17 +103,18 @@
             this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_home);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_logout);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_settings);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_inventory);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_history);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_clientInfo);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_home);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_appointment);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_clientInfo);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_history);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_inventory);
+            this.guna2CustomGradientPanel1.Controls.Add(this.staffPanel);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -195,6 +201,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel1.Controls.Add(this.guna2CircleButton1);
             this.guna2Panel1.Controls.Add(this.btnHome);
             this.guna2Panel1.Controls.Add(this.btn_inventory);
             this.guna2Panel1.Controls.Add(this.btn_history);
@@ -202,8 +209,35 @@
             this.guna2Panel1.Controls.Add(this.btn_appointment);
             this.guna2Panel1.Location = new System.Drawing.Point(35, 148);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(46, 240);
+            this.guna2Panel1.Size = new System.Drawing.Size(46, 297);
             this.guna2Panel1.TabIndex = 2;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.BackgroundImage")));
+            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2CircleButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 23);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(0, 244);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(43, 42);
+            this.guna2CircleButton1.TabIndex = 8;
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.guna2CircleButton1.MouseLeave += new System.EventHandler(this.guna2CircleButton1_MouseLeave);
+            this.guna2CircleButton1.MouseHover += new System.EventHandler(this.guna2CircleButton1_MouseHover);
             // 
             // btnHome
             // 
@@ -243,7 +277,7 @@
             this.btn_inventory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_inventory.ForeColor = System.Drawing.Color.White;
             this.btn_inventory.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_inventory.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventory.Image")));
             this.btn_inventory.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_inventory.Location = new System.Drawing.Point(0, 196);
@@ -270,7 +304,7 @@
             this.btn_history.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_history.ForeColor = System.Drawing.Color.White;
             this.btn_history.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_history.Image = ((System.Drawing.Image)(resources.GetObject("btn_history.Image")));
             this.btn_history.ImageSize = new System.Drawing.Size(24, 20);
             this.btn_history.Location = new System.Drawing.Point(0, 148);
@@ -297,7 +331,7 @@
             this.btn_info.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_info.ForeColor = System.Drawing.Color.White;
             this.btn_info.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
             this.btn_info.Location = new System.Drawing.Point(0, 100);
             this.btn_info.Name = "btn_info";
@@ -323,7 +357,7 @@
             this.btn_appointment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_appointment.ForeColor = System.Drawing.Color.White;
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
             this.btn_appointment.Location = new System.Drawing.Point(0, 52);
             this.btn_appointment.Name = "btn_appointment";
@@ -359,7 +393,7 @@
             this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_logout.Location = new System.Drawing.Point(0, 51);
@@ -386,7 +420,7 @@
             this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_settings.ForeColor = System.Drawing.Color.White;
             this.btn_settings.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_settings.Location = new System.Drawing.Point(0, 3);
@@ -626,6 +660,31 @@
             // 
             this.guna2Elipse16.BorderRadius = 40;
             // 
+            // staffPanel
+            // 
+            this.staffPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.staffPanel.Controls.Add(this.label1);
+            this.staffPanel.Location = new System.Drawing.Point(71, 394);
+            this.staffPanel.Name = "staffPanel";
+            this.staffPanel.Size = new System.Drawing.Size(103, 42);
+            this.staffPanel.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(17, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Staff List";
+            // 
+            // guna2Elipse17
+            // 
+            this.guna2Elipse17.BorderRadius = 15;
+            this.guna2Elipse17.TargetControl = this.staffPanel;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,6 +718,8 @@
             this.pnl_home.PerformLayout();
             this.pnl_appointment.ResumeLayout(false);
             this.pnl_appointment.PerformLayout();
+            this.staffPanel.ResumeLayout(false);
+            this.staffPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -715,5 +776,9 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2Panel staffPanel;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse17;
     }
 }
