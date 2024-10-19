@@ -64,8 +64,6 @@ namespace BloodSeeker.Admin
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            Global globe = new Global();
-            globe.fncConnectToDatabase();
             pnl_home.Hide();
             pnl_appointment.Hide();
             pnl_clientInfo.Hide();
