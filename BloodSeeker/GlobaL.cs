@@ -10,13 +10,14 @@ namespace BloodSeeker
 {
     internal class Global
     {
-        public string servername;
-        public string databasename;
-        public string username;
-        public string password;
-        public string port;
+        private string servername;
+        private string databasename;
+        private string username;
+        private string password;
+        private string port;
         public MySqlConnection conBloodbank;
-        public MySqlCommand slqCommand;
+        public MySqlCommand sqlCommand;
+        public MySqlDataAdapter dataAdapter;
         public string strConnection;
         
 
@@ -31,6 +32,9 @@ namespace BloodSeeker
         //  "PORT": "3306 OR 3307 (depends on your assigned port on your mysql)"
         //}
         // AFTER THAT RIGHT CLICK THE sql.JSON then press "Include from Project"
+        // RIGHT CLICK AND GO PROPERTIES
+        // BUILD ACTION -> CONTENT
+        // COPY TO OUTPUT DIRECTORY -> COPY IF NEWER
         public bool fncConnectToDatabase()
         {
             string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sql.json");
@@ -54,10 +58,10 @@ namespace BloodSeeker
                     "Convert Zero Datetime =true";
 
                     conBloodbank = new MySqlConnection(strConnection);
-                    slqCommand = new MySqlCommand(strConnection, conBloodbank);
+                    sqlCommand = new MySqlCommand(strConnection, conBloodbank);
                     if (conBloodbank.State == ConnectionState.Closed)
                     {
-                        slqCommand.Connection = conBloodbank;
+                        sqlCommand.Connection = conBloodbank;
                         conBloodbank.Open();
                         return true;
                     }
@@ -74,7 +78,7 @@ namespace BloodSeeker
             }
             catch (Exception e)
             {
-                MessageBox.Show("Database JSON Configuration not found");
+                MessageBox.Show("Database JSON Configuration not found "+e.Message);
             }
             return false;
         }
@@ -90,8 +94,6 @@ namespace BloodSeeker
                
             }
         }
-
     }
-
 
 }
