@@ -10,14 +10,13 @@ namespace BloodSeeker
 {
     internal class Global
     {
-        private string servername;
-        private string databasename;
-        private string username;
-        private string password;
-        private string port;
+        public string servername;
+        public string databasename;
+        public string username;
+        public string password;
+        public string port;
         public MySqlConnection conBloodbank;
-        public MySqlCommand sqlCommand;
-        public MySqlDataAdapter dataAdapter;
+        public MySqlCommand slqCommand;
         public string strConnection;
         
 
@@ -32,9 +31,6 @@ namespace BloodSeeker
         //  "PORT": "3306 OR 3307 (depends on your assigned port on your mysql)"
         //}
         // AFTER THAT RIGHT CLICK THE sql.JSON then press "Include from Project"
-        // RIGHT CLICK AND GO PROPERTIES
-        // BUILD ACTION -> CONTENT
-        // COPY TO OUTPUT DIRECTORY -> COPY IF NEWER
         public bool fncConnectToDatabase()
         {
             string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sql.json");
@@ -58,10 +54,10 @@ namespace BloodSeeker
                     "Convert Zero Datetime =true";
 
                     conBloodbank = new MySqlConnection(strConnection);
-                    sqlCommand = new MySqlCommand(strConnection, conBloodbank);
+                    slqCommand = new MySqlCommand(strConnection, conBloodbank);
                     if (conBloodbank.State == ConnectionState.Closed)
                     {
-                        sqlCommand.Connection = conBloodbank;
+                        slqCommand.Connection = conBloodbank;
                         conBloodbank.Open();
                         return true;
                     }
@@ -78,7 +74,7 @@ namespace BloodSeeker
             }
             catch (Exception e)
             {
-                MessageBox.Show("Database JSON Configuration not found "+e.Message);
+                MessageBox.Show("Database JSON Configuration not found");
             }
             return false;
         }
@@ -94,6 +90,8 @@ namespace BloodSeeker
                
             }
         }
+
     }
+
 
 }
