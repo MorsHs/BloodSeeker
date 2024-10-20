@@ -12,7 +12,6 @@ namespace BloodSeeker.Admin
 {
     public partial class AdminLogin : Form
     {
-        SignUpPage signUp = new SignUpPage();
         AdminDashboard admindash = new AdminDashboard();
         public AdminLogin()
         {
@@ -22,7 +21,6 @@ namespace BloodSeeker.Admin
         private void btn_exit_Click(object sender, EventArgs e)
         {
 
-            signUp.Show();
             this.Close();
         }
 

@@ -39,6 +39,11 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.femalecmbx = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.malecmbx = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.txt_address = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pickerDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmb_option = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,18 +61,11 @@
             this.txt_firstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_lastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pickerDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_address = new Guna.UI2.WinForms.Guna2TextBox();
-            this.malecmbx = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.femalecmbx = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,9 +151,102 @@
             this.panel2.Controls.Add(this.txt_lastname);
             this.panel2.Location = new System.Drawing.Point(610, 143);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 596);
+            this.panel2.Size = new System.Drawing.Size(682, 519);
             this.panel2.TabIndex = 16;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // femalecmbx
+            // 
+            this.femalecmbx.Animated = true;
+            this.femalecmbx.AutoSize = true;
+            this.femalecmbx.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.femalecmbx.CheckedState.BorderRadius = 0;
+            this.femalecmbx.CheckedState.BorderThickness = 0;
+            this.femalecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.femalecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.femalecmbx.ForeColor = System.Drawing.Color.White;
+            this.femalecmbx.Location = new System.Drawing.Point(494, 326);
+            this.femalecmbx.Name = "femalecmbx";
+            this.femalecmbx.Size = new System.Drawing.Size(81, 25);
+            this.femalecmbx.TabIndex = 13;
+            this.femalecmbx.Text = "Female";
+            this.femalecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.femalecmbx.UncheckedState.BorderRadius = 0;
+            this.femalecmbx.UncheckedState.BorderThickness = 0;
+            this.femalecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
+            this.femalecmbx.CheckedChanged += new System.EventHandler(this.femalecmbx_CheckedChanged);
+            // 
+            // malecmbx
+            // 
+            this.malecmbx.Animated = true;
+            this.malecmbx.AutoSize = true;
+            this.malecmbx.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.malecmbx.CheckedState.BorderRadius = 0;
+            this.malecmbx.CheckedState.BorderThickness = 0;
+            this.malecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.malecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.malecmbx.ForeColor = System.Drawing.Color.White;
+            this.malecmbx.Location = new System.Drawing.Point(416, 326);
+            this.malecmbx.Name = "malecmbx";
+            this.malecmbx.Size = new System.Drawing.Size(65, 25);
+            this.malecmbx.TabIndex = 12;
+            this.malecmbx.Text = "Male";
+            this.malecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.malecmbx.UncheckedState.BorderRadius = 0;
+            this.malecmbx.UncheckedState.BorderThickness = 0;
+            this.malecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
+            this.malecmbx.CheckedChanged += new System.EventHandler(this.malecmbx_CheckedChanged);
+            // 
+            // txt_address
+            // 
+            this.txt_address.BorderRadius = 6;
+            this.txt_address.BorderThickness = 0;
+            this.txt_address.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_address.DefaultText = "";
+            this.txt_address.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_address.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_address.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_address.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_address.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_address.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_address.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_address.IconLeft")));
+            this.txt_address.Location = new System.Drawing.Point(376, 206);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.PasswordChar = '\0';
+            this.txt_address.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txt_address.PlaceholderText = "Address";
+            this.txt_address.SelectedText = "";
+            this.txt_address.Size = new System.Drawing.Size(239, 33);
+            this.txt_address.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(373, 249);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Birthdate";
+            // 
+            // pickerDate
+            // 
+            this.pickerDate.Animated = true;
+            this.pickerDate.AutoRoundedCorners = true;
+            this.pickerDate.BorderRadius = 17;
+            this.pickerDate.Checked = true;
+            this.pickerDate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.pickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.pickerDate.Location = new System.Drawing.Point(376, 272);
+            this.pickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.pickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.pickerDate.Name = "pickerDate";
+            this.pickerDate.Size = new System.Drawing.Size(239, 36);
+            this.pickerDate.TabIndex = 11;
+            this.pickerDate.Value = new System.DateTime(2024, 10, 19, 16, 2, 33, 318);
             // 
             // txt_username
             // 
@@ -190,7 +281,7 @@
             this.cmb_option.Items.AddRange(new object[] {
             "Admin",
             "Client"});
-            this.cmb_option.Location = new System.Drawing.Point(376, 506);
+            this.cmb_option.Location = new System.Drawing.Point(376, 487);
             this.cmb_option.Name = "cmb_option";
             this.cmb_option.Size = new System.Drawing.Size(83, 21);
             this.cmb_option.TabIndex = 15;
@@ -213,7 +304,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(454, 490);
+            this.label3.Location = new System.Drawing.Point(454, 468);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(265, 13);
             this.label3.TabIndex = 12;
@@ -224,7 +315,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(-39, 490);
+            this.label2.Location = new System.Drawing.Point(-39, 468);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(265, 13);
             this.label2.TabIndex = 11;
@@ -235,7 +326,7 @@
             this.link_login.AutoSize = true;
             this.link_login.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_login.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.link_login.Location = new System.Drawing.Point(356, 490);
+            this.link_login.Location = new System.Drawing.Point(356, 468);
             this.link_login.Name = "link_login";
             this.link_login.Size = new System.Drawing.Size(103, 13);
             this.link_login.TabIndex = 10;
@@ -248,7 +339,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(223, 490);
+            this.label1.Location = new System.Drawing.Point(223, 468);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 9;
@@ -354,7 +445,7 @@
             this.btn_signUp.FillColor2 = System.Drawing.Color.Red;
             this.btn_signUp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_signUp.ForeColor = System.Drawing.Color.White;
-            this.btn_signUp.Location = new System.Drawing.Point(204, 429);
+            this.btn_signUp.Location = new System.Drawing.Point(204, 404);
             this.btn_signUp.Name = "btn_signUp";
             this.btn_signUp.Size = new System.Drawing.Size(287, 39);
             this.btn_signUp.TabIndex = 14;
@@ -465,19 +556,6 @@
             this.panel1.Size = new System.Drawing.Size(682, 446);
             this.panel1.TabIndex = 15;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(523, 87);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(859, 734);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 14;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -501,99 +579,6 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "BloodSeeker";
             // 
-            // pickerDate
-            // 
-            this.pickerDate.Animated = true;
-            this.pickerDate.AutoRoundedCorners = true;
-            this.pickerDate.BorderRadius = 9;
-            this.pickerDate.Checked = true;
-            this.pickerDate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.pickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.pickerDate.Location = new System.Drawing.Point(376, 272);
-            this.pickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.pickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.pickerDate.Name = "pickerDate";
-            this.pickerDate.Size = new System.Drawing.Size(239, 36);
-            this.pickerDate.TabIndex = 11;
-            this.pickerDate.Value = new System.DateTime(2024, 10, 19, 16, 2, 33, 318);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(373, 249);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Birthdate";
-            // 
-            // txt_address
-            // 
-            this.txt_address.BorderRadius = 6;
-            this.txt_address.BorderThickness = 0;
-            this.txt_address.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_address.DefaultText = "";
-            this.txt_address.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_address.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_address.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_address.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_address.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_address.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_address.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_address.IconLeft")));
-            this.txt_address.Location = new System.Drawing.Point(376, 206);
-            this.txt_address.Name = "txt_address";
-            this.txt_address.PasswordChar = '\0';
-            this.txt_address.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_address.PlaceholderText = "Address";
-            this.txt_address.SelectedText = "";
-            this.txt_address.Size = new System.Drawing.Size(239, 33);
-            this.txt_address.TabIndex = 10;
-            // 
-            // malecmbx
-            // 
-            this.malecmbx.Animated = true;
-            this.malecmbx.AutoSize = true;
-            this.malecmbx.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.malecmbx.CheckedState.BorderRadius = 0;
-            this.malecmbx.CheckedState.BorderThickness = 0;
-            this.malecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.malecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.malecmbx.ForeColor = System.Drawing.Color.White;
-            this.malecmbx.Location = new System.Drawing.Point(416, 326);
-            this.malecmbx.Name = "malecmbx";
-            this.malecmbx.Size = new System.Drawing.Size(65, 25);
-            this.malecmbx.TabIndex = 12;
-            this.malecmbx.Text = "Male";
-            this.malecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
-            this.malecmbx.UncheckedState.BorderRadius = 0;
-            this.malecmbx.UncheckedState.BorderThickness = 0;
-            this.malecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
-            this.malecmbx.CheckedChanged += new System.EventHandler(this.malecmbx_CheckedChanged);
-            // 
-            // femalecmbx
-            // 
-            this.femalecmbx.Animated = true;
-            this.femalecmbx.AutoSize = true;
-            this.femalecmbx.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.femalecmbx.CheckedState.BorderRadius = 0;
-            this.femalecmbx.CheckedState.BorderThickness = 0;
-            this.femalecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.femalecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.femalecmbx.ForeColor = System.Drawing.Color.White;
-            this.femalecmbx.Location = new System.Drawing.Point(494, 326);
-            this.femalecmbx.Name = "femalecmbx";
-            this.femalecmbx.Size = new System.Drawing.Size(81, 25);
-            this.femalecmbx.TabIndex = 13;
-            this.femalecmbx.Text = "Female";
-            this.femalecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
-            this.femalecmbx.UncheckedState.BorderRadius = 0;
-            this.femalecmbx.UncheckedState.BorderThickness = 0;
-            this.femalecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
-            this.femalecmbx.CheckedChanged += new System.EventHandler(this.femalecmbx_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,7 +589,6 @@
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -617,7 +601,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -649,7 +632,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_firstname;
         private Guna.UI2.WinForms.Guna2TextBox txt_lastname;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.ComboBox cmb_option;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label6;
