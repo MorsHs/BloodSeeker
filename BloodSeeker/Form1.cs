@@ -139,5 +139,10 @@ namespace BloodSeeker
                 malecmbx.Checked = false;
             }
         }
+
+        private void txt_address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
