@@ -12,7 +12,6 @@ namespace BloodSeeker.Client
 {
     public partial class ClienntLogin : Form
     {
-        SignUpPage signUp = new SignUpPage();
        
         public ClienntLogin()
         {
@@ -21,7 +20,7 @@ namespace BloodSeeker.Client
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            signUp.Show();
+ 
             this.Hide();
         }
     }

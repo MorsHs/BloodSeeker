@@ -18,6 +18,7 @@ namespace BloodSeeker
         public MySqlConnection conBloodbank;
         public MySqlCommand sqlCommand;
         public MySqlDataAdapter dataAdapter;
+        public MySqlDataReader sqlReader;
         public string strConnection;
 
 
