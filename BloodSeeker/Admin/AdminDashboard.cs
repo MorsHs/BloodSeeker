@@ -13,7 +13,7 @@ namespace BloodSeeker.Admin
         public AdminDashboard()
         {
             InitializeComponent();
-            btnHome.FillColor = Color.FromArgb(20, 132, 205);
+            btnHome.FillColor = Color.FromArgb(21, 21, 21);
 
         }
         public void changePanel(Form form)
@@ -34,11 +34,11 @@ namespace BloodSeeker.Admin
                 Guna2CircleButton currentButton = a[i] as Guna2CircleButton;
                 if(button == currentButton)
                 {
-                    currentButton.FillColor = Color.FromArgb(20, 132, 205);
+                    currentButton.FillColor = Color.FromArgb(57, 57, 57);
                 }
                 else
                 {
-                    currentButton.FillColor = Color.FromArgb(83, 0, 0);
+                    currentButton.FillColor = Color.FromArgb(21, 21, 21);
                 }
             }
             
@@ -212,6 +212,11 @@ namespace BloodSeeker.Admin
             Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
             changePanel(new StaffList());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
