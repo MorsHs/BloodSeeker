@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Forms;
 
 namespace BloodSeeker.Admin.Controllers
 {
@@ -39,21 +34,30 @@ namespace BloodSeeker.Admin.Controllers
 
         public void addStaff()
         {
-            Global global = new Global();
-            global.fncConnectToDatabase();
-            global.sqlCommand.Parameters.Clear();
-            global.sqlCommand.CommandText = "prc_createStaff";
-            global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            global.sqlCommand.Parameters.AddWithValue("p_first_name", firstname);
-            global.sqlCommand.Parameters.AddWithValue("p_last_name", lastname);
-            global.sqlCommand.Parameters.AddWithValue("p_address", address);
-            global.sqlCommand.Parameters.AddWithValue("p_mobileNum", contactno);
-            global.sqlCommand.Parameters.AddWithValue("p_emailAdd", emailadd);
-            global.sqlCommand.Parameters.AddWithValue("p_birthDate", birthdate);
-            global.sqlCommand.Parameters.AddWithValue("p_sex", sex);
-            global.sqlCommand.Parameters.AddWithValue("p_username", username);
-            global.sqlCommand.Parameters.AddWithValue("p_password", password);
-            global.sqlCommand.ExecuteNonQuery();
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_createStaff";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_first_name", firstname);
+                global.sqlCommand.Parameters.AddWithValue("p_last_name", lastname);
+                global.sqlCommand.Parameters.AddWithValue("p_address", address);
+                global.sqlCommand.Parameters.AddWithValue("p_mobileNum", contactno);
+                global.sqlCommand.Parameters.AddWithValue("p_emailAdd", emailadd);
+                global.sqlCommand.Parameters.AddWithValue("p_birthDate", birthdate);
+                global.sqlCommand.Parameters.AddWithValue("p_sex", sex);
+                global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                global.sqlCommand.Parameters.AddWithValue("p_password", password);
+                global.sqlCommand.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
 
         }
 
