@@ -33,11 +33,13 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_signUp = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_signUp);
             this.guna2CustomGradientPanel1.Controls.Add(this.flowLayoutPanel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
@@ -77,7 +79,8 @@
             this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2TextBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.Location = new System.Drawing.Point(50, 106);
             this.guna2TextBox1.Name = "guna2TextBox1";
@@ -94,11 +97,32 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(44, 30);
+            this.label1.Location = new System.Drawing.Point(42, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Staff List";
+            // 
+            // btn_signUp
+            // 
+            this.btn_signUp.Animated = true;
+            this.btn_signUp.BorderColor = System.Drawing.Color.Crimson;
+            this.btn_signUp.BorderRadius = 5;
+            this.btn_signUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_signUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_signUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_signUp.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_signUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_signUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_signUp.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_signUp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_signUp.ForeColor = System.Drawing.Color.White;
+            this.btn_signUp.Location = new System.Drawing.Point(986, 107);
+            this.btn_signUp.Name = "btn_signUp";
+            this.btn_signUp.Size = new System.Drawing.Size(92, 39);
+            this.btn_signUp.TabIndex = 15;
+            this.btn_signUp.Text = "Add staff";
+            this.btn_signUp.Click += new System.EventHandler(this.btn_signUp_Click);
             // 
             // StaffList
             // 
@@ -121,5 +145,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btn_signUp;
     }
 }

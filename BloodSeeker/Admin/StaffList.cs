@@ -33,5 +33,11 @@ namespace BloodSeeker.Admin
         {
 
         }
+
+        private void btn_signUp_Click(object sender, EventArgs e)
+        {
+            AddStaff add = new AddStaff();
+            add.ShowDialog();
+        }
     }
 }
