@@ -26,11 +26,11 @@ namespace BloodSeeker.Admin
         public void LoadClientInfo(FlowLayoutPanel panel)
         {
             ClientStaffInformationTab tab;
-            for (int i = 0; i < 10; i++)
-            {
-                tab = new ClientStaffInformationTab("Kent Lawrence Salarda", "Male", "kentsalarda@gail.com", "09452113248");
-                panel.Controls.Add(tab);
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    tab = new ClientStaffInformationTab("Kent Lawrence Salarda", "Male", "kentsalarda@gail.com", "09452113248");
+            //    panel.Controls.Add(tab);
+            //}
         }
     }
 }
