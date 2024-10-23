@@ -174,6 +174,23 @@
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client\ClientHistory1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientHistory1.Designer.cs">
+      <DependentUpon>ClientHistory1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ClientInventory1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientInventory1.Designer.cs">
+      <DependentUpon>ClientInventory1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ClientSettings1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientSettings1.Designer.cs">
+      <DependentUpon>ClientSettings1.cs</DependentUpon>
     <Compile Include="Components\Client Information\ViewMoreClientStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -317,8 +334,17 @@
     <EmbeddedResource Include="Client\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientHistory1.resx">
+      <DependentUpon>ClientHistory1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientInformation.resx">
       <DependentUpon>ClientInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientInventory1.resx">
+      <DependentUpon>ClientInventory1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientSettings1.resx">
+      <DependentUpon>ClientSettings1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Appointment Bar\Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.flowPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -55,18 +55,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1555, 738);
             this.guna2CustomGradientPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(59, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Appointments";
             // 
             // splitContainer1
             // 
@@ -118,8 +106,20 @@
             this.flowPanel2.Location = new System.Drawing.Point(23, 142);
             this.flowPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowPanel2.Name = "flowPanel2";
-            this.flowPanel2.Size = new System.Drawing.Size(863, 425);
+            this.flowPanel2.Size = new System.Drawing.Size(862, 425);
             this.flowPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(59, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 54);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Appointments";
             // 
             // ClientAppointment
             // 
