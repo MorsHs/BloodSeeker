@@ -162,6 +162,12 @@
     <Compile Include="Admin\AdminSettings.Designer.cs">
       <DependentUpon>AdminSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\changePassAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\changePassAdmin.Designer.cs">
+      <DependentUpon>changePassAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ClientInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminSettings.resx">
       <DependentUpon>AdminSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\changePassAdmin.resx">
+      <DependentUpon>changePassAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>

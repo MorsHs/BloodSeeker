@@ -74,6 +74,7 @@ namespace BloodSeeker.Admin
         {
             btn_secu.FillColor = Color.OrangeRed;
             btn_acc.FillColor = Color.FromArgb(155, 0, 0);
+            changePanel(new changePassAdmin());
         }
     }
 }
