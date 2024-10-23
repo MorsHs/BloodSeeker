@@ -55,6 +55,10 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -112,6 +116,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -144,6 +149,12 @@
     <Compile Include="Admin\AdminAppointments.Designer.cs">
       <DependentUpon>AdminAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminChangePfp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangePfp.Designer.cs">
+      <DependentUpon>AdminChangePfp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,11 +179,23 @@
     <Compile Include="Admin\AdminSettings.Designer.cs">
       <DependentUpon>AdminSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Cert.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cert.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Admin\ClientInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Crystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Crystal.Designer.cs">
+      <DependentUpon>Crystal.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Admin\AddStaffController.cs" />
     <Compile Include="Controllers\Admin\StaffListController.cs" />
@@ -275,6 +298,9 @@
     <EmbeddedResource Include="Admin\AdminAppointments.resx">
       <DependentUpon>AdminAppointments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminChangePfp.resx">
+      <DependentUpon>AdminChangePfp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,8 +313,15 @@
     <EmbeddedResource Include="Admin\AdminSettings.resx">
       <DependentUpon>AdminSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Cert.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cert.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Crystal.resx">
+      <DependentUpon>Crystal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -373,6 +406,9 @@
   <ItemGroup>
     <Folder Include="Controllers\Client\" />
     <Folder Include="Model\Client\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
