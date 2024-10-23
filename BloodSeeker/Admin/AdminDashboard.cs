@@ -225,7 +225,7 @@ namespace BloodSeeker.Admin
         {
             Guna2CircleButton button = sender as Guna2CircleButton;
             buttonColor(button);
-            changePanel(new AccountInfo());
+            changePanel(new AdminSettings());
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -156,6 +156,12 @@
     <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSecurity.Designer.cs">
+      <DependentUpon>AdminSecurity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,11 @@
     </Compile>
     <Compile Include="Client\ClientSettings1.Designer.cs">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
+    <Compile Include="Components\Client Information\ViewMoreClientStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Client Information\ViewMoreClientStaff.Designer.cs">
+      <DependentUpon>ViewMoreClientStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Admin\AddStaffController.cs" />
     <Compile Include="Controllers\Admin\StaffListController.cs" />
@@ -293,6 +304,9 @@
     <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminSecurity.resx">
+      <DependentUpon>AdminSecurity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminSettings.resx">
       <DependentUpon>AdminSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Client Information\ClientStaffInformationTab.resx">
       <DependentUpon>ClientStaffInformationTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Client Information\ViewMoreClientStaff.resx">
+      <DependentUpon>ViewMoreClientStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
