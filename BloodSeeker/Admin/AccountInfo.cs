@@ -110,15 +110,7 @@ namespace BloodSeeker.Admin
             showButton();
         }
 
-        public void changePanel(Form form)
-        {
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(form);
-            form.Show();
-        }
+        
         private void guna2Button7_Click(object sender, EventArgs e)
         {
             try
@@ -140,6 +132,17 @@ namespace BloodSeeker.Admin
             {
 
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AccountInfo_Load(object sender, EventArgs e)
+        {
+            btn_cancel.Hide();
+            btn_Submit.Hide();
         }
     }
 }
