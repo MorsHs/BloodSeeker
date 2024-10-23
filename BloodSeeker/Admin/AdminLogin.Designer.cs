@@ -140,7 +140,7 @@
             this.txt_pass.Location = new System.Drawing.Point(46, 134);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '*';
-            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_pass.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txt_pass.PlaceholderText = "Password";
             this.txt_pass.SelectedText = "";
             this.txt_pass.Size = new System.Drawing.Size(239, 33);
@@ -165,7 +165,7 @@
             this.txt_name.Location = new System.Drawing.Point(46, 81);
             this.txt_name.Name = "txt_name";
             this.txt_name.PasswordChar = '\0';
-            this.txt_name.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_name.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txt_name.PlaceholderText = "Name";
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(239, 33);

@@ -50,13 +50,14 @@
             // 
             this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2DataGridView1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1166, 600);

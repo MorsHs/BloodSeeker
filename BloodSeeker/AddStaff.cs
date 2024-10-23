@@ -90,6 +90,7 @@ namespace BloodSeeker
         private void btn_signUp_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            
         }
     }
 }

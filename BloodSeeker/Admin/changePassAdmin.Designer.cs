@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_cancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btn_submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.chk_newPass = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.chc_ConfirmPass = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.chc_currentPass = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_newPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_confirmPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_currentPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_newPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chc_currentPass = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.chc_ConfirmPass = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.chk_newPass = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btn_submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btn_cancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +64,146 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1134, 435);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Elipse1
+            // btn_cancel
             // 
-            this.guna2Elipse1.BorderRadius = 10;
-            this.guna2Elipse1.TargetControl = this;
+            this.btn_cancel.Animated = true;
+            this.btn_cancel.BorderColor = System.Drawing.Color.Crimson;
+            this.btn_cancel.BorderRadius = 5;
+            this.btn_cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_cancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.Location = new System.Drawing.Point(894, 322);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(92, 39);
+            this.btn_cancel.TabIndex = 50;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // guna2Elipse2
+            // btn_submit
             // 
-            this.guna2Elipse2.BorderRadius = 10;
-            this.guna2Elipse2.TargetControl = this;
+            this.btn_submit.Animated = true;
+            this.btn_submit.BorderColor = System.Drawing.Color.Crimson;
+            this.btn_submit.BorderRadius = 5;
+            this.btn_submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_submit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_submit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_submit.ForeColor = System.Drawing.Color.White;
+            this.btn_submit.Location = new System.Drawing.Point(723, 322);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Size = new System.Drawing.Size(92, 39);
+            this.btn_submit.TabIndex = 49;
+            this.btn_submit.Text = "Submit";
+            // 
+            // chk_newPass
+            // 
+            this.chk_newPass.AutoSize = true;
+            this.chk_newPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chk_newPass.CheckedState.BorderRadius = 0;
+            this.chk_newPass.CheckedState.BorderThickness = 0;
+            this.chk_newPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chk_newPass.Location = new System.Drawing.Point(1010, 119);
+            this.chk_newPass.Name = "chk_newPass";
+            this.chk_newPass.Size = new System.Drawing.Size(53, 17);
+            this.chk_newPass.TabIndex = 48;
+            this.chk_newPass.Text = "Show";
+            this.chk_newPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chk_newPass.UncheckedState.BorderRadius = 0;
+            this.chk_newPass.UncheckedState.BorderThickness = 0;
+            this.chk_newPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chk_newPass.CheckedChanged += new System.EventHandler(this.chk_newPass_CheckedChanged);
+            // 
+            // chc_ConfirmPass
+            // 
+            this.chc_ConfirmPass.AutoSize = true;
+            this.chc_ConfirmPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chc_ConfirmPass.CheckedState.BorderRadius = 0;
+            this.chc_ConfirmPass.CheckedState.BorderThickness = 0;
+            this.chc_ConfirmPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chc_ConfirmPass.Location = new System.Drawing.Point(533, 236);
+            this.chc_ConfirmPass.Name = "chc_ConfirmPass";
+            this.chc_ConfirmPass.Size = new System.Drawing.Size(53, 17);
+            this.chc_ConfirmPass.TabIndex = 47;
+            this.chc_ConfirmPass.Text = "Show";
+            this.chc_ConfirmPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chc_ConfirmPass.UncheckedState.BorderRadius = 0;
+            this.chc_ConfirmPass.UncheckedState.BorderThickness = 0;
+            this.chc_ConfirmPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chc_ConfirmPass.CheckedChanged += new System.EventHandler(this.chc_ConfirmPass_CheckedChanged);
+            // 
+            // chc_currentPass
+            // 
+            this.chc_currentPass.AutoSize = true;
+            this.chc_currentPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chc_currentPass.CheckedState.BorderRadius = 0;
+            this.chc_currentPass.CheckedState.BorderThickness = 0;
+            this.chc_currentPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chc_currentPass.Location = new System.Drawing.Point(533, 119);
+            this.chc_currentPass.Name = "chc_currentPass";
+            this.chc_currentPass.Size = new System.Drawing.Size(53, 17);
+            this.chc_currentPass.TabIndex = 46;
+            this.chc_currentPass.Text = "Show";
+            this.chc_currentPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chc_currentPass.UncheckedState.BorderRadius = 0;
+            this.chc_currentPass.UncheckedState.BorderThickness = 0;
+            this.chc_currentPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chc_currentPass.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label2.Location = new System.Drawing.Point(608, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "New Password:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label1.Location = new System.Drawing.Point(131, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 15);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Confirm Password:";
+            // 
+            // txt_newPass
+            // 
+            this.txt_newPass.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_newPass.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_newPass.BorderRadius = 6;
+            this.txt_newPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_newPass.DefaultText = "";
+            this.txt_newPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_newPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_newPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_newPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_newPass.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_newPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_newPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_newPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.txt_newPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_newPass.Location = new System.Drawing.Point(611, 102);
+            this.txt_newPass.Name = "txt_newPass";
+            this.txt_newPass.PasswordChar = '*';
+            this.txt_newPass.PlaceholderText = "";
+            this.txt_newPass.SelectedText = "";
+            this.txt_newPass.Size = new System.Drawing.Size(393, 34);
+            this.txt_newPass.TabIndex = 43;
             // 
             // txt_confirmPass
             // 
@@ -136,151 +267,21 @@
             this.txt_currentPass.TabIndex = 40;
             this.txt_currentPass.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
-            // txt_newPass
+            // guna2Elipse1
             // 
-            this.txt_newPass.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_newPass.BorderColor = System.Drawing.Color.DarkGray;
-            this.txt_newPass.BorderRadius = 6;
-            this.txt_newPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_newPass.DefaultText = "";
-            this.txt_newPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_newPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_newPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_newPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_newPass.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_newPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_newPass.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_newPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.txt_newPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_newPass.Location = new System.Drawing.Point(611, 102);
-            this.txt_newPass.Name = "txt_newPass";
-            this.txt_newPass.PasswordChar = '*';
-            this.txt_newPass.PlaceholderText = "";
-            this.txt_newPass.SelectedText = "";
-            this.txt_newPass.Size = new System.Drawing.Size(393, 34);
-            this.txt_newPass.TabIndex = 43;
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // label1
+            // guna2Elipse2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(131, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 15);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Confirm Password:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label2.Location = new System.Drawing.Point(608, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "New Password:";
-            // 
-            // chc_currentPass
-            // 
-            this.chc_currentPass.AutoSize = true;
-            this.chc_currentPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_currentPass.CheckedState.BorderRadius = 0;
-            this.chc_currentPass.CheckedState.BorderThickness = 0;
-            this.chc_currentPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_currentPass.Location = new System.Drawing.Point(533, 119);
-            this.chc_currentPass.Name = "chc_currentPass";
-            this.chc_currentPass.Size = new System.Drawing.Size(53, 17);
-            this.chc_currentPass.TabIndex = 46;
-            this.chc_currentPass.Text = "Show";
-            this.chc_currentPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chc_currentPass.UncheckedState.BorderRadius = 0;
-            this.chc_currentPass.UncheckedState.BorderThickness = 0;
-            this.chc_currentPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chc_currentPass.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
-            // 
-            // chc_ConfirmPass
-            // 
-            this.chc_ConfirmPass.AutoSize = true;
-            this.chc_ConfirmPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_ConfirmPass.CheckedState.BorderRadius = 0;
-            this.chc_ConfirmPass.CheckedState.BorderThickness = 0;
-            this.chc_ConfirmPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_ConfirmPass.Location = new System.Drawing.Point(533, 236);
-            this.chc_ConfirmPass.Name = "chc_ConfirmPass";
-            this.chc_ConfirmPass.Size = new System.Drawing.Size(53, 17);
-            this.chc_ConfirmPass.TabIndex = 47;
-            this.chc_ConfirmPass.Text = "Show";
-            this.chc_ConfirmPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chc_ConfirmPass.UncheckedState.BorderRadius = 0;
-            this.chc_ConfirmPass.UncheckedState.BorderThickness = 0;
-            this.chc_ConfirmPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chc_ConfirmPass.CheckedChanged += new System.EventHandler(this.chc_ConfirmPass_CheckedChanged);
-            // 
-            // chk_newPass
-            // 
-            this.chk_newPass.AutoSize = true;
-            this.chk_newPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chk_newPass.CheckedState.BorderRadius = 0;
-            this.chk_newPass.CheckedState.BorderThickness = 0;
-            this.chk_newPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chk_newPass.Location = new System.Drawing.Point(1010, 119);
-            this.chk_newPass.Name = "chk_newPass";
-            this.chk_newPass.Size = new System.Drawing.Size(53, 17);
-            this.chk_newPass.TabIndex = 48;
-            this.chk_newPass.Text = "Show";
-            this.chk_newPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chk_newPass.UncheckedState.BorderRadius = 0;
-            this.chk_newPass.UncheckedState.BorderThickness = 0;
-            this.chk_newPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chk_newPass.CheckedChanged += new System.EventHandler(this.chk_newPass_CheckedChanged);
-            // 
-            // btn_submit
-            // 
-            this.btn_submit.Animated = true;
-            this.btn_submit.BorderColor = System.Drawing.Color.Crimson;
-            this.btn_submit.BorderRadius = 5;
-            this.btn_submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_submit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_submit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_submit.ForeColor = System.Drawing.Color.White;
-            this.btn_submit.Location = new System.Drawing.Point(723, 322);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(92, 39);
-            this.btn_submit.TabIndex = 49;
-            this.btn_submit.Text = "Submit";
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Animated = true;
-            this.btn_cancel.BorderColor = System.Drawing.Color.Crimson;
-            this.btn_cancel.BorderRadius = 5;
-            this.btn_cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_cancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_cancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(894, 322);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(92, 39);
-            this.btn_cancel.TabIndex = 50;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.guna2Elipse2.BorderRadius = 10;
+            this.guna2Elipse2.TargetControl = this;
             // 
             // changePassAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1134, 435);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

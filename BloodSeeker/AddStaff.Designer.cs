@@ -57,12 +57,12 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton1);
             this.guna2Panel1.Controls.Add(this.btn_signUp);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
             this.guna2Panel1.Location = new System.Drawing.Point(0, -1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1166, 600);
