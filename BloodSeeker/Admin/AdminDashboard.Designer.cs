@@ -32,6 +32,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.settingsContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_settings = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_logout = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnl_home = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,8 +45,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_logout = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btn_settings = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnl_logout = new Guna.UI2.WinForms.Guna2Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pnl_settings = new Guna.UI2.WinForms.Guna2Panel();
@@ -81,13 +84,13 @@
             this.guna2Elipse15 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse16 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse17 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.settingsContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse18 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.menuExpand = new System.Windows.Forms.Timer(this.components);
-            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse19 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.settingsContainer.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.pnl_home.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -100,9 +103,6 @@
             this.pnl_history.SuspendLayout();
             this.pnl_inventory.SuspendLayout();
             this.staffPanel.SuspendLayout();
-            this.settingsContainer.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -131,6 +131,84 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1370, 749);
             this.guna2CustomGradientPanel1.TabIndex = 4;
+            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            // 
+            // settingsContainer
+            // 
+            this.settingsContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.settingsContainer.Controls.Add(this.guna2Panel9);
+            this.settingsContainer.Controls.Add(this.guna2Panel4);
+            this.settingsContainer.Location = new System.Drawing.Point(32, 494);
+            this.settingsContainer.Name = "settingsContainer";
+            this.settingsContainer.Size = new System.Drawing.Size(46, 96);
+            this.settingsContainer.TabIndex = 0;
+            // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.Controls.Add(this.btn_settings);
+            this.guna2Panel9.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(53, 43);
+            this.guna2Panel9.TabIndex = 1;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.BackColor = System.Drawing.Color.Transparent;
+            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_settings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_settings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_settings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_settings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_settings.FillColor = System.Drawing.Color.Transparent;
+            this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_settings.ForeColor = System.Drawing.Color.White;
+            this.btn_settings.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
+            this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
+            this.btn_settings.Location = new System.Drawing.Point(0, 1);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_settings.Size = new System.Drawing.Size(43, 42);
+            this.btn_settings.TabIndex = 8;
+            this.btn_settings.UseTransparentBackground = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            this.btn_settings.MouseLeave += new System.EventHandler(this.btn_settings_MouseLeave);
+            this.btn_settings.MouseHover += new System.EventHandler(this.btn_settings_MouseHover);
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Controls.Add(this.btn_logout);
+            this.guna2Panel4.Location = new System.Drawing.Point(3, 52);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(53, 43);
+            this.guna2Panel4.TabIndex = 0;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_logout.FillColor = System.Drawing.Color.Transparent;
+            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
+            this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
+            this.btn_logout.Location = new System.Drawing.Point(0, 0);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_logout.Size = new System.Drawing.Size(43, 42);
+            this.btn_logout.TabIndex = 9;
+            this.btn_logout.UseTransparentBackground = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
+            this.btn_logout.MouseHover += new System.EventHandler(this.btn_logout_MouseHover);
             // 
             // pnl_home
             // 
@@ -229,57 +307,6 @@
             this.panel1.Size = new System.Drawing.Size(1190, 600);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.Transparent;
-            this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_logout.FillColor = System.Drawing.Color.Transparent;
-            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
-            this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_logout.Location = new System.Drawing.Point(0, 0);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_logout.Size = new System.Drawing.Size(43, 42);
-            this.btn_logout.TabIndex = 9;
-            this.btn_logout.UseTransparentBackground = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
-            this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
-            this.btn_logout.MouseHover += new System.EventHandler(this.btn_logout_MouseHover);
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.BackColor = System.Drawing.Color.Transparent;
-            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_settings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_settings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_settings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_settings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_settings.FillColor = System.Drawing.Color.Transparent;
-            this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_settings.ForeColor = System.Drawing.Color.White;
-            this.btn_settings.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
-            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
-            this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_settings.Location = new System.Drawing.Point(0, 1);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_settings.Size = new System.Drawing.Size(43, 42);
-            this.btn_settings.TabIndex = 8;
-            this.btn_settings.UseTransparentBackground = true;
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
-            this.btn_settings.MouseLeave += new System.EventHandler(this.btn_settings_MouseLeave);
-            this.btn_settings.MouseHover += new System.EventHandler(this.btn_settings_MouseHover);
             // 
             // pnl_logout
             // 
@@ -673,35 +700,9 @@
             this.guna2Elipse17.BorderRadius = 15;
             this.guna2Elipse17.TargetControl = this.staffPanel;
             // 
-            // settingsContainer
-            // 
-            this.settingsContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.settingsContainer.Controls.Add(this.guna2Panel9);
-            this.settingsContainer.Controls.Add(this.guna2Panel4);
-            this.settingsContainer.Location = new System.Drawing.Point(32, 494);
-            this.settingsContainer.Name = "settingsContainer";
-            this.settingsContainer.Size = new System.Drawing.Size(46, 96);
-            this.settingsContainer.TabIndex = 0;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Controls.Add(this.btn_logout);
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 52);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(53, 43);
-            this.guna2Panel4.TabIndex = 0;
-            // 
             // menuExpand
             // 
             this.menuExpand.Tick += new System.EventHandler(this.menuExpand_Tick);
-            // 
-            // guna2Panel9
-            // 
-            this.guna2Panel9.Controls.Add(this.btn_settings);
-            this.guna2Panel9.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(53, 43);
-            this.guna2Panel9.TabIndex = 1;
             // 
             // AdminDashboard
             // 
@@ -716,6 +717,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.settingsContainer.ResumeLayout(false);
+            this.guna2Panel9.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
             this.pnl_home.ResumeLayout(false);
             this.pnl_home.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -737,9 +741,6 @@
             this.pnl_inventory.PerformLayout();
             this.staffPanel.ResumeLayout(false);
             this.staffPanel.PerformLayout();
-            this.settingsContainer.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

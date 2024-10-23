@@ -83,6 +83,7 @@ namespace BloodSeeker.Client
 
         private void btn_history_Click(object sender, EventArgs e)
         {
+            changePanel(new ClientHistory1());
             btn_history.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);            
@@ -97,6 +98,7 @@ namespace BloodSeeker.Client
 
         private void btn_inventory_Click(object sender, EventArgs e)
         {
+            changePanel(new ClientInventory1());
             btn_inventory.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
@@ -110,6 +112,7 @@ namespace BloodSeeker.Client
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
+            changePanel(new ClientSettings1());
             btn_settings.FillColor = Color.FromArgb(20, 132, 205);
             btn_inventory.FillColor = Color.FromArgb(83, 0, 0);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);

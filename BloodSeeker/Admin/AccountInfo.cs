@@ -17,6 +17,7 @@ namespace BloodSeeker.Admin
             InitializeComponent();
         }
 
+        string photopath;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -107,6 +108,38 @@ namespace BloodSeeker.Admin
         private void txt_email_TextChanged(object sender, EventArgs e)
         {
             showButton();
+        }
+
+        public void changePanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(form);
+            form.Show();
+        }
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog
+                {
+                    Title = "Select Photo",
+                    FileName = ""
+                };
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    img_pfp.Image = Image.FromFile(openFileDialog1.FileName);
+                    photopath = openFileDialog1.FileName;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

@@ -27,6 +27,11 @@ namespace BloodSeeker.Admin
 
         }
 
+        private void flowPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void AdminAppointments_Load(object sender, EventArgs e)
         {
             CalendarFrame calendarFrame = new CalendarFrame(flowPanel2);

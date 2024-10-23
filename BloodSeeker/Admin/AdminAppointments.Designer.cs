@@ -51,9 +51,8 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.Control;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.Control;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1555, 738);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1040, 600);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
@@ -61,7 +60,8 @@
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(0, 100);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 81);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -74,17 +74,15 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.flowPanel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1555, 578);
-            this.splitContainer1.SplitterDistance = 588;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1040, 470);
+            this.splitContainer1.SplitterDistance = 393;
             this.splitContainer1.TabIndex = 1;
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(532, 0);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(399, 0);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(13, 578);
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 470);
             this.guna2VSeparator1.TabIndex = 9;
             // 
             // label2
@@ -93,10 +91,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label2.Location = new System.Drawing.Point(45, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(34, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 29);
+            this.label2.Size = new System.Drawing.Size(83, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Timeline";
             // 
@@ -106,10 +103,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowPanel2.AutoScroll = true;
             this.flowPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.flowPanel2.Location = new System.Drawing.Point(17, 115);
+            this.flowPanel2.Location = new System.Drawing.Point(13, 93);
+            this.flowPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowPanel2.Name = "flowPanel2";
-            this.flowPanel2.Size = new System.Drawing.Size(853, 425);
+            this.flowPanel2.Size = new System.Drawing.Size(560, 345);
             this.flowPanel2.TabIndex = 0;
+            this.flowPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowPanel2_Paint);
             // 
             // label1
             // 
@@ -117,22 +116,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(39, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(29, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 54);
+            this.label1.Size = new System.Drawing.Size(213, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Appointments";
             // 
             // AdminAppointments
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1555, 738);
+            this.ClientSize = new System.Drawing.Size(1040, 600);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminAppointments";
             this.ShowIcon = false;
             this.Text = "AdminAppointments";
