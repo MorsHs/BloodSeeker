@@ -168,7 +168,8 @@
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Controllers\AddStaffController.cs" />
+    <Compile Include="Controllers\Admin\AddStaffController.cs" />
+    <Compile Include="Controllers\Admin\StaffListController.cs" />
     <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,17 +194,30 @@
     <Compile Include="Admin\TransacitionHistory.Designer.cs">
       <DependentUpon>TransacitionHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Person.cs" />
     <Compile Include="Client\ClienntLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Client\ClienntLogin.Designer.cs">
       <DependentUpon>ClienntLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client\ClientAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientAppointment.Designer.cs">
+      <DependentUpon>ClientAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client\ClientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Client\ClientDashboard.Designer.cs">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ClientInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientInformation.Designer.cs">
+      <DependentUpon>ClientInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Appointment Bar\Appointment.cs">
       <SubType>UserControl</SubType>
@@ -236,6 +250,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="Model\Admin\StaffRepository.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,8 +296,14 @@
     <EmbeddedResource Include="Client\ClienntLogin.resx">
       <DependentUpon>ClienntLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientAppointment.resx">
+      <DependentUpon>ClientAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientInformation.resx">
+      <DependentUpon>ClientInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Appointment Bar\Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
@@ -339,6 +360,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\Client\" />
+    <Folder Include="Model\Client\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

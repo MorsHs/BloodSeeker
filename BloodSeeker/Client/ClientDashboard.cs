@@ -53,6 +53,7 @@ namespace BloodSeeker.Client
 
         private void btn_appointment_Click(object sender, EventArgs e)
         {
+            changePanel(new ClientAppointment());
             btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
@@ -67,6 +68,7 @@ namespace BloodSeeker.Client
 
         private void btn_info_Click(object sender, EventArgs e)
         {
+            changePanel(new ClientInfo());
             btn_info.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_appointment.FillColor = Color.FromArgb(83, 0, 0);

@@ -40,32 +40,51 @@ namespace BloodSeeker
         public String registerUser()
         {
              global = new Global();
-            global.fncConnectToDatabase();
-            global.sqlCommand.Parameters.Clear();
-            //Dissapointing na dle nako makuha pa ang clear ug command text into one method kay wla koy time and lazy to do
-            global.sqlCommand.CommandText = "prc_createAccountForAdminStaffClient";
-            global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            global.sqlCommand.Parameters.AddWithValue("p_first_name", firstname);
-            global.sqlCommand.Parameters.AddWithValue("p_last_name", lastname);
-            global.sqlCommand.Parameters.AddWithValue("p_address", address);
-            global.sqlCommand.Parameters.AddWithValue("p_mobileNum", phone);
-            global.sqlCommand.Parameters.AddWithValue("p_emailAdd", email);
-            global.sqlCommand.Parameters.AddWithValue("p_birthDate", birthdate);
-            global.sqlCommand.Parameters.AddWithValue("p_sex", sex);
-            global.sqlCommand.Parameters.AddWithValue("p_username", username);
-            global.sqlCommand.Parameters.AddWithValue("p_password", password);
-            
-            return duplicateMessage(global);
+            try
+            {
+
+
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                //Dissapointing na dle nako makuha pa ang clear ug command text into one method kay wla koy time and lazy to do
+                global.sqlCommand.CommandText = "prc_createAccountForAdminStaffClient";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_first_name", firstname);
+                global.sqlCommand.Parameters.AddWithValue("p_last_name", lastname);
+                global.sqlCommand.Parameters.AddWithValue("p_address", address);
+                global.sqlCommand.Parameters.AddWithValue("p_mobileNum", phone);
+                global.sqlCommand.Parameters.AddWithValue("p_emailAdd", email);
+                global.sqlCommand.Parameters.AddWithValue("p_birthDate", birthdate);
+                global.sqlCommand.Parameters.AddWithValue("p_sex", sex);
+                global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                global.sqlCommand.Parameters.AddWithValue("p_password", password);
+                return duplicateMessage(global);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
         }
         public String duplicateMessage(Global global)
         {
-            global.sqlReader = global.sqlCommand.ExecuteReader();
-            while (global.sqlReader.Read())
+            try
             {
-                if (global.sqlReader["error_message"] != DBNull.Value)
+                global.sqlReader = global.sqlCommand.ExecuteReader();
+                while (global.sqlReader.Read())
                 {
-                   return global.sqlReader["error_message"].ToString();
+                    if (global.sqlReader["error_message"] != DBNull.Value)
+                    {
+                        return global.sqlReader["error_message"].ToString();
+                    }
                 }
+                global.sqlTransaction.Commit();
+                global.fncConnectToDatabase();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+                global.sqlTransaction.Rollback();
             }
             return null;
         }
