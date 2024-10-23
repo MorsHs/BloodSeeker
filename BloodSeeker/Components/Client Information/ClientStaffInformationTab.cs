@@ -1,5 +1,4 @@
-﻿using BloodSeeker.Admin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,11 +31,6 @@ namespace BloodSeeker.Components.Client_Information
             clientsexlbl.Text = _sex;
             clientemaillbl.Text = _email;
             clientphonelbl.Text = _phone;
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            var viewMore = new AdminDashboard();
         }
     }
 }

@@ -42,6 +42,8 @@ namespace BloodSeeker
              global = new Global();
             try
             {
+
+
                 global.fncConnectToDatabase();
                 global.sqlCommand.Parameters.Clear();
                 //Dissapointing na dle nako makuha pa ang clear ug command text into one method kay wla koy time and lazy to do
@@ -76,11 +78,13 @@ namespace BloodSeeker
                         return global.sqlReader["error_message"].ToString();
                     }
                 }
+                global.sqlTransaction.Commit();
                 global.fncConnectToDatabase();
             }
             catch(Exception e)
             {
-                //If no "error_message" do nothing
+                MessageBox.Show(e.Message);
+                global.sqlTransaction.Rollback();
             }
             return null;
         }
