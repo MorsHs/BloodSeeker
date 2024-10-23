@@ -155,6 +155,12 @@
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Client Information\ViewMoreClientStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Client Information\ViewMoreClientStaff.Designer.cs">
+      <DependentUpon>ViewMoreClientStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Admin\AddStaffController.cs" />
     <Compile Include="Controllers\Admin\StaffListController.cs" />
     <Compile Include="Admin\Dashboard.cs">
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Client Information\ClientStaffInformationTab.resx">
       <DependentUpon>ClientStaffInformationTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Client Information\ViewMoreClientStaff.resx">
+      <DependentUpon>ViewMoreClientStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
