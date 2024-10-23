@@ -40,7 +40,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_logout = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_settings = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnl_logout = new Guna.UI2.WinForms.Guna2Panel();
@@ -82,12 +81,17 @@
             this.guna2Elipse15 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse16 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse17 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.settingsContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Elipse18 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.menuExpand = new System.Windows.Forms.Timer(this.components);
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Elipse19 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.pnl_home.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
             this.pnl_logout.SuspendLayout();
             this.pnl_settings.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -96,6 +100,9 @@
             this.pnl_history.SuspendLayout();
             this.pnl_inventory.SuspendLayout();
             this.staffPanel.SuspendLayout();
+            this.settingsContainer.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -104,10 +111,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.guna2CustomGradientPanel1.Controls.Add(this.settingsContainer);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_home);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_logout);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_settings);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
@@ -116,10 +123,10 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_history);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_inventory);
             this.guna2CustomGradientPanel1.Controls.Add(this.staffPanel);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.Control;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1370, 749);
@@ -158,6 +165,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1370, 62);
             this.panel2.TabIndex = 20;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // guna2CirclePictureBox1
             // 
@@ -215,21 +223,12 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Location = new System.Drawing.Point(180, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1140, 600);
+            this.panel1.Size = new System.Drawing.Size(1190, 600);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.guna2Panel2.Controls.Add(this.btn_logout);
-            this.guna2Panel2.Controls.Add(this.btn_settings);
-            this.guna2Panel2.Location = new System.Drawing.Point(32, 496);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(46, 96);
-            this.guna2Panel2.TabIndex = 3;
             // 
             // btn_logout
             // 
@@ -245,7 +244,7 @@
             this.btn_logout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_logout.Location = new System.Drawing.Point(0, 51);
+            this.btn_logout.Location = new System.Drawing.Point(0, 0);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -271,13 +270,14 @@
             this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_settings.Location = new System.Drawing.Point(0, 3);
+            this.btn_settings.Location = new System.Drawing.Point(0, 1);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btn_settings.Size = new System.Drawing.Size(43, 42);
             this.btn_settings.TabIndex = 8;
             this.btn_settings.UseTransparentBackground = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             this.btn_settings.MouseLeave += new System.EventHandler(this.btn_settings_MouseLeave);
             this.btn_settings.MouseHover += new System.EventHandler(this.btn_settings_MouseHover);
             // 
@@ -285,7 +285,7 @@
             // 
             this.pnl_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.pnl_logout.Controls.Add(this.label15);
-            this.pnl_logout.Location = new System.Drawing.Point(52, 547);
+            this.pnl_logout.Location = new System.Drawing.Point(52, 542);
             this.pnl_logout.Name = "pnl_logout";
             this.pnl_logout.Size = new System.Drawing.Size(116, 43);
             this.pnl_logout.TabIndex = 14;
@@ -602,7 +602,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 45;
-            this.guna2Elipse2.TargetControl = this.guna2Panel2;
             // 
             // guna2Elipse3
             // 
@@ -658,7 +657,8 @@
             // 
             // guna2Elipse14
             // 
-            this.guna2Elipse14.BorderRadius = 15;
+            this.guna2Elipse14.BorderRadius = 45;
+            this.guna2Elipse14.TargetControl = this.settingsContainer;
             // 
             // guna2Elipse15
             // 
@@ -672,6 +672,36 @@
             // 
             this.guna2Elipse17.BorderRadius = 15;
             this.guna2Elipse17.TargetControl = this.staffPanel;
+            // 
+            // settingsContainer
+            // 
+            this.settingsContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.settingsContainer.Controls.Add(this.guna2Panel9);
+            this.settingsContainer.Controls.Add(this.guna2Panel4);
+            this.settingsContainer.Location = new System.Drawing.Point(32, 494);
+            this.settingsContainer.Name = "settingsContainer";
+            this.settingsContainer.Size = new System.Drawing.Size(46, 96);
+            this.settingsContainer.TabIndex = 0;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Controls.Add(this.btn_logout);
+            this.guna2Panel4.Location = new System.Drawing.Point(3, 52);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(53, 43);
+            this.guna2Panel4.TabIndex = 0;
+            // 
+            // menuExpand
+            // 
+            this.menuExpand.Tick += new System.EventHandler(this.menuExpand_Tick);
+            // 
+            // guna2Panel9
+            // 
+            this.guna2Panel9.Controls.Add(this.btn_settings);
+            this.guna2Panel9.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(53, 43);
+            this.guna2Panel9.TabIndex = 1;
             // 
             // AdminDashboard
             // 
@@ -692,7 +722,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
             this.pnl_logout.ResumeLayout(false);
             this.pnl_logout.PerformLayout();
             this.pnl_settings.ResumeLayout(false);
@@ -708,6 +737,9 @@
             this.pnl_inventory.PerformLayout();
             this.staffPanel.ResumeLayout(false);
             this.staffPanel.PerformLayout();
+            this.settingsContainer.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -736,7 +768,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse11;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse12;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2CircleButton btn_logout;
         private Guna.UI2.WinForms.Guna2CircleButton btn_settings;
         private System.Windows.Forms.Label label15;
@@ -768,5 +799,11 @@
         private Guna.UI2.WinForms.Guna2Panel staffPanel;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse17;
+        private System.Windows.Forms.FlowLayoutPanel settingsContainer;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse18;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private System.Windows.Forms.Timer menuExpand;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse19;
     }
 }
