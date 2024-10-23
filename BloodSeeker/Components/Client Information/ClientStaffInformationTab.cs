@@ -37,6 +37,21 @@ namespace BloodSeeker.Components.Client_Information
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             var viewMore = new AdminDashboard();
+            using(ClientInfo uu = new ClientInfo())
+            {
+                viewMore.StartPosition = FormStartPosition.Manual;
+                viewMore.FormBorderStyle = FormBorderStyle.None;
+                viewMore.Opacity = .70d;
+                viewMore.BackColor = Color.Black;
+                viewMore.WindowState = FormWindowState.Maximized;
+                viewMore.TopMost = true;
+                viewMore.Location = this.Location;
+                viewMore.ShowInTaskbar = false;
+                uu.Show();
+                uu.Owner = viewMore;
+                uu.ShowDialog();
+                viewMore.Dispose();
+            }
         }
     }
 }
