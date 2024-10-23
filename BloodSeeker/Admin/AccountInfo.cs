@@ -21,5 +21,27 @@ namespace BloodSeeker.Admin
         {
 
         }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            btn_Submit.Show();
+            btn_cancel.Show();
+        }
+
+        private void btn_cancel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            btn_Submit.Hide();
+            btn_cancel.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            txt_username.Enabled = true;
+        }
     }
 }

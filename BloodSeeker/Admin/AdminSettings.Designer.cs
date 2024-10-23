@@ -99,9 +99,9 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Location = new System.Drawing.Point(17, 170);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 170);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1121, 435);
+            this.guna2Panel1.Size = new System.Drawing.Size(1138, 435);
             this.guna2Panel1.TabIndex = 6;
             // 
             // AdminSettings
