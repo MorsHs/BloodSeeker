@@ -45,6 +45,7 @@ namespace BloodSeeker.Admin
         private void AdminSettings_Load(object sender, EventArgs e)
         {
             //btn_account.BackColor = Color.FromArgb(57, 57, 57);
+            btn_acc.FillColor = Color.OrangeRed;
             changePanel(new AccountInfo());
         }
 
@@ -54,6 +55,27 @@ namespace BloodSeeker.Admin
             {
                 
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            btn_secu.FillColor = Color.FromArgb(155, 0, 0);
+            btn_acc.FillColor = Color.OrangeRed;
+            changePanel(new AccountInfo());
+
+        }
+
+        private void btn_secu_Click(object sender, EventArgs e)
+        {
+            btn_secu.FillColor = Color.OrangeRed;
+            btn_acc.FillColor = Color.FromArgb(155, 0, 0);
+
+            changePanel(new AdminSecurity());
         }
     }
 }

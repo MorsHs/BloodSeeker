@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountInfo));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_Submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editEA = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editCN = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editAddress = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editLN = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editFN = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_editUsername = new Guna.UI2.WinForms.Guna2Button();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_contactNo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,65 +55,64 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_Submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel1.SuspendLayout();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.btn_Submit);
-            this.panel1.Controls.Add(this.guna2GradientTileButton1);
-            this.panel1.Controls.Add(this.btn_cancel);
-            this.panel1.Controls.Add(this.guna2Button7);
-            this.panel1.Controls.Add(this.guna2Button6);
-            this.panel1.Controls.Add(this.guna2Button5);
-            this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Controls.Add(this.txt_email);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txt_contactNo);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txt_address);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txt_lastname);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txt_firstname);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txt_username);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1138, 435);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.btn_Submit);
+            this.guna2Panel1.Controls.Add(this.btn_cancel);
+            this.guna2Panel1.Controls.Add(this.guna2Button7);
+            this.guna2Panel1.Controls.Add(this.btn_editEA);
+            this.guna2Panel1.Controls.Add(this.btn_editCN);
+            this.guna2Panel1.Controls.Add(this.btn_editAddress);
+            this.guna2Panel1.Controls.Add(this.btn_editLN);
+            this.guna2Panel1.Controls.Add(this.btn_editFN);
+            this.guna2Panel1.Controls.Add(this.btn_editUsername);
+            this.guna2Panel1.Controls.Add(this.txt_email);
+            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.txt_contactNo);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.txt_address);
+            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.txt_lastname);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.txt_firstname);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.txt_username);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel1.Location = new System.Drawing.Point(-4, -2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1138, 435);
+            this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2GradientTileButton1
+            // btn_Submit
             // 
-            this.guna2GradientTileButton1.Animated = true;
-            this.guna2GradientTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton1.BorderColor = System.Drawing.Color.Crimson;
-            this.guna2GradientTileButton1.BorderRadius = 5;
-            this.guna2GradientTileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientTileButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientTileButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton1.Location = new System.Drawing.Point(596, 454);
-            this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
-            this.guna2GradientTileButton1.Size = new System.Drawing.Size(92, 39);
-            this.guna2GradientTileButton1.TabIndex = 22;
-            this.guna2GradientTileButton1.Text = "Submit";
+            this.btn_Submit.Animated = true;
+            this.btn_Submit.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Submit.BorderColor = System.Drawing.Color.Crimson;
+            this.btn_Submit.BorderRadius = 5;
+            this.btn_Submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Submit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Submit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Submit.ForeColor = System.Drawing.Color.White;
+            this.btn_Submit.Location = new System.Drawing.Point(446, 391);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(92, 39);
+            this.btn_Submit.TabIndex = 46;
+            this.btn_Submit.Text = "Submit";
             // 
             // btn_cancel
             // 
@@ -128,12 +129,11 @@
             this.btn_cancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(453, 386);
+            this.btn_cancel.Location = new System.Drawing.Point(570, 391);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(92, 39);
-            this.btn_cancel.TabIndex = 21;
+            this.btn_cancel.TabIndex = 45;
             this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.TextChanged += new System.EventHandler(this.btn_cancel_TextChanged);
             // 
             // guna2Button7
             // 
@@ -146,107 +146,112 @@
             this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(510, 104);
+            this.guna2Button7.Location = new System.Drawing.Point(627, 109);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button7.TabIndex = 20;
+            this.guna2Button7.TabIndex = 44;
             // 
-            // guna2Button6
+            // btn_editEA
             // 
-            this.guna2Button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button6.BackgroundImage")));
-            this.guna2Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(796, 352);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button6.TabIndex = 19;
+            this.btn_editEA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editEA.BackgroundImage")));
+            this.btn_editEA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editEA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editEA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editEA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editEA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editEA.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editEA.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editEA.ForeColor = System.Drawing.Color.White;
+            this.btn_editEA.Location = new System.Drawing.Point(913, 357);
+            this.btn_editEA.Name = "btn_editEA";
+            this.btn_editEA.Size = new System.Drawing.Size(15, 15);
+            this.btn_editEA.TabIndex = 43;
+            this.btn_editEA.Click += new System.EventHandler(this.btn_editEA_Click);
             // 
-            // guna2Button5
+            // btn_editCN
             // 
-            this.guna2Button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button5.BackgroundImage")));
-            this.guna2Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(796, 277);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button5.TabIndex = 18;
+            this.btn_editCN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editCN.BackgroundImage")));
+            this.btn_editCN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editCN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editCN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editCN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editCN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editCN.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editCN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editCN.ForeColor = System.Drawing.Color.White;
+            this.btn_editCN.Location = new System.Drawing.Point(913, 282);
+            this.btn_editCN.Name = "btn_editCN";
+            this.btn_editCN.Size = new System.Drawing.Size(15, 15);
+            this.btn_editCN.TabIndex = 42;
+            this.btn_editCN.Click += new System.EventHandler(this.btn_editCN_Click);
             // 
-            // guna2Button4
+            // btn_editAddress
             // 
-            this.guna2Button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button4.BackgroundImage")));
-            this.guna2Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(796, 213);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button4.TabIndex = 17;
+            this.btn_editAddress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editAddress.BackgroundImage")));
+            this.btn_editAddress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editAddress.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editAddress.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editAddress.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editAddress.ForeColor = System.Drawing.Color.White;
+            this.btn_editAddress.Location = new System.Drawing.Point(913, 218);
+            this.btn_editAddress.Name = "btn_editAddress";
+            this.btn_editAddress.Size = new System.Drawing.Size(15, 15);
+            this.btn_editAddress.TabIndex = 41;
+            this.btn_editAddress.Click += new System.EventHandler(this.btn_editAddress_Click);
             // 
-            // guna2Button3
+            // btn_editLN
             // 
-            this.guna2Button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button3.BackgroundImage")));
-            this.guna2Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(289, 352);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button3.TabIndex = 16;
+            this.btn_editLN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editLN.BackgroundImage")));
+            this.btn_editLN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editLN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editLN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editLN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editLN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editLN.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editLN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editLN.ForeColor = System.Drawing.Color.White;
+            this.btn_editLN.Location = new System.Drawing.Point(406, 357);
+            this.btn_editLN.Name = "btn_editLN";
+            this.btn_editLN.Size = new System.Drawing.Size(15, 15);
+            this.btn_editLN.TabIndex = 40;
+            this.btn_editLN.Click += new System.EventHandler(this.btn_editLN_Click);
             // 
-            // guna2Button2
+            // btn_editFN
             // 
-            this.guna2Button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button2.BackgroundImage")));
-            this.guna2Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(289, 277);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button2.TabIndex = 15;
+            this.btn_editFN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editFN.BackgroundImage")));
+            this.btn_editFN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editFN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editFN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editFN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editFN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editFN.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editFN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editFN.ForeColor = System.Drawing.Color.White;
+            this.btn_editFN.Location = new System.Drawing.Point(406, 282);
+            this.btn_editFN.Name = "btn_editFN";
+            this.btn_editFN.Size = new System.Drawing.Size(15, 15);
+            this.btn_editFN.TabIndex = 39;
+            this.btn_editFN.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2Button1
+            // btn_editUsername
             // 
-            this.guna2Button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button1.BackgroundImage")));
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(287, 213);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button1.TabIndex = 14;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_editUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editUsername.BackgroundImage")));
+            this.btn_editUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editUsername.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editUsername.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_editUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_editUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_editUsername.FillColor = System.Drawing.Color.Transparent;
+            this.btn_editUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_editUsername.ForeColor = System.Drawing.Color.White;
+            this.btn_editUsername.Location = new System.Drawing.Point(404, 218);
+            this.btn_editUsername.Name = "btn_editUsername";
+            this.btn_editUsername.Size = new System.Drawing.Size(15, 15);
+            this.btn_editUsername.TabIndex = 38;
+            this.btn_editUsername.Click += new System.EventHandler(this.btn_editUsername_Click);
             // 
             // txt_email
             // 
@@ -263,23 +268,24 @@
             this.txt_email.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(604, 342);
+            this.txt_email.Location = new System.Drawing.Point(721, 347);
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
             this.txt_email.PlaceholderText = "";
             this.txt_email.SelectedText = "";
             this.txt_email.Size = new System.Drawing.Size(186, 34);
-            this.txt_email.TabIndex = 13;
+            this.txt_email.TabIndex = 37;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label7.Location = new System.Drawing.Point(601, 325);
+            this.label7.Location = new System.Drawing.Point(718, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 15);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 36;
             this.label7.Text = "Email Address:";
             // 
             // txt_contactNo
@@ -297,23 +303,24 @@
             this.txt_contactNo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_contactNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_contactNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_contactNo.Location = new System.Drawing.Point(604, 267);
+            this.txt_contactNo.Location = new System.Drawing.Point(721, 272);
             this.txt_contactNo.Name = "txt_contactNo";
             this.txt_contactNo.PasswordChar = '\0';
             this.txt_contactNo.PlaceholderText = "";
             this.txt_contactNo.SelectedText = "";
             this.txt_contactNo.Size = new System.Drawing.Size(186, 34);
-            this.txt_contactNo.TabIndex = 11;
+            this.txt_contactNo.TabIndex = 35;
+            this.txt_contactNo.TextChanged += new System.EventHandler(this.txt_contactNo_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label6.Location = new System.Drawing.Point(601, 250);
+            this.label6.Location = new System.Drawing.Point(718, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 15);
-            this.label6.TabIndex = 10;
+            this.label6.TabIndex = 34;
             this.label6.Text = "Contact Number:";
             // 
             // txt_address
@@ -331,23 +338,24 @@
             this.txt_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_address.Location = new System.Drawing.Point(604, 203);
+            this.txt_address.Location = new System.Drawing.Point(721, 208);
             this.txt_address.Name = "txt_address";
             this.txt_address.PasswordChar = '\0';
             this.txt_address.PlaceholderText = "";
             this.txt_address.SelectedText = "";
             this.txt_address.Size = new System.Drawing.Size(186, 34);
-            this.txt_address.TabIndex = 9;
+            this.txt_address.TabIndex = 33;
+            this.txt_address.TextChanged += new System.EventHandler(this.txt_address_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label5.Location = new System.Drawing.Point(601, 186);
+            this.label5.Location = new System.Drawing.Point(718, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 15);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 32;
             this.label5.Text = "Address:";
             // 
             // txt_lastname
@@ -365,23 +373,24 @@
             this.txt_lastname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_lastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_lastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastname.Location = new System.Drawing.Point(101, 342);
+            this.txt_lastname.Location = new System.Drawing.Point(218, 347);
             this.txt_lastname.Name = "txt_lastname";
             this.txt_lastname.PasswordChar = '\0';
             this.txt_lastname.PlaceholderText = "";
             this.txt_lastname.SelectedText = "";
             this.txt_lastname.Size = new System.Drawing.Size(186, 34);
-            this.txt_lastname.TabIndex = 7;
+            this.txt_lastname.TabIndex = 31;
+            this.txt_lastname.TextChanged += new System.EventHandler(this.txt_lastname_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label4.Location = new System.Drawing.Point(101, 325);
+            this.label4.Location = new System.Drawing.Point(218, 330);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 15);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 30;
             this.label4.Text = "Lastname:";
             // 
             // txt_firstname
@@ -400,23 +409,24 @@
             this.txt_firstname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_firstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_firstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstname.Location = new System.Drawing.Point(98, 267);
+            this.txt_firstname.Location = new System.Drawing.Point(215, 272);
             this.txt_firstname.Name = "txt_firstname";
             this.txt_firstname.PasswordChar = '\0';
             this.txt_firstname.PlaceholderText = "";
             this.txt_firstname.SelectedText = "";
             this.txt_firstname.Size = new System.Drawing.Size(186, 34);
-            this.txt_firstname.TabIndex = 5;
+            this.txt_firstname.TabIndex = 29;
+            this.txt_firstname.TextChanged += new System.EventHandler(this.txt_firstname_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label3.Location = new System.Drawing.Point(99, 250);
+            this.label3.Location = new System.Drawing.Point(216, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 15);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 28;
             this.label3.Text = "Firstname:";
             // 
             // txt_username
@@ -435,24 +445,24 @@
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Location = new System.Drawing.Point(98, 204);
+            this.txt_username.Location = new System.Drawing.Point(215, 209);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderText = "";
             this.txt_username.SelectedText = "";
             this.txt_username.Size = new System.Drawing.Size(186, 34);
-            this.txt_username.TabIndex = 3;
-            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
+            this.txt_username.TabIndex = 27;
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label2.Location = new System.Drawing.Point(101, 186);
+            this.label2.Location = new System.Drawing.Point(218, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 15);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 26;
             this.label2.Text = "Username:";
             // 
             // label1
@@ -460,69 +470,66 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.label1.Location = new System.Drawing.Point(370, 134);
+            this.label1.Location = new System.Drawing.Point(487, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 30);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 25;
             this.label1.Text = "Jamyca Lubay";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(378, 8);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(495, 13);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(126, 123);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabIndex = 24;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // btn_Submit
+            // guna2Elipse1
             // 
-            this.btn_Submit.Animated = true;
-            this.btn_Submit.BackColor = System.Drawing.Color.LightGray;
-            this.btn_Submit.BorderColor = System.Drawing.Color.Crimson;
-            this.btn_Submit.BorderRadius = 5;
-            this.btn_Submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Submit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Submit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_Submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_Submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Submit.ForeColor = System.Drawing.Color.White;
-            this.btn_Submit.Location = new System.Drawing.Point(329, 386);
-            this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Size = new System.Drawing.Size(92, 39);
-            this.btn_Submit.TabIndex = 23;
-            this.btn_Submit.Text = "Submit";
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this.guna2Panel1;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 10;
+            this.guna2Elipse2.TargetControl = this;
             // 
             // AccountInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 435);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccountInfo";
             this.Text = "AccountInfo";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btn_Submit;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btn_cancel;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btn_editEA;
+        private Guna.UI2.WinForms.Guna2Button btn_editCN;
+        private Guna.UI2.WinForms.Guna2Button btn_editAddress;
+        private Guna.UI2.WinForms.Guna2Button btn_editLN;
+        private Guna.UI2.WinForms.Guna2Button btn_editFN;
+        private Guna.UI2.WinForms.Guna2Button btn_editUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txt_email;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txt_contactNo;
+        private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txt_address;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txt_lastname;
@@ -530,19 +537,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_firstname;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txt_username;
-        private Guna.UI2.WinForms.Guna2TextBox txt_email;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txt_contactNo;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btn_cancel;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btn_Submit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }
