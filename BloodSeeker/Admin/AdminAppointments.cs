@@ -22,10 +22,16 @@ namespace BloodSeeker.Admin
            
         }
 
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void AdminAppointments_Load(object sender, EventArgs e)
         {
             CalendarFrame calendarFrame = new CalendarFrame(flowPanel2);
             splitContainer1.Panel1.Controls.Add(calendarFrame);
+          
         }
 
         

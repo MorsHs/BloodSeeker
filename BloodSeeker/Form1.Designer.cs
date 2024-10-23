@@ -35,9 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_exit = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -186,38 +183,40 @@
             this.femalecmbx.CheckedState.BorderRadius = 0;
             this.femalecmbx.CheckedState.BorderThickness = 0;
             this.femalecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.femalecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.femalecmbx.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femalecmbx.ForeColor = System.Drawing.Color.White;
             this.femalecmbx.Location = new System.Drawing.Point(494, 326);
             this.femalecmbx.Name = "femalecmbx";
-            this.femalecmbx.Size = new System.Drawing.Size(81, 25);
+            this.femalecmbx.Size = new System.Drawing.Size(78, 25);
             this.femalecmbx.TabIndex = 13;
             this.femalecmbx.Text = "Female";
             this.femalecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
             this.femalecmbx.UncheckedState.BorderRadius = 0;
             this.femalecmbx.UncheckedState.BorderThickness = 0;
-            this.femalecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
+            this.femalecmbx.UncheckedState.FillColor = System.Drawing.Color.DarkRed;
             this.femalecmbx.CheckedChanged += new System.EventHandler(this.femalecmbx_CheckedChanged);
             // 
             // malecmbx
             // 
             this.malecmbx.Animated = true;
             this.malecmbx.AutoSize = true;
+            this.malecmbx.BackColor = System.Drawing.Color.Transparent;
             this.malecmbx.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.malecmbx.CheckedState.BorderRadius = 0;
             this.malecmbx.CheckedState.BorderThickness = 0;
             this.malecmbx.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.malecmbx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.malecmbx.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.malecmbx.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.malecmbx.Location = new System.Drawing.Point(416, 326);
             this.malecmbx.Name = "malecmbx";
-            this.malecmbx.Size = new System.Drawing.Size(65, 25);
+            this.malecmbx.Size = new System.Drawing.Size(63, 25);
             this.malecmbx.TabIndex = 12;
             this.malecmbx.Text = "Male";
             this.malecmbx.UncheckedState.BorderColor = System.Drawing.Color.Black;
             this.malecmbx.UncheckedState.BorderRadius = 0;
             this.malecmbx.UncheckedState.BorderThickness = 0;
-            this.malecmbx.UncheckedState.FillColor = System.Drawing.Color.Black;
+            this.malecmbx.UncheckedState.FillColor = System.Drawing.Color.DarkRed;
+            this.malecmbx.UseVisualStyleBackColor = false;
             this.malecmbx.CheckedChanged += new System.EventHandler(this.malecmbx_CheckedChanged);
             // 
             // txt_address
@@ -261,12 +260,15 @@
             // 
             this.pickerDate.Animated = true;
             this.pickerDate.AutoRoundedCorners = true;
+            this.pickerDate.BorderColor = System.Drawing.Color.White;
             this.pickerDate.BorderRadius = 17;
+            this.pickerDate.BorderThickness = 1;
             this.pickerDate.Checked = true;
             this.pickerDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.pickerDate.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.pickerDate.ForeColor = System.Drawing.Color.LightGray;
             this.pickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.pickerDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.pickerDate.Location = new System.Drawing.Point(376, 272);
             this.pickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.pickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -379,7 +381,8 @@
             this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.CheckedState.BorderRadius = 10;
             this.guna2CheckBox1.CheckedState.BorderThickness = 5;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2CheckBox1.CheckMarkColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2CheckBox1.Location = new System.Drawing.Point(235, 365);
@@ -398,7 +401,8 @@
             this.chk_showpass.CheckedState.BorderColor = System.Drawing.Color.Red;
             this.chk_showpass.CheckedState.BorderRadius = 10;
             this.chk_showpass.CheckedState.BorderThickness = 5;
-            this.chk_showpass.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.chk_showpass.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.chk_showpass.CheckMarkColor = System.Drawing.Color.WhiteSmoke;
             this.chk_showpass.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_showpass.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.chk_showpass.Location = new System.Drawing.Point(235, 302);
@@ -591,7 +595,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1386, 780);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label6);
@@ -620,9 +624,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_exit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;

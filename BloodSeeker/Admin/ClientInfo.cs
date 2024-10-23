@@ -29,8 +29,14 @@ namespace BloodSeeker.Admin
             for (int i = 0; i < 10; i++)
             {
                 tab = new ClientStaffInformationTab("Kent Lawrence Salarda", "Male", "kentsalarda@gail.com", "09452113248");
+                tab.BackColor = Color.FromArgb(36, 36, 36);
                 panel.Controls.Add(tab);
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

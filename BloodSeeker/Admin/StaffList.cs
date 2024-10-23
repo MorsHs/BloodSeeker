@@ -36,8 +36,21 @@ namespace BloodSeeker.Admin
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            AddStaff add = new AddStaff();
-            add.ShowDialog();
+            changePanel(new AddStaff());
+        }
+        public void changePanel(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            guna2CustomGradientPanel1.Controls.Clear();
+            guna2CustomGradientPanel1.Controls.Add(form);
+            form.Show();
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

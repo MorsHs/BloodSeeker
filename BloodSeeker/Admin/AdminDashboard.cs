@@ -13,9 +13,10 @@ namespace BloodSeeker.Admin
         public AdminDashboard()
         {
             InitializeComponent();
-            btnHome.FillColor = Color.FromArgb(21, 21, 21);
+            btnHome.FillColor = Color.FromArgb(57, 57, 57);
 
         }
+        bool menu = false;
         public void changePanel(Form form)
         {
             form.TopLevel = false;
@@ -74,6 +75,7 @@ namespace BloodSeeker.Admin
             pnl_settings.Hide();
             pnl_logout.Hide();
             staffPanel.Hide();
+           
             changePanel(new Dashboard());
         }
 
@@ -217,6 +219,40 @@ namespace BloodSeeker.Admin
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            Guna2CircleButton button = sender as Guna2CircleButton;
+            buttonColor(button);
+            changePanel(new AccountInfo());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuExpand_Tick(object sender, EventArgs e)
+        {
+if (menu == false)
+            {
+                settingsContainer.Height += 10;
+                if(settingsContainer.Height >= 102)
+                {
+                    menuExpand.Stop();
+                    menu = false;
+                }
+            }
+            else
+            {
+                settingsContainer.Height -= 10;
+                if(settingsContainer.Height <= 42)
+                {
+                    menuExpand.Stop();
+                    menu = false;
+                }
+            }
         }
     }
 }
