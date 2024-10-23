@@ -170,6 +170,7 @@
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(239, 33);
             this.txt_name.TabIndex = 0;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // guna2Panel1
             // 
