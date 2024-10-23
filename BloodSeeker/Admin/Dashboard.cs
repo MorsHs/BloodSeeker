@@ -16,5 +16,10 @@ namespace BloodSeeker.Admin
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
