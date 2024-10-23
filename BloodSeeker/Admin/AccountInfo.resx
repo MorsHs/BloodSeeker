@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="guna2Button7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -528,7 +531,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editEA.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -938,7 +941,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editCN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -1348,7 +1351,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editAddress.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -1758,7 +1761,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editLN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -2168,7 +2171,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editFN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -2578,7 +2581,7 @@
         QgghhBBCCCGEEFHnR37k/wfD4I+abr+lQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_editUsername.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAXshJREFUeF7t
         vQeYHdd5pmnJclK0LFskRWfLOWhsWdm7s+PZ8c483p21vbv2+PF6NtgSEbqbkiXipkYHxEZOpIjYOaIj
@@ -4554,8 +4557,11 @@
         5UBH+0x/KrMT+qIfbP/Z
 </value>
   </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>302, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
