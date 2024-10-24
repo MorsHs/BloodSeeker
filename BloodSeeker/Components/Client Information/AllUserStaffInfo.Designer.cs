@@ -228,6 +228,7 @@
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllUserStaffInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AllUserStaffInfo";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AllUserStaffInfo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

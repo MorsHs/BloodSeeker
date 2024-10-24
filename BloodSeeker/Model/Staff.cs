@@ -9,7 +9,7 @@ namespace BloodSeeker.Model
 {
     internal class Staff:Person
     {
-        public int _id { get;,set; }
+        public int _id { get;set; }
         public Staff(string username,string password,string firstname,string lastname,string email,string phone,string address,string sex,DateTime birthdate,int id):
             base(username,password,firstname,lastname,email,phone,address,sex,birthdate)
         {
