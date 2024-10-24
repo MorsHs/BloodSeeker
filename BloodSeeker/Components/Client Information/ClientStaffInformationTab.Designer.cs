@@ -81,6 +81,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(92, 35);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "View More";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // clientphonelbl
             // 
@@ -178,12 +179,12 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // ClientInformationTab
+            // ClientStaffInformationTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "ClientInformationTab";
+            this.Name = "ClientStaffInformationTab";
             this.Size = new System.Drawing.Size(511, 156);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
