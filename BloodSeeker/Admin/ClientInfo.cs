@@ -30,10 +30,13 @@ namespace BloodSeeker.Admin
             for (int i = 0; i < controller.getClientLength(); i++)
             {
                 tab = new ClientStaffInformationTab(
-                    controller.getClientList()[i].firstname + " " + controller.getClientList()[i].lastname,
+                    controller.getClientList()[i].firstname,
+                    controller.getClientList()[i].lastname,
                     controller.getClientList()[i].sex,
+                    controller.getClientList()[i].phone,
                     controller.getClientList()[i].email,
-                    controller.getClientList()[i].phone
+                    controller.getClientList()[i].address,
+                    controller.getClientList()[i].birthdate
                     );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);
