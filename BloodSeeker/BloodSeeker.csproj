@@ -174,34 +174,34 @@
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientChangePass.cs">
+    <Compile Include="Customer\ClientChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientChangePass.Designer.cs">
+    <Compile Include="Customer\ClientChangePass.Designer.cs">
       <DependentUpon>ClientChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientHistory1.cs">
+    <Compile Include="Customer\ClientHistory1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientHistory1.Designer.cs">
+    <Compile Include="Customer\ClientHistory1.Designer.cs">
       <DependentUpon>ClientHistory1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientInventory1.cs">
+    <Compile Include="Customer\ClientInventory1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientInventory1.Designer.cs">
+    <Compile Include="Customer\ClientInventory1.Designer.cs">
       <DependentUpon>ClientInventory1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientSettings1.cs">
+    <Compile Include="Customer\ClientSettings1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientSettings1.Designer.cs">
+    <Compile Include="Customer\ClientSettings1.Designer.cs">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientSettingsPanel.cs">
+    <Compile Include="Customer\ClientSettingsPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientSettingsPanel.Designer.cs">
+    <Compile Include="Customer\ClientSettingsPanel.Designer.cs">
       <DependentUpon>ClientSettingsPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Client Information\AllUserStaffInfo.cs">
@@ -210,11 +210,11 @@
     <Compile Include="Components\Client Information\AllUserStaffInfo.Designer.cs">
       <DependentUpon>AllUserStaffInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Admin\AddClientController.cs" />
-    <Compile Include="Controllers\Admin\AddStaffController.cs" />
-    <Compile Include="Controllers\Admin\AdminLogController.cs" />
-    <Compile Include="Controllers\Admin\ClientListController.cs" />
-    <Compile Include="Controllers\Admin\StaffListController.cs" />
+    <Compile Include="Controllers\AddClientController.cs" />
+    <Compile Include="Controllers\AddStaffController.cs" />
+    <Compile Include="Controllers\AdminLogController.cs" />
+    <Compile Include="Controllers\ClientListController.cs" />
+    <Compile Include="Controllers\StaffListController.cs" />
     <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,32 +239,32 @@
     <Compile Include="Admin\TransacitionHistory.Designer.cs">
       <DependentUpon>TransacitionHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Admin\AdminLoginRep.cs" />
-    <Compile Include="Model\Admin\ClientRepository.cs" />
+    <Compile Include="Model\AdminLoginRep.cs" />
+    <Compile Include="Model\ClientRepository.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Person.cs" />
-    <Compile Include="Client\ClienntLogin.cs">
+    <Compile Include="Customer\ClienntLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClienntLogin.Designer.cs">
+    <Compile Include="Customer\ClienntLogin.Designer.cs">
       <DependentUpon>ClienntLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientAppointment.cs">
+    <Compile Include="Customer\ClientAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientAppointment.Designer.cs">
+    <Compile Include="Customer\ClientAppointment.Designer.cs">
       <DependentUpon>ClientAppointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientDashboard.cs">
+    <Compile Include="Customer\ClientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientDashboard.Designer.cs">
+    <Compile Include="Customer\ClientDashboard.Designer.cs">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client\ClientInformation.cs">
+    <Compile Include="Customer\ClientInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client\ClientInformation.Designer.cs">
+    <Compile Include="Customer\ClientInformation.Designer.cs">
       <DependentUpon>ClientInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Appointment Bar\Appointment.cs">
@@ -298,7 +298,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="Model\Admin\StaffRepository.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\StaffRepository.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,31 +345,31 @@
     <EmbeddedResource Include="Admin\TransacitionHistory.resx">
       <DependentUpon>TransacitionHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClienntLogin.resx">
+    <EmbeddedResource Include="Customer\ClienntLogin.resx">
       <DependentUpon>ClienntLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientAppointment.resx">
+    <EmbeddedResource Include="Customer\ClientAppointment.resx">
       <DependentUpon>ClientAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientChangePass.resx">
+    <EmbeddedResource Include="Customer\ClientChangePass.resx">
       <DependentUpon>ClientChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientDashboard.resx">
+    <EmbeddedResource Include="Customer\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientHistory1.resx">
+    <EmbeddedResource Include="Customer\ClientHistory1.resx">
       <DependentUpon>ClientHistory1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientInformation.resx">
+    <EmbeddedResource Include="Customer\ClientInformation.resx">
       <DependentUpon>ClientInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientInventory1.resx">
+    <EmbeddedResource Include="Customer\ClientInventory1.resx">
       <DependentUpon>ClientInventory1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientSettings1.resx">
+    <EmbeddedResource Include="Customer\ClientSettings1.resx">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ClientSettingsPanel.resx">
+    <EmbeddedResource Include="Customer\ClientSettingsPanel.resx">
       <DependentUpon>ClientSettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Appointment Bar\Appointment.resx">
@@ -430,9 +431,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\Client\" />
-    <Folder Include="Model\Client\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

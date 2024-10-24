@@ -78,13 +78,10 @@ namespace BloodSeeker
                         return global.sqlReader["error_message"].ToString();
                     }
                 }
-                global.sqlTransaction.Commit();
                 global.fncConnectToDatabase();
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message);
-                global.sqlTransaction.Rollback();
             }
             return null;
         }
