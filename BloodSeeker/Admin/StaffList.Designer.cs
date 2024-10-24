@@ -39,15 +39,16 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_signUp);
             this.guna2CustomGradientPanel1.Controls.Add(this.flowLayoutPanel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1166, 600);
@@ -57,6 +58,7 @@
             // btn_signUp
             // 
             this.btn_signUp.Animated = true;
+            this.btn_signUp.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btn_signUp.BorderColor = System.Drawing.Color.Crimson;
             this.btn_signUp.BorderRadius = 5;
             this.btn_signUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -80,7 +82,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(50, 166);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";

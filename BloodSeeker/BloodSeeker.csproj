@@ -206,6 +206,7 @@
     </Compile>
     <Compile Include="Controllers\Admin\AddClientController.cs" />
     <Compile Include="Controllers\Admin\AddStaffController.cs" />
+    <Compile Include="Controllers\Admin\AdminLogController.cs" />
     <Compile Include="Controllers\Admin\ClientListController.cs" />
     <Compile Include="Controllers\Admin\StaffListController.cs" />
     <Compile Include="Admin\Dashboard.cs">
@@ -232,6 +233,7 @@
     <Compile Include="Admin\TransacitionHistory.Designer.cs">
       <DependentUpon>TransacitionHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Admin\AdminLoginRep.cs" />
     <Compile Include="Model\Admin\ClientRepository.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Client\ClienntLogin.cs">
