@@ -192,6 +192,12 @@
     <Compile Include="Client\ClientSettings1.Designer.cs">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Client Information\AllUserStaffInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Client Information\AllUserStaffInfo.Designer.cs">
+      <DependentUpon>AllUserStaffInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Admin\AddClientController.cs" />
     <Compile Include="Controllers\Admin\AddStaffController.cs" />
     <Compile Include="Controllers\Admin\AdminLogController.cs" />
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Calendar\CalendarFrame.resx">
       <DependentUpon>CalendarFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Client Information\AllUserStaffInfo.resx">
+      <DependentUpon>AllUserStaffInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Client Information\ClientStaffInformationTab.resx">
       <DependentUpon>ClientStaffInformationTab.cs</DependentUpon>
