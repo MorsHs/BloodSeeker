@@ -174,6 +174,12 @@
     <Compile Include="Admin\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client\ClientChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientChangePass.Designer.cs">
+      <DependentUpon>ClientChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client\ClientHistory1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     </Compile>
     <Compile Include="Client\ClientSettings1.Designer.cs">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ClientSettingsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientSettingsPanel.Designer.cs">
+      <DependentUpon>ClientSettingsPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Client Information\AllUserStaffInfo.cs">
       <SubType>Form</SubType>
@@ -337,6 +349,9 @@
     <EmbeddedResource Include="Client\ClientAppointment.resx">
       <DependentUpon>ClientAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientChangePass.resx">
+      <DependentUpon>ClientChangePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client\ClientSettings1.resx">
       <DependentUpon>ClientSettings1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientSettingsPanel.resx">
+      <DependentUpon>ClientSettingsPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Appointment Bar\Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
