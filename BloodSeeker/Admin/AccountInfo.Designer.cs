@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountInfo));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.img_pfp = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btn_Submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_editEA = new Guna.UI2.WinForms.Guna2Button();
@@ -54,20 +57,18 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.img_pfp = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pfp)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.Controls.Add(this.guna2Button7);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.img_pfp);
             this.guna2Panel1.Controls.Add(this.btn_Submit);
             this.guna2Panel1.Controls.Add(this.btn_cancel);
             this.guna2Panel1.Controls.Add(this.btn_editEA);
@@ -88,10 +89,50 @@
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.txt_username);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Location = new System.Drawing.Point(-4, -2);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1138, 435);
+            this.guna2Panel1.Size = new System.Drawing.Size(1134, 435);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button7.BackgroundImage")));
+            this.guna2Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.White;
+            this.guna2Button7.Location = new System.Drawing.Point(642, 99);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(15, 15);
+            this.guna2Button7.TabIndex = 50;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.label1.Location = new System.Drawing.Point(502, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 30);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Jamyca Lubay";
+            // 
+            // img_pfp
+            // 
+            this.img_pfp.Image = ((System.Drawing.Image)(resources.GetObject("img_pfp.Image")));
+            this.img_pfp.ImageRotate = 0F;
+            this.img_pfp.Location = new System.Drawing.Point(510, 3);
+            this.img_pfp.Name = "img_pfp";
+            this.img_pfp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.img_pfp.Size = new System.Drawing.Size(126, 123);
+            this.img_pfp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_pfp.TabIndex = 48;
+            this.img_pfp.TabStop = false;
             // 
             // btn_Submit
             // 
@@ -463,57 +504,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.guna2Button7);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.img_pfp);
-            this.panel1.Location = new System.Drawing.Point(435, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 250);
-            this.panel1.TabIndex = 47;
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Button7.BackgroundImage")));
-            this.guna2Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(202, 99);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(15, 15);
-            this.guna2Button7.TabIndex = 47;
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.label1.Location = new System.Drawing.Point(62, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 30);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Jamyca Lubay";
-            // 
-            // img_pfp
-            // 
-            this.img_pfp.Image = ((System.Drawing.Image)(resources.GetObject("img_pfp.Image")));
-            this.img_pfp.ImageRotate = 0F;
-            this.img_pfp.Location = new System.Drawing.Point(70, 3);
-            this.img_pfp.Name = "img_pfp";
-            this.img_pfp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_pfp.Size = new System.Drawing.Size(126, 123);
-            this.img_pfp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_pfp.TabIndex = 45;
-            this.img_pfp.TabStop = false;
-            // 
             // AccountInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,10 +513,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccountInfo";
             this.Text = "AccountInfo";
+            this.Load += new System.EventHandler(this.AccountInfo_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pfp)).EndInit();
             this.ResumeLayout(false);
 
@@ -557,7 +546,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox img_pfp;

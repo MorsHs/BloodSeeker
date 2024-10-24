@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodSeeker.Controllers.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace BloodSeeker.Admin
 {
     public partial class AdminLogin : Form
     {
+        private AdminLogController adminLogController;
         AdminDashboard admindash = new AdminDashboard();
         public AdminLogin()
         {
             InitializeComponent();
+            adminLogController = new AdminLogController();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -26,8 +29,21 @@ namespace BloodSeeker.Admin
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            admindash.Show();
-            this.Hide();
+            string username = txt_name.Text;
+            string password = txt_pass.Text;
+
+            bool isLoggedIn = adminLogController.Login(username, password);
+
+            if (isLoggedIn)
+            {
+                admindash.Show();
+                this.Hide();
+            }
+        }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

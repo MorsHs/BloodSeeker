@@ -43,13 +43,14 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Controls.Add(this.splitContainer1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.Control;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.Control;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.InactiveBorder;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.InactiveBorder;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1040, 600);
@@ -61,17 +62,17 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 81);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.splitContainer1.Panel1.Controls.Add(this.guna2VSeparator1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.flowPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(1040, 470);
@@ -104,7 +105,7 @@
             this.flowPanel2.AutoScroll = true;
             this.flowPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.flowPanel2.Location = new System.Drawing.Point(13, 93);
-            this.flowPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowPanel2.Name = "flowPanel2";
             this.flowPanel2.Size = new System.Drawing.Size(560, 345);
             this.flowPanel2.TabIndex = 0;
