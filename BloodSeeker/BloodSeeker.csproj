@@ -241,6 +241,7 @@
     </Compile>
     <Compile Include="Model\Admin\AdminLoginRep.cs" />
     <Compile Include="Model\Admin\ClientRepository.cs" />
+    <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Client\ClienntLogin.cs">
       <SubType>Form</SubType>
