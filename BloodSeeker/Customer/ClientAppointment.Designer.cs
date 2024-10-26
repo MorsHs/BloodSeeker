@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -43,6 +44,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_Submit);
             this.guna2CustomGradientPanel1.Controls.Add(this.splitContainer1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -106,7 +108,7 @@
             this.flowPanel2.Location = new System.Drawing.Point(23, 142);
             this.flowPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowPanel2.Name = "flowPanel2";
-            this.flowPanel2.Size = new System.Drawing.Size(862, 425);
+            this.flowPanel2.Size = new System.Drawing.Size(899, 425);
             this.flowPanel2.TabIndex = 0;
             // 
             // label1
@@ -120,6 +122,29 @@
             this.label1.Size = new System.Drawing.Size(267, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "Appointments";
+            // 
+            // btn_Submit
+            // 
+            this.btn_Submit.Animated = true;
+            this.btn_Submit.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Submit.BorderColor = System.Drawing.Color.Crimson;
+            this.btn_Submit.BorderRadius = 5;
+            this.btn_Submit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Submit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Submit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Submit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Submit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Submit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Submit.ForeColor = System.Drawing.Color.White;
+            this.btn_Submit.Location = new System.Drawing.Point(1330, 104);
+            this.btn_Submit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(212, 48);
+            this.btn_Submit.TabIndex = 65;
+            this.btn_Submit.Text = "Set up Appointment!";
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // ClientAppointment
             // 
@@ -152,5 +177,6 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowPanel2;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btn_Submit;
     }
 }
