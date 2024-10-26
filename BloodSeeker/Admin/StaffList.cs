@@ -1,5 +1,7 @@
 ﻿using BloodSeeker.Admin.Controllers;
 using BloodSeeker.Components.Client_Information;
+using BloodSeeker.Model;
+using BloodSeeker.Model.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +18,12 @@ namespace BloodSeeker.Admin
     {
         ClientStaffInformationTab tab;
         StaffListController controller;
+        StaffRepository staffRepository;
         public StaffList()
         {
             InitializeComponent();
+            staffRepository = new StaffRepository(); 
+            LoadStaff();
         }
 
         private void guna2TextBox1_Load(object sender, EventArgs e)
@@ -39,7 +44,25 @@ namespace BloodSeeker.Admin
                 flowLayoutPanel1.Controls.Add(tab);
             }
         }
-
+        private void LoadStaff(List<Staff> staffToDisplay = null)
+        {
+            flowLayoutPanel1.Controls.Clear(); // Clear existing entries
+            var staffList = staffToDisplay ?? staffRepository.getStaff();
+            foreach (var staff in staffList)
+            {
+                tab = new ClientStaffInformationTab(
+                    staff.firstname,
+                    staff.lastname,
+                    staff.sex,
+                    staff.phone,
+                    staff.email,
+                    staff.address,
+                    staff.birthdate
+                );
+                tab.BackColor = Color.FromArgb(36, 36, 36);
+                flowLayoutPanel1.Controls.Add(tab);
+            }
+        }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -62,6 +85,26 @@ namespace BloodSeeker.Admin
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = guna2TextBox1.Text.Trim();
+            int? staffId = null;
+
+            
+            if (int.TryParse(searchTerm, out int id))
+            {
+                staffId = id;
+            }
+
+            var searchResults = staffRepository.searchStaff(
+                staffId,            
+                staffId.HasValue ? null : searchTerm, 
+                staffId.HasValue ? null : searchTerm   
+            );
+
+            LoadStaff(searchResults);
         }
     }
 }
