@@ -1,5 +1,6 @@
 ﻿using BloodSeeker.Admin;
 using BloodSeeker.Client;
+using BloodSeeker.Controllers.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +59,15 @@ namespace BloodSeeker
                         else
                         {
                             MessageBox.Show("Account Created!","SUCCESS",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                            
+                            txt_firstname.Clear();
+                            txt_lastname.Clear();
+                            txt_username.Clear();
+                            txt_pass.Clear();
+                            txt_confirmpass.Clear();
+                            txt_email.Clear();
+                            txt_address.Clear();
+                            txt_contact.Clear();
+                            clientlog.Show();
                         }
                     }
                     else
