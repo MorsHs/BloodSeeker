@@ -75,7 +75,7 @@ namespace BloodSeeker.Model.Admin
 
             
         }
-        public List<Staff> searchStaff(int? staffId = null, string firstName = null, string lastName = null)
+        public List<Staff> searchStaffById(int staffId)
         {
             List<Staff> result = new List<Staff>();
 
@@ -84,12 +84,94 @@ namespace BloodSeeker.Model.Admin
                 Global global = new Global();
                 global.fncConnectToDatabase();
                 global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_searchStaff"; 
+                global.sqlCommand.CommandText = "prc_searchStaffById";
                 global.sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                global.sqlCommand.Parameters.AddWithValue("@p_staff_id", staffId.HasValue ? (object)staffId.Value : DBNull.Value);
-                global.sqlCommand.Parameters.AddWithValue("@p_first_name", string.IsNullOrEmpty(firstName) ? (object)DBNull.Value : firstName);
-                global.sqlCommand.Parameters.AddWithValue("@p_last_name", string.IsNullOrEmpty(lastName) ? (object)DBNull.Value : lastName);
+                global.sqlCommand.Parameters.AddWithValue("@p_staff_id", staffId);
+
+                using (MySqlDataReader reader = global.sqlCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var staff = new Staff(
+                            reader.GetString("username"),
+                            null,
+                            reader.GetString("first_name"),
+                            reader.GetString("last_name"),
+                            reader.GetString("emailAdd"),
+                            reader.GetString("mobileNum"),
+                            reader.GetString("address"),
+                            reader.GetString("sex"),
+                            reader.GetDateTime("birthDate"),
+                            reader.GetInt32("staff_id")
+                        );
+                        result.Add(staff);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return result;
+        }
+
+        public List<Staff> searchStaffByFirstName(string firstName)
+        {
+            List<Staff> result = new List<Staff>();
+
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_searchStaffByFirstName";
+                global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                global.sqlCommand.Parameters.AddWithValue("@p_first_name", firstName);
+
+                using (MySqlDataReader reader = global.sqlCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var staff = new Staff(
+                            reader.GetString("username"),
+                            null,
+                            reader.GetString("first_name"),
+                            reader.GetString("last_name"),
+                            reader.GetString("emailAdd"),
+                            reader.GetString("mobileNum"),
+                            reader.GetString("address"),
+                            reader.GetString("sex"),
+                            reader.GetDateTime("birthDate"),
+                            reader.GetInt32("staff_id")
+                        );
+                        result.Add(staff);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return result;
+        }
+
+        public List<Staff> searchStaffByLastName(string lastName)
+        {
+            List<Staff> result = new List<Staff>();
+
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_searchStaffByLastName";
+                global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                global.sqlCommand.Parameters.AddWithValue("@p_last_name", lastName);
 
                 using (MySqlDataReader reader = global.sqlCommand.ExecuteReader())
                 {

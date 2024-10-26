@@ -1,4 +1,5 @@
 ﻿using BloodSeeker.Admin.Controllers;
+using BloodSeeker.Class;
 using BloodSeeker.Components.Client_Information;
 using BloodSeeker.Controllers.Admin;
 using Guna.UI2.WinForms;
@@ -50,6 +51,76 @@ namespace BloodSeeker.Admin
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void tb_searchClient_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = tb_searchClient.Text.Trim();
+            List<Person> searchResults = new List<Person>();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                flowLayoutPanel1.Controls.Clear();
+
+                var allClients = controller.getClientList();
+                foreach (var client in allClients)
+                {
+                    var tab = new ClientStaffInformationTab(
+                        client.firstname,
+                        client.lastname,
+                        client.sex,
+                        client.phone,
+                        client.email,
+                        client.address,
+                        client.birthdate
+                    );
+                    tab.BackColor = Color.FromArgb(36, 36, 36);
+                    flowLayoutPanel1.Controls.Add(tab);
+                }
+                return;
+            }
+
+            if (int.TryParse(searchText, out int clientId))
+            {
+                searchResults = controller.searchClientById(clientId);
+            }
+            else
+            {
+                var nameParts = searchText.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (nameParts.Length == 1)
+                {
+                    searchResults.AddRange(controller.searchClientByFirstName(nameParts[0]));
+                    searchResults.AddRange(controller.searchClientByLastName(nameParts[0]));
+                }
+                else
+                {
+                    searchResults.AddRange(controller.searchClientByFirstName(nameParts[0]));
+
+                    if (nameParts.Length > 1)
+                    {
+                        searchResults.AddRange(controller.searchClientByLastName(nameParts[1]));
+                    }
+                }
+            }
+
+            searchResults = searchResults.Distinct().ToList();
+
+            flowLayoutPanel1.Controls.Clear();
+            foreach (var client in searchResults)
+            {
+                var tab = new ClientStaffInformationTab(
+                    client.firstname,
+                    client.lastname,
+                    client.sex,
+                    client.phone,
+                    client.email,
+                    client.address,
+                    client.birthdate
+                );
+                tab.BackColor = Color.FromArgb(36, 36, 36);
+                flowLayoutPanel1.Controls.Add(tab);
+            }
         }
     }
 }
