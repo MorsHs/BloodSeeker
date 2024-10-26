@@ -45,5 +45,17 @@ namespace BloodSeeker.Admin
         {
 
         }
+
+        private void chk_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_showpass.Checked)
+            {
+                txt_pass.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_pass.PasswordChar = '*'; 
+            }
+        }
     }
 }
