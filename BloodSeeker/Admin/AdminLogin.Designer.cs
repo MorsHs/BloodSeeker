@@ -163,7 +163,7 @@
             this.txt_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txt_name.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_name.IconLeft = ((System.Drawing.Image)(resources.GetObject("txt_name.IconLeft")));
-            this.txt_name.Location = new System.Drawing.Point(46, 81);
+            this.txt_name.Location = new System.Drawing.Point(46, 82);
             this.txt_name.Name = "txt_name";
             this.txt_name.PasswordChar = '\0';
             this.txt_name.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -252,11 +252,11 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2CheckBox chk_showpass;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_signUp;
-        private Guna.UI2.WinForms.Guna2TextBox txt_pass;
-        private Guna.UI2.WinForms.Guna2TextBox txt_name;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public Guna.UI2.WinForms.Guna2TextBox txt_pass;
+        public Guna.UI2.WinForms.Guna2TextBox txt_name;
     }
 }

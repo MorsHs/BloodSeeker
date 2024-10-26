@@ -1,20 +1,25 @@
 ﻿using BloodSeeker.Components.Client_Information;
+using BloodSeeker.Controllers.Admin;
 using Guna.UI2.WinForms;
+using Org.BouncyCastle.Math.EC.Endo;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace BloodSeeker.Admin
 {
     public partial class AdminDashboard : Form
     {
-           
+       
+        private AdminLogController adminLogController;
+        public string Username;
         public AdminDashboard()
         {
             InitializeComponent();
             btnHome.FillColor = Color.FromArgb(57, 57, 57);
-
+            
         }
         bool menu = false;
         public void changePanel(Form form)
@@ -65,6 +70,7 @@ namespace BloodSeeker.Admin
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+           
             Global globe = new Global();
             globe.fncConnectToDatabase();
             pnl_home.Hide();
@@ -75,7 +81,7 @@ namespace BloodSeeker.Admin
             pnl_settings.Hide();
             pnl_logout.Hide();
             staffPanel.Hide();
-           
+            txt_dashUsername.Text = "Hi " + Username + "!";
             changePanel(new Dashboard());
         }
 
@@ -256,6 +262,11 @@ if (menu == false)
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txt_dashUsername_Click(object sender, EventArgs e)
         {
 
         }

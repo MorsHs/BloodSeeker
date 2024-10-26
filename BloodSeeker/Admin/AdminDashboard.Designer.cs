@@ -41,7 +41,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txt_dashUsername = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -235,7 +235,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.txt_dashUsername);
             this.panel2.Controls.Add(this.guna2PictureBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -259,19 +259,20 @@
             this.guna2CirclePictureBox1.TabIndex = 15;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // label10
+            // txt_dashUsername
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_dashUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(1225, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 21);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Hi Afdfdeg!";
+            this.txt_dashUsername.AutoSize = true;
+            this.txt_dashUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txt_dashUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dashUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txt_dashUsername.Location = new System.Drawing.Point(1225, 25);
+            this.txt_dashUsername.Name = "txt_dashUsername";
+            this.txt_dashUsername.Size = new System.Drawing.Size(18, 21);
+            this.txt_dashUsername.TabIndex = 11;
+            this.txt_dashUsername.Text = "..";
+            this.txt_dashUsername.Click += new System.EventHandler(this.txt_dashUsername_Click);
             // 
             // guna2PictureBox2
             // 
@@ -794,7 +795,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2Panel staffPanel;
@@ -806,5 +806,6 @@
         private System.Windows.Forms.Timer menuExpand;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse19;
+        public System.Windows.Forms.Label txt_dashUsername;
     }
 }

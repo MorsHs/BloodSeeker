@@ -1,4 +1,5 @@
 ﻿using BloodSeeker.Controllers.Admin;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace BloodSeeker.Admin
     public partial class AdminLogin : Form
     {
         private AdminLogController adminLogController;
-        AdminDashboard admindash = new AdminDashboard();
+       
+       
         public AdminLogin()
         {
             InitializeComponent();
@@ -31,15 +33,20 @@ namespace BloodSeeker.Admin
         {
             string username = txt_name.Text;
             string password = txt_pass.Text;
+           
 
             bool isLoggedIn = adminLogController.Login(username, password);
 
             if (isLoggedIn)
             {
-                admindash.Show();
+                AdminDashboard dash = new AdminDashboard();
+                dash.Username = username;
+                dash.Show();
                 this.Hide();
             }
         }
+
+       
 
         private void txt_name_TextChanged(object sender, EventArgs e)
         {

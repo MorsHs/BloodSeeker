@@ -1,9 +1,14 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.SqlServer.Server;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace BloodSeeker.Model.Admin
@@ -16,6 +21,7 @@ namespace BloodSeeker.Model.Admin
 
             try
             {
+               
                 Global global = new Global();
                 global.fncConnectToDatabase();
                 global.sqlCommand.Parameters.Clear();
@@ -25,6 +31,7 @@ namespace BloodSeeker.Model.Admin
                 global.sqlCommand.Parameters.AddWithValue("@p_password", password);
 
                 MySqlDataReader reader = global.sqlCommand.ExecuteReader();
+
 
                 if (reader.HasRows)
                 {
@@ -41,5 +48,6 @@ namespace BloodSeeker.Model.Admin
 
             return isValid;
         }
-    }
+       
+}
 }
