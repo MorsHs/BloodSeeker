@@ -14,6 +14,7 @@ namespace BloodSeeker.Components.Calendar
     {
         private string day;
         private Boolean checker;
+        public event EventHandler<DaySelectedEventArgs> DaySelected;
         public CalendarButton(String day)
         {
             InitializeComponent();
@@ -69,6 +70,10 @@ namespace BloodSeeker.Components.Calendar
         private void panel1_Click(object sender, EventArgs e)
         {
             checkBoxBorder();
+            if (!string.IsNullOrEmpty(day))
+            {
+                DaySelected?.Invoke(this, new DaySelectedEventArgs(day));  // Add this line
+            }
         }
 
         private void panel1_MouseHover(object sender, EventArgs e)
@@ -82,5 +87,7 @@ namespace BloodSeeker.Components.Calendar
             label1.BackColor = Color.FromArgb(240, 240, 240);
             panel1.BackColor = Color.FromArgb(240, 240, 240);
         }
+
+
     }
 }

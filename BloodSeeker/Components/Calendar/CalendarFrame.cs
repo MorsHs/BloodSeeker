@@ -14,40 +14,120 @@ namespace BloodSeeker.Components.Calendar
 {
     public partial class CalendarFrame : UserControl
     {
-        private static int _year,_month;
+        private int currentYear;
+        private int currentMonth;
         private static FlowLayoutPanel _flowLayoutPanel;
+        public event EventHandler<AppointmentEventArgs> AppointmentRequested;
+
         public CalendarFrame(FlowLayoutPanel flowpanel)
         {
             InitializeComponent();
             _flowLayoutPanel = flowpanel;
-            addDay(DateTime.Now.Month, DateTime.Now.Year);
+            currentMonth = DateTime.Now.Month;
+            currentYear = DateTime.Now.Year;
+            
+            Button prevMonth = new Button
+            {
+                Text = "<",
+                Size = new Size(30, 30),
+                Location = new Point(10, 10),
+                BackColor = Color.FromArgb(120, 0, 0),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat
+            };
+
+            Button nextMonth = new Button
+            {
+                Text = ">",
+                Size = new Size(30, 30),
+                Location = new Point(monthlbl.Right + 120, 10),
+                BackColor = Color.FromArgb(120, 0, 0),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat
+            };
+
+            prevMonth.Click += (s, e) => NavigateMonth(-1);
+            nextMonth.Click += (s, e) => NavigateMonth(1);
+
+            Controls.Add(prevMonth);
+            Controls.Add(nextMonth);
+
+            UpdateCalendar();
         }
-        private void addDay(int month, int year)
+
+        private void NavigateMonth(int offset)
         {
-            monthlbl.Text = new DateTimeFormatInfo().GetMonthName(month).ToString() + " " + year.ToString();
+            currentMonth += offset;
+            if (currentMonth > 12)
+            {
+                currentMonth = 1;
+                currentYear++;
+            }
+            else if (currentMonth < 1)
+            {
+                currentMonth = 12;
+                currentYear--;
+            }
+            UpdateCalendar();
+        }
+
+        private void UpdateCalendar()
+        {
             flowLayoutPanel1.Controls.Clear();
-            _year = year;
-            _month = month;
-            DateTime start_of_month = new DateTime(year, month, 1);
-            int day = DateTime.DaysInMonth(year, month);
-            int week = Convert.ToInt32(start_of_month.DayOfWeek.ToString("d"));
-            for (int i = 1; i < week; i++)
-            {
-                CalendarButton calendarButton = new CalendarButton("");
-                flowLayoutPanel1.Controls.Add(calendarButton);
+            //_flowLayoutPanel.Controls.Clear();
 
-            }
-            for (int i = 1; i < day; i++)
+            monthlbl.Text = new DateTimeFormatInfo().GetMonthName(currentMonth) + " " + currentYear.ToString();
+
+            DateTime startOfMonth = new DateTime(currentYear, currentMonth, 1);
+            int daysInMonth = DateTime.DaysInMonth(currentYear, currentMonth);
+            int firstDayOfWeek = Convert.ToInt32(startOfMonth.DayOfWeek.ToString("d"));
+
+           
+            for (int i = 1; i < firstDayOfWeek; i++)
             {
-                CalendarButton calendarButton = new CalendarButton(i + "");
-                flowLayoutPanel1.Controls.Add(calendarButton);
+                CalendarButton emptyButton = new CalendarButton("");
+                flowLayoutPanel1.Controls.Add(emptyButton);
             }
 
-            for (int i = 0; i < 10; i++)
+            
+            for (int i = 1; i <= daysInMonth; i++)
             {
-                Appointment appointment = new Appointment();
-                _flowLayoutPanel.Controls.Add(appointment);
+                CalendarButton dayButton = new CalendarButton(i.ToString());
+                dayButton.DaySelected += OnDaySelected;
+                flowLayoutPanel1.Controls.Add(dayButton);
             }
+
+           
+            //for (int i = 0; i < 10; i++)
+            //{
+                //Appointment appointment = new Appointment();
+                //_flowLayoutPanel.Controls.Add(appointment);
+            //}
+        }
+
+        private void OnDaySelected(object sender, DaySelectedEventArgs e)
+        {
+            var selectedDate = new DateTime(currentYear, currentMonth, int.Parse(e.Day));
+            AppointmentRequested?.Invoke(this, new AppointmentEventArgs(selectedDate));
+        }
+    }
+
+    
+    public class AppointmentEventArgs : EventArgs
+    {
+        public DateTime SelectedDate { get; }
+        public AppointmentEventArgs(DateTime selectedDate)
+        {
+            SelectedDate = selectedDate;
+        }
+    }
+
+    public class DaySelectedEventArgs : EventArgs
+    {
+        public string Day { get; }
+        public DaySelectedEventArgs(string day)
+        {
+            Day = day;
         }
     }
 }

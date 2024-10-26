@@ -39,7 +39,6 @@
             this.btn_aboutme = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnCreate = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btn_inventory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_history = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_info = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_appointment = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -50,8 +49,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pnl_settings = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.pnl_inventory = new Guna.UI2.WinForms.Guna2Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.pnl_history = new Guna.UI2.WinForms.Guna2Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.pnl_clientInfo = new Guna.UI2.WinForms.Guna2Panel();
@@ -84,7 +81,6 @@
             this.guna2Panel2.SuspendLayout();
             this.pnl_logout.SuspendLayout();
             this.pnl_settings.SuspendLayout();
-            this.pnl_inventory.SuspendLayout();
             this.pnl_history.SuspendLayout();
             this.pnl_clientInfo.SuspendLayout();
             this.pnl_home.SuspendLayout();
@@ -100,7 +96,6 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_logout);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_settings);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pnl_inventory);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_history);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_clientInfo);
             this.guna2CustomGradientPanel1.Controls.Add(this.pnl_home);
@@ -170,14 +165,13 @@
             this.guna2Panel1.Controls.Add(this.btn_aboutme);
             this.guna2Panel1.Controls.Add(this.btnCreate);
             this.guna2Panel1.Controls.Add(this.btnHome);
-            this.guna2Panel1.Controls.Add(this.btn_inventory);
             this.guna2Panel1.Controls.Add(this.btn_history);
             this.guna2Panel1.Controls.Add(this.btn_info);
             this.guna2Panel1.Controls.Add(this.btn_appointment);
             this.guna2Panel1.Location = new System.Drawing.Point(55, 185);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(61, 295);
+            this.guna2Panel1.Size = new System.Drawing.Size(61, 247);
             this.guna2Panel1.TabIndex = 21;
             // 
             // btn_aboutme
@@ -256,34 +250,6 @@
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             this.btnHome.MouseHover += new System.EventHandler(this.btnHome_MouseHover);
             // 
-            // btn_inventory
-            // 
-            this.btn_inventory.BackColor = System.Drawing.Color.Transparent;
-            this.btn_inventory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_inventory.BackgroundImage")));
-            this.btn_inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_inventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_inventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_inventory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_inventory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_inventory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_inventory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_inventory.ForeColor = System.Drawing.Color.White;
-            this.btn_inventory.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_inventory.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btn_inventory.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventory.Image")));
-            this.btn_inventory.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_inventory.Location = new System.Drawing.Point(0, 241);
-            this.btn_inventory.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_inventory.Name = "btn_inventory";
-            this.btn_inventory.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_inventory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_inventory.Size = new System.Drawing.Size(57, 52);
-            this.btn_inventory.TabIndex = 7;
-            this.btn_inventory.UseTransparentBackground = true;
-            this.btn_inventory.Click += new System.EventHandler(this.btn_inventory_Click);
-            this.btn_inventory.MouseLeave += new System.EventHandler(this.btn_inventory_MouseLeave);
-            this.btn_inventory.MouseHover += new System.EventHandler(this.btn_inventory_MouseHover);
-            // 
             // btn_history
             // 
             this.btn_history.BackColor = System.Drawing.Color.Transparent;
@@ -297,7 +263,7 @@
             this.btn_history.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_history.ForeColor = System.Drawing.Color.White;
             this.btn_history.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_history.Image = ((System.Drawing.Image)(resources.GetObject("btn_history.Image")));
             this.btn_history.ImageSize = new System.Drawing.Size(24, 20);
             this.btn_history.Location = new System.Drawing.Point(0, 182);
@@ -325,7 +291,7 @@
             this.btn_info.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_info.ForeColor = System.Drawing.Color.White;
             this.btn_info.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
             this.btn_info.Location = new System.Drawing.Point(0, 123);
             this.btn_info.Margin = new System.Windows.Forms.Padding(4);
@@ -352,7 +318,7 @@
             this.btn_appointment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_appointment.ForeColor = System.Drawing.Color.White;
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
             this.btn_appointment.Location = new System.Drawing.Point(0, 64);
             this.btn_appointment.Margin = new System.Windows.Forms.Padding(4);
@@ -390,7 +356,7 @@
             this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_logout.Location = new System.Drawing.Point(0, 63);
@@ -418,7 +384,7 @@
             this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_settings.ForeColor = System.Drawing.Color.White;
             this.btn_settings.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
             this.btn_settings.Location = new System.Drawing.Point(0, 4);
@@ -476,29 +442,6 @@
             this.label14.Size = new System.Drawing.Size(63, 20);
             this.label14.TabIndex = 1;
             this.label14.Text = "Settings";
-            // 
-            // pnl_inventory
-            // 
-            this.pnl_inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnl_inventory.BorderColor = System.Drawing.Color.White;
-            this.pnl_inventory.Controls.Add(this.label16);
-            this.pnl_inventory.Location = new System.Drawing.Point(85, 431);
-            this.pnl_inventory.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_inventory.Name = "pnl_inventory";
-            this.pnl_inventory.Size = new System.Drawing.Size(155, 49);
-            this.pnl_inventory.TabIndex = 24;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(35, 11);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 20);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Inventory";
             // 
             // pnl_history
             // 
@@ -688,7 +631,6 @@
             // guna2Elipse7
             // 
             this.guna2Elipse7.BorderRadius = 40;
-            this.guna2Elipse7.TargetControl = this.pnl_inventory;
             // 
             // guna2Elipse8
             // 
@@ -739,8 +681,6 @@
             this.pnl_logout.PerformLayout();
             this.pnl_settings.ResumeLayout(false);
             this.pnl_settings.PerformLayout();
-            this.pnl_inventory.ResumeLayout(false);
-            this.pnl_inventory.PerformLayout();
             this.pnl_history.ResumeLayout(false);
             this.pnl_history.PerformLayout();
             this.pnl_clientInfo.ResumeLayout(false);
@@ -772,7 +712,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btn_aboutme;
         private Guna.UI2.WinForms.Guna2CircleButton btnCreate;
         private Guna.UI2.WinForms.Guna2CircleButton btnHome;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_inventory;
         private Guna.UI2.WinForms.Guna2CircleButton btn_history;
         private Guna.UI2.WinForms.Guna2CircleButton btn_info;
         private Guna.UI2.WinForms.Guna2CircleButton btn_appointment;
@@ -783,8 +722,6 @@
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2Panel pnl_settings;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2Panel pnl_inventory;
-        private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Panel pnl_history;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Panel pnl_clientInfo;

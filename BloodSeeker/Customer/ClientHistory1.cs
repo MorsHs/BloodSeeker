@@ -20,8 +20,8 @@ namespace BloodSeeker.Client
 
         private void ClientHistory1_Load(object sender, EventArgs e)
         {
-            CalendarFrame calendarFrame = new CalendarFrame(flowPanel1);
-            flowPanel1.Controls.Add(calendarFrame);
+           
         }
+
     }
 }

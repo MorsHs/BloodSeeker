@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,13 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1555, 738);
             this.guna2CustomGradientPanel1.TabIndex = 0;
             // 
+            // flowPanel1
+            // 
+            this.flowPanel1.Location = new System.Drawing.Point(68, 137);
+            this.flowPanel1.Name = "flowPanel1";
+            this.flowPanel1.Size = new System.Drawing.Size(1139, 535);
+            this.flowPanel1.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -58,13 +65,6 @@
             this.label1.Size = new System.Drawing.Size(147, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "History";
-            // 
-            // flowPanel1
-            // 
-            this.flowPanel1.Location = new System.Drawing.Point(68, 137);
-            this.flowPanel1.Name = "flowPanel1";
-            this.flowPanel1.Size = new System.Drawing.Size(1066, 535);
-            this.flowPanel1.TabIndex = 1;
             // 
             // ClientHistory1
             // 
