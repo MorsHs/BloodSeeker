@@ -17,6 +17,8 @@ namespace BloodSeeker.Client
         public ClienntLogin()
         {
             InitializeComponent();
+      
+
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -37,6 +39,18 @@ namespace BloodSeeker.Client
             else
             {
                 MessageBox.Show("User doesn't exist");
+            }
+        }
+
+        private void chk_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_showpass.Checked)
+            {
+                txt_pass.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_pass.PasswordChar = '*';
             }
         }
     }

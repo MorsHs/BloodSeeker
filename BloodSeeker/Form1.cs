@@ -144,5 +144,29 @@ namespace BloodSeeker
         {
 
         }
+
+        private void chk_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_showpass.Checked)
+            {
+                txt_pass.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_pass.PasswordChar = '*';
+            }
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox1.Checked)
+            {
+                txt_confirmpass.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_confirmpass.PasswordChar = '*';
+            }
+        }
     }
 }

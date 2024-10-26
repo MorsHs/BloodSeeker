@@ -139,6 +139,7 @@
             this.chk_showpass.UncheckedState.BorderRadius = 0;
             this.chk_showpass.UncheckedState.BorderThickness = 0;
             this.chk_showpass.UncheckedState.FillColor = System.Drawing.Color.DarkRed;
+            this.chk_showpass.CheckedChanged += new System.EventHandler(this.chk_showpass_CheckedChanged);
             // 
             // btn_signUp
             // 

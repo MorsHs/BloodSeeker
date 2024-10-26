@@ -382,7 +382,6 @@
             this.guna2CheckBox1.CheckedState.BorderRadius = 10;
             this.guna2CheckBox1.CheckedState.BorderThickness = 5;
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2CheckBox1.CheckMarkColor = System.Drawing.Color.Red;
             this.guna2CheckBox1.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2CheckBox1.Location = new System.Drawing.Point(235, 365);
@@ -394,6 +393,7 @@
             this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
             this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
             this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.DarkRed;
+            this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
             // chk_showpass
             // 
@@ -414,6 +414,7 @@
             this.chk_showpass.UncheckedState.BorderRadius = 0;
             this.chk_showpass.UncheckedState.BorderThickness = 0;
             this.chk_showpass.UncheckedState.FillColor = System.Drawing.Color.DarkRed;
+            this.chk_showpass.CheckedChanged += new System.EventHandler(this.chk_showpass_CheckedChanged);
             // 
             // txt_confirmpass
             // 
