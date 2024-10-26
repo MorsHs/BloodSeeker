@@ -90,21 +90,70 @@ namespace BloodSeeker.Admin
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
             string searchTerm = guna2TextBox1.Text.Trim();
-            int? staffId = null;
+            flowLayoutPanel1.Controls.Clear();
 
-            
-            if (int.TryParse(searchTerm, out int id))
+            if (string.IsNullOrEmpty(searchTerm))
             {
-                staffId = id;
+                var allStaff = controller.getStaffList(); 
+                foreach (var staff in allStaff)
+                {
+                    var tab = new ClientStaffInformationTab(
+                        staff.firstname,
+                        staff.lastname,
+                        staff.sex,
+                        staff.phone,
+                        staff.email,
+                        staff.address,
+                        staff.birthdate
+                    );
+                    tab.BackColor = Color.FromArgb(36, 36, 36);
+                    flowLayoutPanel1.Controls.Add(tab);
+                }
+                return;
             }
 
-            var searchResults = staffRepository.searchStaff(
-                staffId,            
-                staffId.HasValue ? null : searchTerm, 
-                staffId.HasValue ? null : searchTerm   
-            );
+            List<Staff> searchResults = new List<Staff>();
 
-            LoadStaff(searchResults);
-        }
+            if (int.TryParse(searchTerm, out int staffId))
+            {
+                searchResults = staffRepository.searchStaffById(staffId);
+            }
+            else
+            {
+                var nameParts = searchTerm.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (nameParts.Length == 1)
+                {
+                    var firstNameResults = staffRepository.searchStaffByFirstName(nameParts[0]);
+                    var lastNameResults = staffRepository.searchStaffByLastName(nameParts[0]);
+
+                    searchResults = firstNameResults.Concat(lastNameResults).Distinct().ToList();
+                }
+                else if (nameParts.Length >= 2)
+                {
+                    var firstNameResults = staffRepository.searchStaffByFirstName(nameParts[0]);
+                    var lastNameResults = staffRepository.searchStaffByLastName(nameParts[1]);
+
+                    searchResults = firstNameResults
+                        .Where(staff => lastNameResults.Any(lr => lr.staffId == staff.staffId))
+                        .ToList();
+                }
+            }
+
+            foreach (var staff in searchResults)
+            {
+                var tab = new ClientStaffInformationTab(
+                    staff.firstname,
+                    staff.lastname,
+                    staff.sex,
+                    staff.phone,
+                    staff.email,
+                    staff.address,
+                    staff.birthdate
+                );
+                tab.BackColor = Color.FromArgb(36, 36, 36);
+                flowLayoutPanel1.Controls.Add(tab);
+             }
+            }
     }
 }
