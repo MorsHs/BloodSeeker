@@ -15,12 +15,11 @@ namespace BloodSeeker.Admin
 {
     public partial class AdminAppointments : Form
     {
-        private static int _year, _month;
+       
         public AdminAppointments()
         {
             InitializeComponent();
             this.Load += AdminAppointments_Load;
-
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -33,14 +32,16 @@ namespace BloodSeeker.Admin
 
         }
 
-        private void AdminAppointments_Load(object sender, EventArgs e)
+        public void AdminAppointments_Load(object sender, EventArgs e)
         {
+           
             InitializeDataGridView();
             DisplayAppointment();
+            timer1.Enabled = true;
 
         }
 
-        private void InitializeDataGridView()
+        public void InitializeDataGridView()
         {
             // Set DataPropertyName for each manually added column
             dgv_appointments.Columns["appointmentID"].DataPropertyName = "appointment_id";
@@ -52,7 +53,23 @@ namespace BloodSeeker.Admin
             dgv_appointments.Columns["status"].DataPropertyName = "status";
         }
 
-        private void DisplayAppointment()
+        private void dgv_appointments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgv_appointments.Columns["status"].Index && e.RowIndex >= 0)
+            {
+                var cellvalue = Convert.ToInt32(dgv_appointments.Rows[e.RowIndex].Cells[0].Value);
+                AcceptReject AR = new AcceptReject(cellvalue);
+                AR.Show();
+                
+            }
+        }
+       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void DisplayAppointment()
         {
             try
             {
