@@ -132,6 +132,12 @@
     <Compile Include="AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AcceptReject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AcceptReject.Designer.cs">
+      <DependentUpon>AcceptReject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AccountInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +320,9 @@
     <Compile Include="SomeProcedure.cs" />
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AcceptReject.resx">
+      <DependentUpon>AcceptReject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AccountInfo.resx">
       <DependentUpon>AccountInfo.cs</DependentUpon>
