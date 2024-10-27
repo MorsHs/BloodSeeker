@@ -132,5 +132,34 @@ namespace BloodSeeker
             }
             return dataTable;
         }
+
+        public DataTable fncDisplayAppointment()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_displayAppointment", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+                            using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
+                            {
+                                global.dataAdapter.Fill(dataTable);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading inventory: " + ex.Message);
+            }
+            return dataTable;
+        }
+
     }
-    }
+}
