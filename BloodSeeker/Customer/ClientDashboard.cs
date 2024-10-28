@@ -201,5 +201,10 @@ namespace BloodSeeker.Client
         {
             pnl_logout.Hide();
         }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
