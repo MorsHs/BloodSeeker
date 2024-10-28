@@ -97,7 +97,6 @@ namespace BloodSeeker
                 MessageBox.Show("Error searching inventory: " + ex.Message);
             }
 
-            // Check for null or empty result set
             if (dataTable == null || dataTable.Rows.Count == 0)
             {
             }
@@ -157,6 +156,36 @@ namespace BloodSeeker
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading inventory: " + ex.Message);
+            }
+            return dataTable;
+        }
+
+        public DataTable fncDisplayClientAppointment(int clientId)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_displayClientAppHistory", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+                            // Pass the client ID as a parameter
+                            global.sqlCommand.Parameters.AddWithValue("@p_ClientID", clientId);
+
+                            using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
+                            {
+                                global.dataAdapter.Fill(dataTable);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
             }
             return dataTable;
         }

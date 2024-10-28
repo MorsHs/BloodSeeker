@@ -13,7 +13,7 @@ namespace BloodSeeker.Client
 {
     public partial class ClientInformation : Form
     {
-        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Risingup1924;";
+        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Jonald12345;";
 
         public ClientInformation()
         {
@@ -59,6 +59,16 @@ namespace BloodSeeker.Client
                     MessageBox.Show("Error loading client information: " + ex.Message);
                 }
             }
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
