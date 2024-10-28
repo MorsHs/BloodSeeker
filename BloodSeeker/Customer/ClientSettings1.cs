@@ -135,7 +135,7 @@ namespace BloodSeeker.Client
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             Global global = new Global();
-            clientId = 3;
+            
 
             string result = new SomeProcedure().UpdateClientInfo(
                 clientId,
@@ -157,6 +157,7 @@ namespace BloodSeeker.Client
             DataTable ClientInfo = someProcedure.GetClientInfo(clientId);
             if (ClientInfo != null && ClientInfo.Rows.Count > 0)
             {
+                
                 txt_firstname.Text = ClientInfo.Rows[0]["first_name"].ToString();
                 txt_lastname.Text = ClientInfo.Rows[0]["last_name"].ToString();
                 txt_address.Text = ClientInfo.Rows[0]["address"].ToString();
