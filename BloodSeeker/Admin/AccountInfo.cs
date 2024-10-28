@@ -15,9 +15,13 @@ namespace BloodSeeker.Admin
         public AccountInfo()
         {
             InitializeComponent();
+            this.adminId = adminId;  
+            someProcedure = new SomeProcedure();
         }
 
-        string photopath;
+        private int adminId; 
+        private string photopath;  
+        private SomeProcedure someProcedure;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -111,7 +115,56 @@ namespace BloodSeeker.Admin
         }
 
         
-        private void guna2Button7_Click(object sender, EventArgs e)
+    
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AccountInfo_Load(object sender, EventArgs e)
+        {
+            btn_cancel.Hide();
+            btn_Submit.Hide();
+        }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            Global global = new Global();
+            int adminId = 1; 
+
+            string result = new SomeProcedure().UpdateAdminInfo(
+                adminId,
+                txt_firstname.Text.Trim(),
+                txt_lastname.Text.Trim(),
+                txt_address.Text.Trim(),
+                txt_contactNo.Text.Trim(),
+                txt_email.Text.Trim(),
+                txt_username.Text.Trim(),
+                photopath 
+            );
+
+            MessageBox.Show(result);
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            btn_Submit.Hide();
+            btn_cancel.Hide();
+            ResetFields();
+        }
+        private void ResetFields()
+        {
+         
+            txt_username.Clear();
+            txt_firstname.Clear();
+            txt_lastname.Clear();
+            txt_address.Clear();
+            txt_contactNo.Clear();
+            txt_email.Clear();
+        }
+
+        private void guna2Button7_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -132,17 +185,6 @@ namespace BloodSeeker.Admin
             {
 
             }
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void AccountInfo_Load(object sender, EventArgs e)
-        {
-            btn_cancel.Hide();
-            btn_Submit.Hide();
         }
     }
 }

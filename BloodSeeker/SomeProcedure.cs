@@ -191,7 +191,43 @@ namespace BloodSeeker
             }
             return resultMessage;
         }
+        public string UpdateAdminInfo(int adminId, string firstName, string lastName, string address, string mobileNum, string emailAdd, string username, string photoPath)
+        {
+            string resultMessage = "Failed to update account information.";
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_editAdminInfo", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
 
+                            // Set the parameters for the stored procedure
+                            global.sqlCommand.Parameters.AddWithValue("p_admin_id", adminId);
+                            global.sqlCommand.Parameters.AddWithValue("p_first_name", firstName);
+                            global.sqlCommand.Parameters.AddWithValue("p_last_name", lastName);
+                            global.sqlCommand.Parameters.AddWithValue("p_address", address);
+                            global.sqlCommand.Parameters.AddWithValue("p_mobileNum", mobileNum);
+                            global.sqlCommand.Parameters.AddWithValue("p_emailAdd", emailAdd);
+                            global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                            global.sqlCommand.Parameters.AddWithValue("p_photo", photoPath);
+
+                            // Execute the command
+                            global.sqlCommand.ExecuteNonQuery();
+                            resultMessage = "Account information updated successfully!";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMessage = "Error updating account information: " + ex.Message;
+            }
+            return resultMessage;
+        }
     }
 
 }
