@@ -27,40 +27,45 @@ namespace BloodSeeker
 
         private void guna2GradientTileButton1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
             if (txt_pass.Text.ToString() == txt_confirmpass.Text.ToString())
             {
-                if (txt_firstname.Text != "" &&
-                    txt_lastname.Text != "" &&
-                    txt_username.Text != "" &&
-                    txt_pass.Text != "" &&
-                    txt_confirmpass.Text != "" &&
-                    txt_email.Text != "" &&
-                    txt_address.Text != "" &&
-                    malecmbx.Checked || femalecmbx.Checked
-                    )
+                if (!string.IsNullOrWhiteSpace(txt_firstname.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_lastname.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_username.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_pass.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_confirmpass.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_email.Text) &&
+                    !string.IsNullOrWhiteSpace(txt_address.Text) &&
+                    (malecmbx.Checked || femalecmbx.Checked))
                 {
                     if (pickerDate.Value.Date <= DateTime.Now.Date)
                     {
-                       AddStaffController addstaff = new AddStaffController(txt_username.Text.ToString(),
-                                                                  txt_firstname.Text.ToString(),
-                                                                  txt_lastname.Text.ToString(),
-                                                                  txt_pass.Text.ToString(),
-                                                                  txt_email.Text.ToString(),
-                                                                  txt_contact.Text.ToString(),
-                                                                  txt_address.Text.ToString(),
-                                                                  pickerDate.Value.Date,
-                                                                  checkboxChecker()
-                                                                  );
+                        SomeProcedure addstaff = new SomeProcedure();
+                        string result = addstaff.CreateAccountForStaff(
+                            txt_firstname.Text.ToString(),
+                            txt_lastname.Text.ToString(),
+                            txt_address.Text.ToString(),
+                            txt_contact.Text.ToString(),
+                            txt_email.Text.ToString(),
+                            pickerDate.Value.Date,
+                            checkboxChecker(),
+                            txt_username.Text.ToString(),
+                            txt_pass.Text.ToString()
+                        );
+
+                        MessageBox.Show(result); // Show the result message
+                        this.Dispose(); // Close the form
                     }
                     else
                     {
-                        MessageBox.Show("Today is " + DateTime.Now.Date + " its not possible to put " + pickerDate.Value.Date);
+                        MessageBox.Show("Today is " + DateTime.Now.Date + ". It's not possible to put " + pickerDate.Value.Date);
                         pickerDate.Value = DateTime.Now.Date;
                     }
-
                 }
-                else MessageBox.Show("Please Fill out the missing forms");
+                else
+                {
+                    MessageBox.Show("Please fill out the missing forms.");
+                }
             }
             else
             {
@@ -68,7 +73,7 @@ namespace BloodSeeker
                 txt_confirmpass.Text = txt_pass.Text = "";
             }
 
-            
+
         }
 
         private void malecmbx_CheckedChanged(object sender, EventArgs e)

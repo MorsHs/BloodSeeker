@@ -258,6 +258,42 @@ namespace BloodSeeker
 
             return dataTable;
         }
+        public string CreateAccountForStaff(string firstName, string lastName, string address, string mobileNum, string emailAdd, DateTime birthDate, string sex, string username, string password)
+        {
+            string resultMessage = "Account creation failed.";
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_createAccountForStaff", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                            global.sqlCommand.Parameters.AddWithValue("p_first_name", firstName);
+                            global.sqlCommand.Parameters.AddWithValue("p_last_name", lastName);
+                            global.sqlCommand.Parameters.AddWithValue("p_address", address);
+                            global.sqlCommand.Parameters.AddWithValue("p_mobileNum", mobileNum);
+                            global.sqlCommand.Parameters.AddWithValue("p_emailAdd", emailAdd);
+                            global.sqlCommand.Parameters.AddWithValue("p_birthDate", birthDate);
+                            global.sqlCommand.Parameters.AddWithValue("p_sex", sex);
+                            global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                            global.sqlCommand.Parameters.AddWithValue("p_password", password);
+
+                            int rowsAffected = global.sqlCommand.ExecuteNonQuery();
+                            resultMessage = rowsAffected > 0 ? "Account created successfully!" : "Username is taken already.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMessage = "Error creating account: " + ex.Message;
+            }
+            return resultMessage;
+        }
     }
 
 }
