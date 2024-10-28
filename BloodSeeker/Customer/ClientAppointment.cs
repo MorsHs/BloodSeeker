@@ -8,21 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace BloodSeeker.Client
-
 {
-
     public partial class ClientAppointment : Form
     {
         private DateTime selectedDate;
+        private int loggedInDonorId; // to store donor_id
 
-        public ClientAppointment()
+        public ClientAppointment(int donorID)
         {
             InitializeComponent();
+            loggedInDonorId = donorID;
         }
-
-
 
         private void ClientAppointment_Load(object sender, EventArgs e)
         {
@@ -32,14 +31,10 @@ namespace BloodSeeker.Client
             btn_Submit.Click += btn_Submit_Click;
         }
 
-
-
         private void OnAppointmentRequested(object sender, AppointmentEventArgs e)
         {
             selectedDate = e.SelectedDate;
         }
-
-
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
@@ -49,7 +44,6 @@ namespace BloodSeeker.Client
             {
                 string appointmentTime = DateTime.Now.ToString("hh:mm tt");
                 string appointmentDate = selectedDate.ToString("dddd, MMMM dd yyyy");
-
 
                 bool duplicate = false;
                 foreach (FlowLayoutPanel existingAppointment in flowPanel2.Controls)
@@ -66,6 +60,14 @@ namespace BloodSeeker.Client
 
                 if (!duplicate)
                 {
+                    
+                     
+                    string status = "Scheduled"; 
+
+                   
+                    InsertAppointmentIntoDatabase(loggedInDonorId, selectedDate, status);
+
+                    
                     FlowLayoutPanel appointmentEntry = new FlowLayoutPanel();
                     appointmentEntry.AutoSize = true;
 
@@ -106,7 +108,28 @@ namespace BloodSeeker.Client
             btn_Submit.Enabled = true;
         }
 
+        private void InsertAppointmentIntoDatabase(int donor_id, DateTime date, string status)
+        {
+            if (selectedDate == default(DateTime))
+            {
+                MessageBox.Show("Pick a date first!");
+                return;
+            }
+
+            string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Risingup1924;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand command = new MySqlCommand("prc_setAppointment", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@p_DonorID", donor_id);
+                    command.Parameters.AddWithValue("@p_AppointmentDate", date);
+                    command.Parameters.AddWithValue("@p_AppointmentStatus", status);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Appointment successfully scheduled!");
+                }
+            }
+        }
     }
-
-
 }
