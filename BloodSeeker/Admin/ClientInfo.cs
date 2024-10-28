@@ -37,8 +37,7 @@ namespace BloodSeeker.Admin
                     controller.getClientList()[i].phone,
                     controller.getClientList()[i].email,
                     controller.getClientList()[i].address,
-                    controller.getClientList()[i].birthdate,
-                    controller.getClientList()[i].photo
+                    controller.getClientList()[i].birthdate
                     );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);
@@ -73,8 +72,7 @@ namespace BloodSeeker.Admin
                         client.phone,
                         client.email,
                         client.address,
-                        client.birthdate,
-                        client.photo
+                        client.birthdate
                     );
                     tab.BackColor = Color.FromArgb(36, 36, 36);
                     flowLayoutPanel1.Controls.Add(tab);
@@ -118,8 +116,7 @@ namespace BloodSeeker.Admin
                     client.phone,
                     client.email,
                     client.address,
-                    client.birthdate,
-                    client.photo
+                    client.birthdate
                 );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);

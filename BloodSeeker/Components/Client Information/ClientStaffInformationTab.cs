@@ -20,8 +20,7 @@ namespace BloodSeeker.Components.Client_Information
         private String _phone;
         private String _address;    
         private DateTime _birthday;
-        private string photo;
-        public ClientStaffInformationTab(String firstname,string lastname,string sex,string phone,string email,string address,DateTime birthDate, string photo)
+        public ClientStaffInformationTab(String firstname,string lastname,string sex,string phone,string email,string address,DateTime birthDate)
         {
             InitializeComponent();
             _firstname = firstname;
@@ -31,8 +30,6 @@ namespace BloodSeeker.Components.Client_Information
             _phone = phone;
             _address = address;
             _birthday = birthDate;
-            this.photo = photo;
-            convertImage();
             setClientInformationTab();
         }
         public void setClientInformationTab()
@@ -43,22 +40,6 @@ namespace BloodSeeker.Components.Client_Information
             clientphonelbl.Text = _phone;
         }
 
-        public void convertImage()
-        {
-            try
-            {
-                byte[] base_64_image = Convert.FromBase64String(photo);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    avatar.Image = Image.FromStream(ms);
-                }
-            }
-            catch (Exception ex) {
-                //Image is null
-                 
-            }
-           
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -90,6 +71,11 @@ namespace BloodSeeker.Components.Client_Information
                 background.Dispose();
             }
             
+        }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

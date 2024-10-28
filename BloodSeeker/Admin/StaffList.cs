@@ -38,8 +38,7 @@ namespace BloodSeeker.Admin
                     controller.getStaffList()[i].phone,
                     controller.getStaffList()[i].email,
                     controller.getStaffList()[i].address,
-                    controller.getStaffList()[i].birthdate,
-                    controller.getStaffList()[i].photo
+                    controller.getStaffList()[i].birthdate
                     );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);
@@ -58,8 +57,7 @@ namespace BloodSeeker.Admin
                     staff.phone,
                     staff.email,
                     staff.address,
-                    staff.birthdate,
-                    staff.photo
+                    staff.birthdate
                 );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);
@@ -106,8 +104,7 @@ namespace BloodSeeker.Admin
                         staff.phone,
                         staff.email,
                         staff.address,
-                        staff.birthdate,
-                        staff.photo
+                        staff.birthdate
                     );
                     tab.BackColor = Color.FromArgb(36, 36, 36);
                     flowLayoutPanel1.Controls.Add(tab);
@@ -152,8 +149,7 @@ namespace BloodSeeker.Admin
                     staff.phone,
                     staff.email,
                     staff.address,
-                    staff.birthdate,
-                    staff.photo
+                    staff.birthdate
                 );
                 tab.BackColor = Color.FromArgb(36, 36, 36);
                 flowLayoutPanel1.Controls.Add(tab);
