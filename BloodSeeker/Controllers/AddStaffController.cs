@@ -39,7 +39,7 @@ namespace BloodSeeker.Admin.Controllers
                 Global global = new Global();
                 global.fncConnectToDatabase();
                 global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_createStaff";
+                global.sqlCommand.CommandText = "prc_createAccountForStaff";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
                 global.sqlCommand.Parameters.AddWithValue("p_first_name", firstname);
                 global.sqlCommand.Parameters.AddWithValue("p_last_name", lastname);

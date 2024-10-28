@@ -87,6 +87,7 @@
             this.guna2Elipse18 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.menuExpand = new System.Windows.Forms.Timer(this.components);
             this.guna2Elipse19 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse20 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.settingsContainer.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
@@ -258,6 +259,7 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 15;
             this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // txt_dashUsername
             // 
@@ -705,6 +707,10 @@
             // 
             this.menuExpand.Tick += new System.EventHandler(this.menuExpand_Tick);
             // 
+            // guna2Elipse20
+            // 
+            this.guna2Elipse20.BorderRadius = 10;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -807,5 +813,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse19;
         public System.Windows.Forms.Label txt_dashUsername;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse20;
     }
 }

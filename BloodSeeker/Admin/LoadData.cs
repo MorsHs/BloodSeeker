@@ -75,6 +75,7 @@ namespace BloodSeeker.Admin
             pr.crystalReportViewer1.ReportSource = tr;
             pr.crystalReportViewer1.Refresh();
             pr.Show();
+            this.Hide();
         }
     }
 }

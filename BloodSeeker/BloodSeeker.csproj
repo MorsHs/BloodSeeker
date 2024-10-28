@@ -270,6 +270,7 @@
     <Compile Include="Admin\TransacitionHistory.Designer.cs">
       <DependentUpon>TransacitionHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoard Display Code\DashBoardDisplay.cs" />
     <Compile Include="Model\AdminLoginRep.cs" />
     <Compile Include="Controllers\ClientLoginController.cs" />
     <Compile Include="Model\ClientLoginRepo.cs" />
