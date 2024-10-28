@@ -178,6 +178,7 @@
             this.avatar.Size = new System.Drawing.Size(100, 95);
             this.avatar.TabIndex = 0;
             this.avatar.TabStop = false;
+            this.avatar.Click += new System.EventHandler(this.avatar_Click);
             // 
             // ClientStaffInformationTab
             // 

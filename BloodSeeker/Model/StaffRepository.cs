@@ -61,8 +61,7 @@ namespace BloodSeeker.Model.Admin
                     string phone = reader.GetString("mobileNum");
                     string address = reader.GetString("address");
                     DateTime birthDate = reader.GetDateTime("birthDate");
-                    string photo = reader.GetString("photo");
-                    Person staff = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate,photo);
+                    Person staff = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate);
                     //TODO Staff Photo
                     addPerson(staff);
 
@@ -104,7 +103,6 @@ namespace BloodSeeker.Model.Admin
                             reader.GetString("address"),
                             reader.GetString("sex"),
                             reader.GetDateTime("birthDate"),
-                            reader.GetString("photo"),
                             reader.GetInt32("staff_id")
                         );
                         result.Add(staff);
@@ -147,7 +145,6 @@ namespace BloodSeeker.Model.Admin
                             reader.GetString("address"),
                             reader.GetString("sex"),
                             reader.GetDateTime("birthDate"),
-                            reader.GetString("photo"),
                             reader.GetInt32("staff_id")
                         );
                         result.Add(staff);
@@ -190,7 +187,6 @@ namespace BloodSeeker.Model.Admin
                             reader.GetString("address"),
                             reader.GetString("sex"),
                             reader.GetDateTime("birthDate"),
-                            reader.GetString("photo"),
                             reader.GetInt32("staff_id")
                         );
                         result.Add(staff);
