@@ -1,4 +1,4 @@
-﻿using BloodSeeker.DashBoard_Display_Code;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,14 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Security.Policy;
 
-namespace BloodSeeker.Admin
+namespace BloodSeeker.Customer
 {
-    public partial class Dashboard : Form
+    public partial class CDashboard : Form
     {
-       // DashBoardDisplay display = new DashBoardDisplay();
-        public Dashboard()
+        public CDashboard()
         {
             InitializeComponent();
             store1();
@@ -26,19 +24,22 @@ namespace BloodSeeker.Admin
             getCountabplus();
             getCountabminus();
             getCountoplus();
-            getCountominus(); 
+            getCountominus();
         }
-        
 
-        private void label6_Click(object sender, EventArgs e)
+        private void CDashboard_Load(object sender, EventArgs e)
         {
 
         }
-       
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         public void store1()
         {
-           
+
             try
             {
                 Global global = new Global();
@@ -60,7 +61,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-               
+
             }
         }
 
@@ -87,7 +88,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-                
+
             }
         }
         public void getCountbplus()
@@ -112,7 +113,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-                
+
             }
         }
         public void getCountbminus()
@@ -138,7 +139,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-               
+
             }
         }
         public void getCountabplus()
@@ -163,7 +164,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-                
+
             }
         }
         public void getCountabminus()
@@ -188,7 +189,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-                
+
             }
         }
         public void getCountoplus()
@@ -214,7 +215,7 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-                
+
             }
         }
         public void getCountominus()
@@ -239,31 +240,8 @@ namespace BloodSeeker.Admin
             }
             catch (Exception ex)
             {
-               
+
             }
         }
-
-        public void store()
-        {
-            DashBoardDisplay display = new DashBoardDisplay();
-             display.getCountaplus("A+");
-            var cellValue = Convert.ToString(dgv_aplus.Rows[0].Cells[1].Value);
-            lbl_AplusCount.Text = cellValue;
-
-        }
-
-        
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
     }
-
 }

@@ -1,6 +1,6 @@
-﻿namespace BloodSeeker.Admin
+﻿namespace BloodSeeker.Customer
 {
-    partial class Dashboard
+    partial class CDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -52,9 +52,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_ominus = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ominusquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,14 +91,13 @@
             this.Aminusquantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_AminnusCount = new System.Windows.Forms.Label();
             this.lbl_Aminus = new System.Windows.Forms.Label();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgv_aplus = new Guna.UI2.WinForms.Guna2DataGridView();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_AplusCount = new System.Windows.Forms.Label();
             this.lbl_Aplus = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ominus)).BeginInit();
             this.guna2Panel14.SuspendLayout();
@@ -112,67 +112,77 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_abplus)).BeginInit();
             this.guna2Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_aminus)).BeginInit();
-            this.guna2Panel5.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_aplus)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2CustomGradientPanel1
+            // guna2GradientPanel1
             // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label6);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.SystemColors.ControlLight;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1166, 600);
-            this.guna2CustomGradientPanel1.TabIndex = 1;
-            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            this.guna2GradientPanel1.Controls.Add(this.guna2Panel5);
+            this.guna2GradientPanel1.Controls.Add(this.label6);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1166, 600);
+            this.guna2GradientPanel1.TabIndex = 0;
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
-            // guna2Panel2
+            // label6
             // 
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.guna2Panel13);
-            this.guna2Panel2.Controls.Add(this.guna2Panel14);
-            this.guna2Panel2.Controls.Add(this.guna2Panel11);
-            this.guna2Panel2.Controls.Add(this.guna2Panel10);
-            this.guna2Panel2.Controls.Add(this.guna2Panel12);
-            this.guna2Panel2.Controls.Add(this.guna2Panel7);
-            this.guna2Panel2.Controls.Add(this.guna2Panel8);
-            this.guna2Panel2.Controls.Add(this.guna2Panel5);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(56, 112);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(552, 253);
-            this.guna2Panel2.TabIndex = 7;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(27, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(170, 45);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Dashboard";
             // 
-            // label2
+            // guna2Panel5
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(10, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Blood Inventory";
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2Panel5.BorderRadius = 10;
+            this.guna2Panel5.BorderThickness = 1;
+            this.guna2Panel5.Controls.Add(this.label4);
+            this.guna2Panel5.Controls.Add(this.guna2Panel13);
+            this.guna2Panel5.Controls.Add(this.guna2Panel14);
+            this.guna2Panel5.Controls.Add(this.guna2Panel11);
+            this.guna2Panel5.Controls.Add(this.guna2Panel10);
+            this.guna2Panel5.Controls.Add(this.guna2Panel12);
+            this.guna2Panel5.Controls.Add(this.guna2Panel7);
+            this.guna2Panel5.Controls.Add(this.guna2Panel8);
+            this.guna2Panel5.Controls.Add(this.guna2Panel6);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(96, 107);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(552, 253);
+            this.guna2Panel5.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(10, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Blood Inventory";
             // 
             // guna2Panel13
             // 
-            this.guna2Panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel13.BorderRadius = 10;
             this.guna2Panel13.BorderThickness = 1;
             this.guna2Panel13.Controls.Add(this.dgv_ominus);
             this.guna2Panel13.Controls.Add(this.lbl_OminusCount);
             this.guna2Panel13.Controls.Add(this.lbl_Ominus);
-            this.guna2Panel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel13.Location = new System.Drawing.Point(423, 151);
             this.guna2Panel13.Name = "guna2Panel13";
             this.guna2Panel13.Size = new System.Drawing.Size(113, 82);
@@ -184,7 +194,7 @@
             this.dgv_ominus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgv_ominus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_ominus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_ominus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,7 +227,7 @@
             this.dgv_ominus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_ominus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_ominus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_ominus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_ominus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_ominus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_ominus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_ominus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -245,7 +255,7 @@
             // lbl_OminusCount
             // 
             this.lbl_OminusCount.AutoSize = true;
-            this.lbl_OminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_OminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_OminusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_OminusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_OminusCount.Location = new System.Drawing.Point(44, 40);
@@ -257,7 +267,7 @@
             // lbl_Ominus
             // 
             this.lbl_Ominus.AutoSize = true;
-            this.lbl_Ominus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Ominus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Ominus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Ominus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Ominus.Location = new System.Drawing.Point(30, 10);
@@ -268,14 +278,14 @@
             // 
             // guna2Panel14
             // 
-            this.guna2Panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel14.BorderRadius = 10;
             this.guna2Panel14.BorderThickness = 1;
             this.guna2Panel14.Controls.Add(this.dgv_bminus);
             this.guna2Panel14.Controls.Add(this.lbl_BminusCount);
             this.guna2Panel14.Controls.Add(this.lbl_Bminus);
-            this.guna2Panel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel14.Location = new System.Drawing.Point(423, 54);
             this.guna2Panel14.Name = "guna2Panel14";
             this.guna2Panel14.Size = new System.Drawing.Size(113, 82);
@@ -287,7 +297,7 @@
             this.dgv_bminus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgv_bminus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_bminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_bminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -320,7 +330,7 @@
             this.dgv_bminus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_bminus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_bminus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_bminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_bminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_bminus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_bminus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_bminus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -348,7 +358,7 @@
             // lbl_BminusCount
             // 
             this.lbl_BminusCount.AutoSize = true;
-            this.lbl_BminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_BminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_BminusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_BminusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_BminusCount.Location = new System.Drawing.Point(44, 39);
@@ -360,7 +370,7 @@
             // lbl_Bminus
             // 
             this.lbl_Bminus.AutoSize = true;
-            this.lbl_Bminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Bminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Bminus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Bminus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Bminus.Location = new System.Drawing.Point(30, 9);
@@ -371,14 +381,14 @@
             // 
             // guna2Panel11
             // 
-            this.guna2Panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel11.BorderRadius = 10;
             this.guna2Panel11.BorderThickness = 1;
             this.guna2Panel11.Controls.Add(this.dgv_oplus);
             this.guna2Panel11.Controls.Add(this.lbl_OplusCount);
             this.guna2Panel11.Controls.Add(this.lbl_Oplus);
-            this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel11.Location = new System.Drawing.Point(289, 151);
             this.guna2Panel11.Name = "guna2Panel11";
             this.guna2Panel11.Size = new System.Drawing.Size(113, 82);
@@ -390,7 +400,7 @@
             this.dgv_oplus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             this.dgv_oplus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_oplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_oplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -423,7 +433,7 @@
             this.dgv_oplus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_oplus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_oplus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_oplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_oplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_oplus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_oplus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_oplus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -451,7 +461,7 @@
             // lbl_OplusCount
             // 
             this.lbl_OplusCount.AutoSize = true;
-            this.lbl_OplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_OplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_OplusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_OplusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_OplusCount.Location = new System.Drawing.Point(44, 40);
@@ -463,7 +473,7 @@
             // lbl_Oplus
             // 
             this.lbl_Oplus.AutoSize = true;
-            this.lbl_Oplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Oplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Oplus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Oplus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Oplus.Location = new System.Drawing.Point(24, 10);
@@ -474,14 +484,14 @@
             // 
             // guna2Panel10
             // 
-            this.guna2Panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel10.BorderRadius = 10;
             this.guna2Panel10.BorderThickness = 1;
             this.guna2Panel10.Controls.Add(this.dgv_abminus);
             this.guna2Panel10.Controls.Add(this.lbl_ABminusCount);
             this.guna2Panel10.Controls.Add(this.lbl_ABminus);
-            this.guna2Panel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel10.Location = new System.Drawing.Point(155, 151);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(113, 82);
@@ -493,7 +503,7 @@
             this.dgv_abminus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
             this.dgv_abminus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgv_abminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_abminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -526,7 +536,7 @@
             this.dgv_abminus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_abminus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_abminus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_abminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_abminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_abminus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_abminus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_abminus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -554,7 +564,7 @@
             // lbl_ABminusCount
             // 
             this.lbl_ABminusCount.AutoSize = true;
-            this.lbl_ABminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_ABminusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_ABminusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_ABminusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_ABminusCount.Location = new System.Drawing.Point(41, 40);
@@ -566,7 +576,7 @@
             // lbl_ABminus
             // 
             this.lbl_ABminus.AutoSize = true;
-            this.lbl_ABminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_ABminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_ABminus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_ABminus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_ABminus.Location = new System.Drawing.Point(29, 10);
@@ -577,14 +587,14 @@
             // 
             // guna2Panel12
             // 
-            this.guna2Panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel12.BorderRadius = 10;
             this.guna2Panel12.BorderThickness = 1;
             this.guna2Panel12.Controls.Add(this.dgv_bplus);
             this.guna2Panel12.Controls.Add(this.lbl_BplusCount);
             this.guna2Panel12.Controls.Add(this.lbl_Bplus);
-            this.guna2Panel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel12.Location = new System.Drawing.Point(289, 54);
             this.guna2Panel12.Name = "guna2Panel12";
             this.guna2Panel12.Size = new System.Drawing.Size(113, 82);
@@ -596,7 +606,7 @@
             this.dgv_bplus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
             this.dgv_bplus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dgv_bplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_bplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -629,7 +639,7 @@
             this.dgv_bplus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_bplus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_bplus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_bplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_bplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_bplus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_bplus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_bplus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -657,7 +667,7 @@
             // lbl_BplusCount
             // 
             this.lbl_BplusCount.AutoSize = true;
-            this.lbl_BplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_BplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_BplusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_BplusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_BplusCount.Location = new System.Drawing.Point(44, 39);
@@ -669,7 +679,7 @@
             // lbl_Bplus
             // 
             this.lbl_Bplus.AutoSize = true;
-            this.lbl_Bplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Bplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Bplus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Bplus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Bplus.Location = new System.Drawing.Point(28, 9);
@@ -680,14 +690,14 @@
             // 
             // guna2Panel7
             // 
-            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel7.BorderRadius = 10;
             this.guna2Panel7.BorderThickness = 1;
             this.guna2Panel7.Controls.Add(this.dgv_abplus);
             this.guna2Panel7.Controls.Add(this.lbl_ABplusCount);
             this.guna2Panel7.Controls.Add(this.lbl_ABplus);
-            this.guna2Panel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel7.Location = new System.Drawing.Point(15, 151);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(113, 82);
@@ -699,7 +709,7 @@
             this.dgv_abplus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
             this.dgv_abplus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgv_abplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_abplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -732,7 +742,7 @@
             this.dgv_abplus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_abplus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_abplus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_abplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_abplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_abplus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_abplus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_abplus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -760,7 +770,7 @@
             // lbl_ABplusCount
             // 
             this.lbl_ABplusCount.AutoSize = true;
-            this.lbl_ABplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_ABplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_ABplusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_ABplusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_ABplusCount.Location = new System.Drawing.Point(33, 40);
@@ -772,7 +782,7 @@
             // lbl_ABplus
             // 
             this.lbl_ABplus.AutoSize = true;
-            this.lbl_ABplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_ABplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_ABplus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_ABplus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_ABplus.Location = new System.Drawing.Point(20, 10);
@@ -783,14 +793,14 @@
             // 
             // guna2Panel8
             // 
-            this.guna2Panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel8.BorderRadius = 10;
             this.guna2Panel8.BorderThickness = 1;
             this.guna2Panel8.Controls.Add(this.dgv_aminus);
             this.guna2Panel8.Controls.Add(this.lbl_AminnusCount);
             this.guna2Panel8.Controls.Add(this.lbl_Aminus);
-            this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel8.Location = new System.Drawing.Point(155, 54);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(113, 82);
@@ -802,7 +812,7 @@
             this.dgv_aminus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
             this.dgv_aminus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-            this.dgv_aminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_aminus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -835,7 +845,7 @@
             this.dgv_aminus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_aminus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_aminus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_aminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_aminus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_aminus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_aminus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_aminus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -863,7 +873,7 @@
             // lbl_AminnusCount
             // 
             this.lbl_AminnusCount.AutoSize = true;
-            this.lbl_AminnusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_AminnusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_AminnusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_AminnusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_AminnusCount.Location = new System.Drawing.Point(39, 41);
@@ -875,7 +885,7 @@
             // lbl_Aminus
             // 
             this.lbl_Aminus.AutoSize = true;
-            this.lbl_Aminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Aminus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Aminus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Aminus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Aminus.Location = new System.Drawing.Point(29, 9);
@@ -884,20 +894,20 @@
             this.lbl_Aminus.TabIndex = 1;
             this.lbl_Aminus.Text = "A-";
             // 
-            // guna2Panel5
+            // guna2Panel6
             // 
-            this.guna2Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Panel5.BorderRadius = 10;
-            this.guna2Panel5.BorderThickness = 1;
-            this.guna2Panel5.Controls.Add(this.dgv_aplus);
-            this.guna2Panel5.Controls.Add(this.lbl_AplusCount);
-            this.guna2Panel5.Controls.Add(this.lbl_Aplus);
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(15, 54);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(113, 82);
-            this.guna2Panel5.TabIndex = 0;
+            this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2Panel6.BorderRadius = 10;
+            this.guna2Panel6.BorderThickness = 1;
+            this.guna2Panel6.Controls.Add(this.dgv_aplus);
+            this.guna2Panel6.Controls.Add(this.lbl_AplusCount);
+            this.guna2Panel6.Controls.Add(this.lbl_Aplus);
+            this.guna2Panel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel6.Location = new System.Drawing.Point(15, 54);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(113, 82);
+            this.guna2Panel6.TabIndex = 0;
             // 
             // dgv_aplus
             // 
@@ -905,7 +915,7 @@
             this.dgv_aplus.AllowUserToDeleteRows = false;
             dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
             this.dgv_aplus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            this.dgv_aplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_aplus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -938,7 +948,7 @@
             this.dgv_aplus.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_aplus.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_aplus.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_aplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.dgv_aplus.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_aplus.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_aplus.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgv_aplus.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -966,7 +976,7 @@
             // lbl_AplusCount
             // 
             this.lbl_AplusCount.AutoSize = true;
-            this.lbl_AplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_AplusCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_AplusCount.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_AplusCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_AplusCount.Location = new System.Drawing.Point(36, 41);
@@ -978,7 +988,7 @@
             // lbl_Aplus
             // 
             this.lbl_Aplus.AutoSize = true;
-            this.lbl_Aplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.lbl_Aplus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_Aplus.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.lbl_Aplus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_Aplus.Location = new System.Drawing.Point(33, 9);
@@ -987,33 +997,20 @@
             this.lbl_Aplus.TabIndex = 0;
             this.lbl_Aplus.Text = "A+";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label6.Location = new System.Drawing.Point(29, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 45);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Dashboard";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // Dashboard
+            // CDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1166, 600);
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
+            this.Name = "CDashboard";
+            this.Text = "CDashboard";
+            this.Load += new System.EventHandler(this.CDashboard_Load);
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.guna2Panel13.ResumeLayout(false);
             this.guna2Panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ominus)).EndInit();
@@ -1035,8 +1032,8 @@
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_aminus)).EndInit();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_aplus)).EndInit();
             this.ResumeLayout(false);
 
@@ -1044,49 +1041,49 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.Label lbl_Aplus;
-        private System.Windows.Forms.Label lbl_Ominus;
-        private System.Windows.Forms.Label lbl_Bminus;
-        private System.Windows.Forms.Label lbl_Oplus;
-        private System.Windows.Forms.Label lbl_ABminus;
-        private System.Windows.Forms.Label lbl_Bplus;
-        private System.Windows.Forms.Label lbl_ABplus;
-        private System.Windows.Forms.Label lbl_Aminus;
-        private System.Windows.Forms.Label lbl_AplusCount;
-        private System.Windows.Forms.Label lbl_OminusCount;
-        private System.Windows.Forms.Label lbl_BminusCount;
-        private System.Windows.Forms.Label lbl_OplusCount;
-        private System.Windows.Forms.Label lbl_ABminusCount;
-        private System.Windows.Forms.Label lbl_BplusCount;
-        private System.Windows.Forms.Label lbl_ABplusCount;
-        private System.Windows.Forms.Label lbl_AminnusCount;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_aplus;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         public Guna.UI2.WinForms.Guna2DataGridView dgv_ominus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_bminus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_oplus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_abminus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_bplus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_abplus;
-        public Guna.UI2.WinForms.Guna2DataGridView dgv_aminus;
         private System.Windows.Forms.DataGridViewTextBoxColumn ominusquantity;
+        private System.Windows.Forms.Label lbl_OminusCount;
+        private System.Windows.Forms.Label lbl_Ominus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_bminus;
         private System.Windows.Forms.DataGridViewTextBoxColumn bminusquantity;
+        private System.Windows.Forms.Label lbl_BminusCount;
+        private System.Windows.Forms.Label lbl_Bminus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_oplus;
         private System.Windows.Forms.DataGridViewTextBoxColumn oplusquantity;
+        private System.Windows.Forms.Label lbl_OplusCount;
+        private System.Windows.Forms.Label lbl_Oplus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_abminus;
         private System.Windows.Forms.DataGridViewTextBoxColumn abminusquantity;
+        private System.Windows.Forms.Label lbl_ABminusCount;
+        private System.Windows.Forms.Label lbl_ABminus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_bplus;
         private System.Windows.Forms.DataGridViewTextBoxColumn bplusquantity;
+        private System.Windows.Forms.Label lbl_BplusCount;
+        private System.Windows.Forms.Label lbl_Bplus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_abplus;
         private System.Windows.Forms.DataGridViewTextBoxColumn abplusquantity;
+        private System.Windows.Forms.Label lbl_ABplusCount;
+        private System.Windows.Forms.Label lbl_ABplus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_aminus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Aminusquantity;
+        private System.Windows.Forms.Label lbl_AminnusCount;
+        private System.Windows.Forms.Label lbl_Aminus;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        public Guna.UI2.WinForms.Guna2DataGridView dgv_aplus;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.Label lbl_AplusCount;
+        private System.Windows.Forms.Label lbl_Aplus;
     }
 }
