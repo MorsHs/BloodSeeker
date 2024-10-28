@@ -47,9 +47,16 @@ namespace BloodSeeker
                 {
                     if (pickerDate.Value.Date <= DateTime.Now.Date)
                     {
-                        controller = new SignUpController(txt_firstname.Text.ToString(), txt_lastname.Text.ToString(),
-                        txt_pass.Text.ToString(), txt_username.Text.ToString(), txt_email.Text.ToString(),
-                        txt_contact.Text.ToString(), txt_address.Text.ToString(), checkboxChecker(), pickerDate.Value.Date);
+                        controller = new SignUpController(
+                            txt_firstname.Text.ToString(), 
+                            txt_lastname.Text.ToString(),
+                            txt_pass.Text.ToString(), 
+                            txt_username.Text.ToString(), 
+                            txt_email.Text.ToString(),
+                            txt_contact.Text.ToString(), 
+                            txt_address.Text.ToString(), 
+                            checkboxChecker(), 
+                            pickerDate.Value.Date);
 
                         string message = controller.registerUser();
                         if (message != null)
