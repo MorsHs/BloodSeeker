@@ -104,6 +104,7 @@
             this.btn_submit.Size = new System.Drawing.Size(92, 39);
             this.btn_submit.TabIndex = 49;
             this.btn_submit.Text = "Submit";
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // chk_newPass
             // 
