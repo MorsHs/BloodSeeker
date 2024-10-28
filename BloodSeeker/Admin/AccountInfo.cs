@@ -126,6 +126,8 @@ namespace BloodSeeker.Admin
         {
             btn_cancel.Hide();
             btn_Submit.Hide();
+            LoadAdminInfo();
+
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
@@ -153,15 +155,41 @@ namespace BloodSeeker.Admin
             btn_cancel.Hide();
             ResetFields();
         }
+
+        private void LoadAdminInfo()
+        {
+            int adminId = 1;
+            DataTable adminInfo = someProcedure.GetAdminInfo(adminId);
+            if (adminInfo != null && adminInfo.Rows.Count > 0)
+            {
+                txt_firstname.Text = adminInfo.Rows[0]["first_name"].ToString();
+                txt_lastname.Text = adminInfo.Rows[0]["last_name"].ToString();
+                txt_address.Text = adminInfo.Rows[0]["address"].ToString();
+                txt_contactNo.Text = adminInfo.Rows[0]["mobileNum"].ToString();
+                txt_email.Text = adminInfo.Rows[0]["emailAdd"].ToString();
+                txt_username.Text = adminInfo.Rows[0]["username"].ToString();
+
+                string photoPath = adminInfo.Rows[0]["photo"].ToString();
+                if (!string.IsNullOrEmpty(photoPath))
+                {
+                    img_pfp.Image = Image.FromFile(photoPath);
+                    photopath = photoPath;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No admin information found.");
+            }
+        }
         private void ResetFields()
         {
-         
-            txt_username.Clear();
-            txt_firstname.Clear();
-            txt_lastname.Clear();
-            txt_address.Clear();
-            txt_contactNo.Clear();
-            txt_email.Clear();
+
+            txt_username.Enabled = false;
+            txt_firstname.Enabled = false;
+            txt_lastname.Enabled = false;
+            txt_address.Enabled = false;
+            txt_contactNo.Enabled = false;
+            txt_email.Enabled = false;
         }
 
         private void guna2Button7_Click_1(object sender, EventArgs e)
