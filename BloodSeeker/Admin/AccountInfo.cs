@@ -168,7 +168,6 @@ namespace BloodSeeker.Admin
                 txt_contactNo.Text = adminInfo.Rows[0]["mobileNum"].ToString();
                 txt_email.Text = adminInfo.Rows[0]["emailAdd"].ToString();
                 txt_username.Text = adminInfo.Rows[0]["username"].ToString();
-
                 string photoPath = adminInfo.Rows[0]["photo"].ToString();
                 if (!string.IsNullOrEmpty(photoPath))
                 {
@@ -178,7 +177,7 @@ namespace BloodSeeker.Admin
             }
             else
             {
-                MessageBox.Show("No admin information found.");
+                MessageBox.Show("No client information found.");
             }
         }
         private void ResetFields()

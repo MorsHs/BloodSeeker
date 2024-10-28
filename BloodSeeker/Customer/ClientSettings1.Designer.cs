@@ -38,6 +38,8 @@
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmb_bloodGroup = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_Submit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_cancel = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -61,8 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.img_pfp = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pfp)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +98,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel1.Controls.Add(this.cmb_bloodGroup);
             this.guna2Panel1.Controls.Add(this.btn_Submit);
             this.guna2Panel1.Controls.Add(this.btn_cancel);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
@@ -121,10 +121,52 @@
             this.guna2Panel1.Controls.Add(this.txt_username);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.img_pfp);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, -1);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1512, 535);
+            this.guna2Panel1.Size = new System.Drawing.Size(1138, 436);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.label1.Location = new System.Drawing.Point(438, 220);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Bloodtype:";
+            // 
+            // cmb_bloodGroup
+            // 
+            this.cmb_bloodGroup.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_bloodGroup.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_bloodGroup.BorderRadius = 6;
+            this.cmb_bloodGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_bloodGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_bloodGroup.FillColor = System.Drawing.Color.DarkGray;
+            this.cmb_bloodGroup.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_bloodGroup.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_bloodGroup.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_bloodGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmb_bloodGroup.ItemHeight = 30;
+            this.cmb_bloodGroup.Items.AddRange(new object[] {
+            "A",
+            "A+",
+            "A-",
+            "B",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
+            this.cmb_bloodGroup.Location = new System.Drawing.Point(441, 237);
+            this.cmb_bloodGroup.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_bloodGroup.Name = "cmb_bloodGroup";
+            this.cmb_bloodGroup.Size = new System.Drawing.Size(187, 36);
+            this.cmb_bloodGroup.TabIndex = 65;
             // 
             // btn_Submit
             // 
@@ -141,12 +183,12 @@
             this.btn_Submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_Submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Submit.ForeColor = System.Drawing.Color.White;
-            this.btn_Submit.Location = new System.Drawing.Point(626, 449);
-            this.btn_Submit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Submit.Location = new System.Drawing.Point(428, 364);
             this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Size = new System.Drawing.Size(123, 48);
+            this.btn_Submit.Size = new System.Drawing.Size(92, 39);
             this.btn_Submit.TabIndex = 64;
             this.btn_Submit.Text = "Submit";
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // btn_cancel
             // 
@@ -163,12 +205,12 @@
             this.btn_cancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(791, 449);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancel.Location = new System.Drawing.Point(551, 364);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(123, 48);
+            this.btn_cancel.Size = new System.Drawing.Size(92, 39);
             this.btn_cancel.TabIndex = 63;
             this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // guna2Button1
             // 
@@ -181,10 +223,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(825, 179);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Location = new System.Drawing.Point(577, 144);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(20, 18);
+            this.guna2Button1.Size = new System.Drawing.Size(15, 15);
             this.guna2Button1.TabIndex = 62;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
@@ -199,10 +240,9 @@
             this.btn_editEA.FillColor = System.Drawing.Color.Transparent;
             this.btn_editEA.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editEA.ForeColor = System.Drawing.Color.White;
-            this.btn_editEA.Location = new System.Drawing.Point(1220, 397);
-            this.btn_editEA.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editEA.Location = new System.Drawing.Point(873, 322);
             this.btn_editEA.Name = "btn_editEA";
-            this.btn_editEA.Size = new System.Drawing.Size(20, 18);
+            this.btn_editEA.Size = new System.Drawing.Size(15, 15);
             this.btn_editEA.TabIndex = 61;
             this.btn_editEA.Click += new System.EventHandler(this.btn_editEA_Click_1);
             // 
@@ -217,10 +257,9 @@
             this.btn_editCN.FillColor = System.Drawing.Color.Transparent;
             this.btn_editCN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editCN.ForeColor = System.Drawing.Color.White;
-            this.btn_editCN.Location = new System.Drawing.Point(1220, 305);
-            this.btn_editCN.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editCN.Location = new System.Drawing.Point(873, 247);
             this.btn_editCN.Name = "btn_editCN";
-            this.btn_editCN.Size = new System.Drawing.Size(20, 18);
+            this.btn_editCN.Size = new System.Drawing.Size(15, 15);
             this.btn_editCN.TabIndex = 60;
             this.btn_editCN.Click += new System.EventHandler(this.btn_editCN_Click_1);
             // 
@@ -235,10 +274,9 @@
             this.btn_editAddress.FillColor = System.Drawing.Color.Transparent;
             this.btn_editAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editAddress.ForeColor = System.Drawing.Color.White;
-            this.btn_editAddress.Location = new System.Drawing.Point(1220, 226);
-            this.btn_editAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editAddress.Location = new System.Drawing.Point(873, 183);
             this.btn_editAddress.Name = "btn_editAddress";
-            this.btn_editAddress.Size = new System.Drawing.Size(20, 18);
+            this.btn_editAddress.Size = new System.Drawing.Size(15, 15);
             this.btn_editAddress.TabIndex = 59;
             this.btn_editAddress.Click += new System.EventHandler(this.btn_editAddress_Click_1);
             // 
@@ -253,10 +291,9 @@
             this.btn_editLN.FillColor = System.Drawing.Color.Transparent;
             this.btn_editLN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editLN.ForeColor = System.Drawing.Color.White;
-            this.btn_editLN.Location = new System.Drawing.Point(544, 397);
-            this.btn_editLN.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editLN.Location = new System.Drawing.Point(366, 322);
             this.btn_editLN.Name = "btn_editLN";
-            this.btn_editLN.Size = new System.Drawing.Size(20, 18);
+            this.btn_editLN.Size = new System.Drawing.Size(15, 15);
             this.btn_editLN.TabIndex = 58;
             this.btn_editLN.Click += new System.EventHandler(this.btn_editLN_Click_1);
             // 
@@ -271,10 +308,9 @@
             this.btn_editFN.FillColor = System.Drawing.Color.Transparent;
             this.btn_editFN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editFN.ForeColor = System.Drawing.Color.White;
-            this.btn_editFN.Location = new System.Drawing.Point(544, 305);
-            this.btn_editFN.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editFN.Location = new System.Drawing.Point(366, 247);
             this.btn_editFN.Name = "btn_editFN";
-            this.btn_editFN.Size = new System.Drawing.Size(20, 18);
+            this.btn_editFN.Size = new System.Drawing.Size(15, 15);
             this.btn_editFN.TabIndex = 57;
             this.btn_editFN.Click += new System.EventHandler(this.btn_editFN_Click);
             // 
@@ -289,10 +325,9 @@
             this.btn_editUsername.FillColor = System.Drawing.Color.Transparent;
             this.btn_editUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_editUsername.ForeColor = System.Drawing.Color.White;
-            this.btn_editUsername.Location = new System.Drawing.Point(542, 226);
-            this.btn_editUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editUsername.Location = new System.Drawing.Point(364, 183);
             this.btn_editUsername.Name = "btn_editUsername";
-            this.btn_editUsername.Size = new System.Drawing.Size(20, 18);
+            this.btn_editUsername.Size = new System.Drawing.Size(15, 15);
             this.btn_editUsername.TabIndex = 56;
             this.btn_editUsername.Click += new System.EventHandler(this.btn_editUsername_Click_1);
             // 
@@ -311,13 +346,13 @@
             this.txt_email.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_email.Location = new System.Drawing.Point(964, 385);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_email.Location = new System.Drawing.Point(681, 312);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_email.Name = "txt_email";
             this.txt_email.PasswordChar = '\0';
             this.txt_email.PlaceholderText = "";
             this.txt_email.SelectedText = "";
-            this.txt_email.Size = new System.Drawing.Size(248, 42);
+            this.txt_email.Size = new System.Drawing.Size(186, 34);
             this.txt_email.TabIndex = 55;
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged_1);
             // 
@@ -326,10 +361,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label7.Location = new System.Drawing.Point(960, 364);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(678, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 20);
+            this.label7.Size = new System.Drawing.Size(84, 15);
             this.label7.TabIndex = 54;
             this.label7.Text = "Email Address:";
             // 
@@ -348,13 +382,13 @@
             this.txt_contactNo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_contactNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_contactNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_contactNo.Location = new System.Drawing.Point(964, 293);
-            this.txt_contactNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_contactNo.Location = new System.Drawing.Point(681, 237);
+            this.txt_contactNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_contactNo.Name = "txt_contactNo";
             this.txt_contactNo.PasswordChar = '\0';
             this.txt_contactNo.PlaceholderText = "";
             this.txt_contactNo.SelectedText = "";
-            this.txt_contactNo.Size = new System.Drawing.Size(248, 42);
+            this.txt_contactNo.Size = new System.Drawing.Size(186, 34);
             this.txt_contactNo.TabIndex = 53;
             this.txt_contactNo.TextChanged += new System.EventHandler(this.txt_contactNo_TextChanged_1);
             // 
@@ -363,10 +397,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label6.Location = new System.Drawing.Point(960, 272);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(678, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 20);
+            this.label6.Size = new System.Drawing.Size(98, 15);
             this.label6.TabIndex = 52;
             this.label6.Text = "Contact Number:";
             // 
@@ -385,13 +418,13 @@
             this.txt_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_address.Location = new System.Drawing.Point(964, 215);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_address.Location = new System.Drawing.Point(681, 174);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_address.Name = "txt_address";
             this.txt_address.PasswordChar = '\0';
             this.txt_address.PlaceholderText = "";
             this.txt_address.SelectedText = "";
-            this.txt_address.Size = new System.Drawing.Size(248, 42);
+            this.txt_address.Size = new System.Drawing.Size(186, 34);
             this.txt_address.TabIndex = 51;
             this.txt_address.TextChanged += new System.EventHandler(this.txt_address_TextChanged_1);
             // 
@@ -400,10 +433,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label5.Location = new System.Drawing.Point(960, 193);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(678, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.Size = new System.Drawing.Size(52, 15);
             this.label5.TabIndex = 50;
             this.label5.Text = "Address:";
             // 
@@ -422,13 +454,13 @@
             this.txt_lastname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_lastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_lastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lastname.Location = new System.Drawing.Point(294, 385);
-            this.txt_lastname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_lastname.Location = new System.Drawing.Point(178, 312);
+            this.txt_lastname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_lastname.Name = "txt_lastname";
             this.txt_lastname.PasswordChar = '\0';
             this.txt_lastname.PlaceholderText = "";
             this.txt_lastname.SelectedText = "";
-            this.txt_lastname.Size = new System.Drawing.Size(248, 42);
+            this.txt_lastname.Size = new System.Drawing.Size(186, 34);
             this.txt_lastname.TabIndex = 49;
             this.txt_lastname.TextChanged += new System.EventHandler(this.txt_lastname_TextChanged_1);
             // 
@@ -437,10 +469,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label4.Location = new System.Drawing.Point(294, 364);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(178, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.Size = new System.Drawing.Size(61, 15);
             this.label4.TabIndex = 48;
             this.label4.Text = "Lastname:";
             // 
@@ -460,13 +491,13 @@
             this.txt_firstname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_firstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_firstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_firstname.Location = new System.Drawing.Point(290, 293);
-            this.txt_firstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_firstname.Location = new System.Drawing.Point(176, 237);
+            this.txt_firstname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_firstname.Name = "txt_firstname";
             this.txt_firstname.PasswordChar = '\0';
             this.txt_firstname.PlaceholderText = "";
             this.txt_firstname.SelectedText = "";
-            this.txt_firstname.Size = new System.Drawing.Size(248, 42);
+            this.txt_firstname.Size = new System.Drawing.Size(186, 34);
             this.txt_firstname.TabIndex = 47;
             this.txt_firstname.TextChanged += new System.EventHandler(this.txt_firstname_TextChanged_1);
             // 
@@ -475,10 +506,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label3.Location = new System.Drawing.Point(291, 272);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(176, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(62, 15);
             this.label3.TabIndex = 46;
             this.label3.Text = "Firstname:";
             // 
@@ -498,13 +528,13 @@
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Location = new System.Drawing.Point(290, 215);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_username.Location = new System.Drawing.Point(176, 174);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderText = "";
             this.txt_username.SelectedText = "";
-            this.txt_username.Size = new System.Drawing.Size(248, 42);
+            this.txt_username.Size = new System.Drawing.Size(186, 34);
             this.txt_username.TabIndex = 45;
             this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
@@ -513,10 +543,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label2.Location = new System.Drawing.Point(294, 193);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(178, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 44;
             this.label2.Text = "Username:";
             // 
@@ -524,10 +553,11 @@
             // 
             this.img_pfp.Image = ((System.Drawing.Image)(resources.GetObject("img_pfp.Image")));
             this.img_pfp.ImageRotate = 0F;
-            this.img_pfp.Location = new System.Drawing.Point(644, 27);
+            this.img_pfp.Location = new System.Drawing.Point(441, 21);
+            this.img_pfp.Margin = new System.Windows.Forms.Padding(2);
             this.img_pfp.Name = "img_pfp";
             this.img_pfp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.img_pfp.Size = new System.Drawing.Size(201, 170);
+            this.img_pfp.Size = new System.Drawing.Size(151, 138);
             this.img_pfp.TabIndex = 0;
             this.img_pfp.TabStop = false;
             // 
@@ -535,55 +565,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "A",
-            "A+",
-            "A-",
-            "B",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(1308, 221);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.TabIndex = 65;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(1304, 193);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Bloodtype:";
-            // 
             // ClientSettings1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1517, 535);
+            this.ClientSize = new System.Drawing.Size(1138, 435);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClientSettings1";
             this.Text = "ClientSettings1";
+            this.Load += new System.EventHandler(this.ClientSettings1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_pfp)).EndInit();
@@ -624,6 +616,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_cancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_bloodGroup;
     }
 }
