@@ -228,6 +228,36 @@ namespace BloodSeeker
             }
             return resultMessage;
         }
+        public DataTable GetAdminInfo(int adminId)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_getAdminInfo", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+                            global.sqlCommand.Parameters.AddWithValue("@p_admin_id", adminId);
+
+                            using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
+                            {
+                                global.dataAdapter.Fill(dataTable);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving admin information: " + ex.Message);
+            }
+
+            return dataTable;
+        }
     }
 
 }
