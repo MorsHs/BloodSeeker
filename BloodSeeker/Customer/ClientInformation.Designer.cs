@@ -31,16 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblBloodType = new System.Windows.Forms.Label();
             this.lblSex = new System.Windows.Forms.Label();
             this.lblMobilenum = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.lblDonorId = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblDonorId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -81,7 +81,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel2.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.label20);
+            this.guna2Panel2.Controls.Add(this.lblEmail);
             this.guna2Panel2.Controls.Add(this.lblBloodType);
             this.guna2Panel2.Controls.Add(this.lblSex);
             this.guna2Panel2.Controls.Add(this.lblMobilenum);
@@ -104,16 +104,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1148, 377);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // label20
+            // lblEmail
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(29, 328);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 25);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "label20";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Location = new System.Drawing.Point(29, 328);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(72, 25);
+            this.lblEmail.TabIndex = 20;
+            this.lblEmail.Text = "label20";
             // 
             // lblBloodType
             // 
@@ -159,17 +159,6 @@
             this.lblAddress.TabIndex = 16;
             this.lblAddress.Text = "label16";
             // 
-            // lblDonorId
-            // 
-            this.lblDonorId.AutoSize = true;
-            this.lblDonorId.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonorId.ForeColor = System.Drawing.Color.Transparent;
-            this.lblDonorId.Location = new System.Drawing.Point(228, 46);
-            this.lblDonorId.Name = "lblDonorId";
-            this.lblDonorId.Size = new System.Drawing.Size(69, 25);
-            this.lblDonorId.TabIndex = 15;
-            this.lblDonorId.Text = "label15";
-            // 
             // lblBirthdate
             // 
             this.lblBirthdate.AutoSize = true;
@@ -202,17 +191,6 @@
             this.label12.Size = new System.Drawing.Size(45, 28);
             this.label12.TabIndex = 12;
             this.label12.Text = "Sex";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(143, 46);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 25);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Donor Id: ";
             // 
             // label10
             // 
@@ -348,6 +326,28 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(143, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 25);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Donor Id: ";
+            // 
+            // lblDonorId
+            // 
+            this.lblDonorId.AutoSize = true;
+            this.lblDonorId.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonorId.ForeColor = System.Drawing.Color.Transparent;
+            this.lblDonorId.Location = new System.Drawing.Point(228, 46);
+            this.lblDonorId.Name = "lblDonorId";
+            this.lblDonorId.Size = new System.Drawing.Size(69, 25);
+            this.lblDonorId.TabIndex = 15;
+            this.lblDonorId.Text = "label15";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -413,7 +413,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblLname;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblBloodType;
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblMobilenum;

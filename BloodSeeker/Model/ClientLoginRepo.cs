@@ -15,7 +15,7 @@ namespace BloodSeeker.Model
         { 
         
         }
-        public bool getUser(string _username,string _password)
+        public bool getUser(string username, string password)
         {
             try
             {
@@ -24,26 +24,20 @@ namespace BloodSeeker.Model
                 global.sqlCommand.Parameters.Clear();
                 global.sqlCommand.CommandText = "prc_clientLogin";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_username", _username);
-                global.sqlCommand.Parameters.AddWithValue("p_password", _password);
-                MySqlDataReader reader = global.sqlReader;
-                reader = global.sqlCommand.ExecuteReader();
-                while (reader.Read())
+                global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                global.sqlCommand.Parameters.AddWithValue("p_password", password);
+
+                using (MySqlDataReader reader = global.sqlCommand.ExecuteReader())
                 {
-                    string username = reader.GetString("username");
-                    string password = reader.GetString("password");
-                    if (username == _username && password == _password)
-                    {
-                        return true;
-                    }
+                    
+                    return reader.HasRows;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
-            return false;
-
         }
 
     }
