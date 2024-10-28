@@ -13,13 +13,15 @@ namespace BloodSeeker.Client
 {
     public partial class ClientInformation : Form
     {
-        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=jamycalubay@@@22;";
 
         public ClientInformation()
         {
             InitializeComponent();
             this.Load += ClientInformation_Load;
+            this.clientId = clientId;
         }
+
+
 
         private void ClientInformation_Load(object sender, EventArgs e)
         {
@@ -28,47 +30,70 @@ namespace BloodSeeker.Client
 
         private void LoadClientInfo()
         {
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            try
             {
-                try
+                DataTable dt = someProcedure.GetClientsInfo(clientId = 3);
+                if (dt.Rows.Count > 0)
                 {
-                    conn.Open();
-                    using (MySqlCommand cmd = new MySqlCommand("GetClientsInfo", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                    DataRow row = dt.Rows[0];
+                    lbl_FullName.Text = GetSafeString(row["first_name"]) + " " + GetSafeString(row["last_name"]);
+                    lbl_clientId.Text = GetSafeString(row["client_id"]);
+                    lblFname.Text = GetSafeString(row["first_name"]);
+                    lblLname.Text = GetSafeString(row["last_name"]);
+                    lblBirthdate.Text = GetSafeString(row["birthDate"]);
+                    lblBloodType.Text = GetSafeString(row["blood_group"]);
+                    lblAddress.Text = GetSafeString(row["address"]);
+                    lblMobilenum.Text = GetSafeString(row["mobileNum"]);
+                    lblSex.Text = GetSafeString(row["sex"]);
+                    lblEmail.Text = GetSafeString(row["emailAdd"]);
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                lblDonorId.Text = reader["client_id"].ToString();
-                                lblFname.Text = reader["first_name"].ToString();
-                                lblLname.Text = reader["last_name"].ToString();
-                                lblBirthdate.Text = reader["birthDate"].ToString();
-                                lblBloodType.Text = reader["blood_group"].ToString();
-                                lblAddress.Text = reader["address"].ToString();
-                                lblMobilenum.Text = reader["mobileNum"].ToString();
-                                lblSex.Text = reader["sex"].ToString();
-                                lblEmail.Text = reader["emailAdd"].ToString();
-                            }
-                        }
+                    if (row["photo"] != DBNull.Value)
+                    {
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error loading client information: " + ex.Message);
+                    MessageBox.Show("No client information found.");
+                    ClearLabels();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading client information: {ex.Message}");
+                ClearLabels();
+            }
         }
-
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+        private string GetSafeString(object value)
+        {
+            return value == DBNull.Value ? "-" : value.ToString();
+        }
+
+        private string GetSafeDateTime(object value)
+        {
+            if (value == DBNull.Value) return "-";
+            return DateTime.TryParse(value.ToString(), out DateTime result)
+                ? result.ToString("yyyy-MM-dd")
+                : "-";
+        }
+
+        private void ClearLabels()
+        {
+            lbl_clientId.Text = "-";
+            lblFname.Text = "-";
+            lblLname.Text = "-";
+            lblBirthdate.Text = "-";
+            lblBloodType.Text = "-";
+            lblAddress.Text = "-";
+            lblMobilenum.Text = "-";
+            lblSex.Text = "-";
+            lblEmail.Text = "-";
         }
     }
 }

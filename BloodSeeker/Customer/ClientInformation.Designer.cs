@@ -49,10 +49,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblName = new System.Windows.Forms.Label();
+            this.lbl_FullName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblDonorId = new System.Windows.Forms.Label();
+            this.lbl_display = new System.Windows.Forms.Label();
+            this.lbl_clientId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -316,10 +316,10 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.lblName);
+            this.guna2Panel1.Controls.Add(this.lbl_FullName);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2Panel1.Controls.Add(this.label11);
-            this.guna2Panel1.Controls.Add(this.lblDonorId);
+            this.guna2Panel1.Controls.Add(this.lbl_display);
+            this.guna2Panel1.Controls.Add(this.lbl_clientId);
             this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(51, 106);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -327,17 +327,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(434, 91);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // lblName
+            // lbl_FullName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Transparent;
-            this.lblName.Location = new System.Drawing.Point(107, 15);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(102, 21);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Eren Reggin";
+            this.lbl_FullName.AutoSize = true;
+            this.lbl_FullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FullName.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_FullName.Location = new System.Drawing.Point(107, 15);
+            this.lbl_FullName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_FullName.Name = "lbl_FullName";
+            this.lbl_FullName.Size = new System.Drawing.Size(102, 21);
+            this.lbl_FullName.TabIndex = 1;
+            this.lbl_FullName.Text = "Eren Reggin";
             // 
             // guna2CirclePictureBox1
             // 
@@ -350,29 +350,29 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // label11
+            // lbl_display
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(107, 37);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 20);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Donor Id: ";
+            this.lbl_display.AutoSize = true;
+            this.lbl_display.Font = new System.Drawing.Font("Segoe UI Semilight", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_display.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_display.Location = new System.Drawing.Point(107, 37);
+            this.lbl_display.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_display.Name = "lbl_display";
+            this.lbl_display.Size = new System.Drawing.Size(69, 20);
+            this.lbl_display.TabIndex = 11;
+            this.lbl_display.Text = "Client Id: ";
             // 
-            // lblDonorId
+            // lbl_clientId
             // 
-            this.lblDonorId.AutoSize = true;
-            this.lblDonorId.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonorId.ForeColor = System.Drawing.Color.Transparent;
-            this.lblDonorId.Location = new System.Drawing.Point(171, 37);
-            this.lblDonorId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDonorId.Name = "lblDonorId";
-            this.lblDonorId.Size = new System.Drawing.Size(56, 20);
-            this.lblDonorId.TabIndex = 15;
-            this.lblDonorId.Text = "label15";
+            this.lbl_clientId.AutoSize = true;
+            this.lbl_clientId.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clientId.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_clientId.Location = new System.Drawing.Point(192, 37);
+            this.lbl_clientId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_clientId.Name = "lbl_clientId";
+            this.lbl_clientId.Size = new System.Drawing.Size(56, 20);
+            this.lbl_clientId.TabIndex = 15;
+            this.lbl_clientId.Text = "label15";
             // 
             // label1
             // 
@@ -430,7 +430,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lbl_FullName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
@@ -446,11 +446,11 @@
         private System.Windows.Forms.Label lblSex;
         private System.Windows.Forms.Label lblMobilenum;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblDonorId;
+        private System.Windows.Forms.Label lbl_clientId;
         private System.Windows.Forms.Label lblBirthdate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_display;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
     }

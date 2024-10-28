@@ -386,7 +386,37 @@ namespace BloodSeeker
 
             return dataTable;
         }
-        public string CreateAccountForStaff(string firstName, string lastName, string address, string mobileNum, string emailAdd, DateTime birthDate, string sex, string username, string password)
+
+        public DataTable GetClientsInfo(int clientId)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("GetClientsInfo", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+                            global.sqlCommand.Parameters.AddWithValue("@p_clientId", clientId);
+
+                            using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
+                            {
+                                global.dataAdapter.Fill(dataTable);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving client information: " + ex.Message);
+            }
+            return dataTable;
+        }
+    public string CreateAccountForStaff(string firstName, string lastName, string address, string mobileNum, string emailAdd, DateTime birthDate, string sex, string username, string password)
         {
             string resultMessage = "Account creation failed.";
             try
