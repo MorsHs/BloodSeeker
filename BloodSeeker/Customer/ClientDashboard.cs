@@ -13,9 +13,12 @@ namespace BloodSeeker.Client
 {
     public partial class ClientDashboard : Form
     {
-        public ClientDashboard()
+        private int donorID; // Assuming you have this value stored
+
+        public ClientDashboard(int loggedInDonorID)
         {
             InitializeComponent();
+            donorID = loggedInDonorID;
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace BloodSeeker.Client
 
         private void btn_appointment_Click(object sender, EventArgs e)
         {
-            changePanel(new ClientAppointment());
+            changePanel(new ClientAppointment(donorID)); // Pass the donorID here
             btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
@@ -61,7 +64,6 @@ namespace BloodSeeker.Client
             btn_settings.FillColor = Color.FromArgb(83, 0, 0);
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-
         }
 
         private void btn_info_Click(object sender, EventArgs e)
@@ -75,7 +77,6 @@ namespace BloodSeeker.Client
             btn_settings.FillColor = Color.FromArgb(83, 0, 0);
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
-
         }
 
         private void btn_history_Click(object sender, EventArgs e)
@@ -83,13 +84,12 @@ namespace BloodSeeker.Client
             changePanel(new ClientHistory1());
             btn_history.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
-            btn_info.FillColor = Color.FromArgb(83, 0, 0);            
+            btn_info.FillColor = Color.FromArgb(83, 0, 0);
             btn_logout.FillColor = Color.FromArgb(83, 0, 0);
             btn_settings.FillColor = Color.FromArgb(83, 0, 0);
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
             btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-
         }
 
         private void btn_inventory_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace BloodSeeker.Client
             changePanel(new ClientInventory1());
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
-            btn_history.FillColor = Color.FromArgb(83, 0, 0);           
+            btn_history.FillColor = Color.FromArgb(83, 0, 0);
             btn_logout.FillColor = Color.FromArgb(83, 0, 0);
             btn_settings.FillColor = Color.FromArgb(83, 0, 0);
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
@@ -116,7 +116,6 @@ namespace BloodSeeker.Client
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
             btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -130,7 +129,6 @@ namespace BloodSeeker.Client
             btnCreate.FillColor = Color.FromArgb(83, 0, 0);
             btn_aboutme.FillColor = Color.FromArgb(83, 0, 0);
             btn_appointment.FillColor = Color.FromArgb(83, 0, 0);
-
         }
 
         private void ClientDashboard_Load(object sender, EventArgs e)
@@ -171,7 +169,7 @@ namespace BloodSeeker.Client
 
         private void btn_info_MouseLeave(object sender, EventArgs e)
         {
-            pnl_clientInfo.Hide() ;
+            pnl_clientInfo.Hide();
         }
 
         private void btn_history_MouseHover(object sender, EventArgs e)
@@ -181,9 +179,8 @@ namespace BloodSeeker.Client
 
         private void btn_history_MouseLeave(object sender, EventArgs e)
         {
-            pnl_history.Hide() ;
+            pnl_history.Hide();
         }
-
 
         private void btn_settings_MouseHover(object sender, EventArgs e)
         {

@@ -34,6 +34,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.Dgv_TransactionHistory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.print = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_TransactionHistory)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1166, 600);
             this.guna2CustomGradientPanel1.TabIndex = 3;
+            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // Dgv_TransactionHistory
             // 
@@ -68,6 +70,8 @@
             this.Dgv_TransactionHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_TransactionHistory.ColumnHeadersHeight = 15;
             this.Dgv_TransactionHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Dgv_TransactionHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.print});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,6 +108,7 @@
             this.Dgv_TransactionHistory.ThemeStyle.RowsStyle.Height = 22;
             this.Dgv_TransactionHistory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Dgv_TransactionHistory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Dgv_TransactionHistory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_TransactionHistory_CellClick);
             this.Dgv_TransactionHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_TransactionHistory_CellContentClick);
             // 
             // label6
@@ -117,6 +122,13 @@
             this.label6.Size = new System.Drawing.Size(281, 45);
             this.label6.TabIndex = 6;
             this.label6.Text = "Transaction History";
+            // 
+            // print
+            // 
+            this.print.HeaderText = "Print";
+            this.print.Name = "print";
+            this.print.Text = "Print";
+            this.print.UseColumnTextForButtonValue = true;
             // 
             // TransacitionHistory
             // 
@@ -139,5 +151,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2DataGridView Dgv_TransactionHistory;
+        private System.Windows.Forms.DataGridViewButtonColumn print;
     }
 }
