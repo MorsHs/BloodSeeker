@@ -21,6 +21,8 @@ namespace BloodSeeker.Client
             InitializeComponent();
             this.clientId = clientId;
             someProcedure = new SomeProcedure();
+            btn_Submit.Hide();
+            btn_cancel.Hide();
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -29,12 +31,18 @@ namespace BloodSeeker.Client
 
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
-            btn_Submit.Show();
             btn_cancel.Show();
+            btn_Submit.Show();
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             txt_username.Enabled = true;
+        }
+
+        private void showButton()
+        {
+            btn_cancel.Show();
+            btn_Submit.Show();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -71,11 +79,7 @@ namespace BloodSeeker.Client
         {
             txt_email.Enabled = true;
         }
-        private void showButton()
-        {
-            btn_cancel.Show();
-            btn_Submit.Show();
-        }
+       
 
         private void txt_username_TextChanged_1(object sender, EventArgs e)
         {
@@ -130,6 +134,16 @@ namespace BloodSeeker.Client
 
             }
         }
+        private void ResetFields()
+        {
+
+            txt_username.Enabled = false;
+            txt_firstname.Enabled = false;
+            txt_lastname.Enabled = false;
+            txt_address.Enabled = false;
+            txt_contactNo.Enabled = false;
+            txt_email.Enabled = false;
+        }
 
 
         private void btn_Submit_Click(object sender, EventArgs e)
@@ -150,6 +164,7 @@ namespace BloodSeeker.Client
             );
 
             MessageBox.Show(result);
+            ResetFields();
         }
         private void LoadClientInfo()
         {
@@ -176,17 +191,7 @@ namespace BloodSeeker.Client
                 MessageBox.Show("No client information found.");
             }
         }
-        private void ResetFields()
-        {
-
-            txt_username.Enabled = false;
-            txt_firstname.Enabled = false;
-            txt_lastname.Enabled = false;
-            txt_address.Enabled = false;
-            txt_contactNo.Enabled = false;
-            txt_email.Enabled = false;
-
-        }
+       
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
@@ -197,9 +202,15 @@ namespace BloodSeeker.Client
 
         private void ClientSettings1_Load(object sender, EventArgs e)
         {
-            btn_cancel.Hide();
-            btn_Submit.Hide();
+            
             LoadClientInfo();
+            btn_Submit.Hide();
+            btn_cancel.Hide();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BloodSeeker.Admin;
+using BloodSeeker.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +43,7 @@ namespace BloodSeeker.Client
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            changePanel(new Dashboard());
+            changePanel(new CDashboard());
             btnHome.FillColor = Color.FromArgb(20, 132, 205);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
             btn_history.FillColor = Color.FromArgb(83, 0, 0);
@@ -139,7 +140,7 @@ namespace BloodSeeker.Client
             pnl_history.Hide();
             pnl_settings.Hide();
             pnl_logout.Hide();
-            changePanel(new Dashboard());
+            changePanel(new CDashboard());
         }
 
         private void btnHome_MouseHover(object sender, EventArgs e)
@@ -203,6 +204,11 @@ namespace BloodSeeker.Client
         }
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
