@@ -147,6 +147,9 @@ namespace BloodSeeker.Admin
             );
 
             MessageBox.Show(result);
+            ResetFields();
+            btn_cancel.Hide();
+            btn_Submit.Hide();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

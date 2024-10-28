@@ -116,7 +116,7 @@ namespace BloodSeeker.Client
                 return;
             }
 
-            string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Jonald12345;";
+            string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=jamycalubay@@@22;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand command = new MySqlCommand("prc_setAppointment", connection))
