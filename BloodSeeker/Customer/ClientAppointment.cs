@@ -116,7 +116,7 @@ namespace BloodSeeker.Client
                 return;
             }
 
-            string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Risingup1924;";
+            string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Jonald12345;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand command = new MySqlCommand("prc_setAppointment", connection))
@@ -130,6 +130,11 @@ namespace BloodSeeker.Client
                     MessageBox.Show("Appointment successfully scheduled!");
                 }
             }
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

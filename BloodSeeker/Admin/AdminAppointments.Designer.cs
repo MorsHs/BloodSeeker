@@ -125,6 +125,7 @@
             this.dgv_appointments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_appointments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_appointments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_appointments_CellClick);
+            this.dgv_appointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_appointments_CellContentClick);
             // 
             // appointmentID
             // 

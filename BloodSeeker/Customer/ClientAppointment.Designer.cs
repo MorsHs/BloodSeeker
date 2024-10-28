@@ -149,7 +149,7 @@
             this.ClientSize = new System.Drawing.Size(1166, 600);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClientAppointment";
             this.ShowIcon = false;
             this.Text = "ClientAppointment";
