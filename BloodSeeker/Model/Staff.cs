@@ -10,8 +10,8 @@ namespace BloodSeeker.Model
     internal class Staff:Person
     {
         public int staffId { get;set; }
-        public Staff(string username,string password,string firstname,string lastname,string email,string phone,string address,string sex,DateTime birthdate,int id):
-            base(username,password,firstname,lastname,email,phone,address,sex,birthdate)
+        public Staff(string username,string password,string firstname,string lastname,string email,string phone,string address,string sex,DateTime birthdate,string photo,int id):
+            base(username,password,firstname,lastname,email,phone,address,sex,birthdate,photo)
         {
             this.staffId = id;
         }

@@ -50,7 +50,8 @@ namespace BloodSeeker.Model.Admin
                     string phone = reader.GetString("mobileNum");
                     string address = reader.GetString("address");
                     DateTime birthDate = reader.GetDateTime("birthDate");
-                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate);
+                    string photo = reader.GetString("photo");
+                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate,photo);
                     //TODO Staff Photo
                     addPerson(client);
 
@@ -88,7 +89,8 @@ namespace BloodSeeker.Model.Admin
                     string phone = reader.GetString("mobileNum");
                     string address = reader.GetString("address");
                     DateTime birthDate = reader.GetDateTime("birthDate");
-                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate);
+                    string photo = reader.GetString("photo"); 
+                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate, photo);
                     results.Add(client);
                 }
                 reader.Close();
@@ -126,7 +128,8 @@ namespace BloodSeeker.Model.Admin
                     string phone = reader.GetString("mobileNum");
                     string address = reader.GetString("address");
                     DateTime birthDate = reader.GetDateTime("birthDate");
-                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate);
+                    string photo = reader.GetString("photo");
+                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate, photo);
                     results.Add(client);
                 }
                 reader.Close();
@@ -164,7 +167,8 @@ namespace BloodSeeker.Model.Admin
                     string phone = reader.GetString("mobileNum");
                     string address = reader.GetString("address");
                     DateTime birthDate = reader.GetDateTime("birthDate");
-                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate);
+                    string photo = reader.GetString("photo");
+                    Person client = new Person(username, null, first_name, last_name, email, phone, address, sex, birthDate,photo);
                     results.Add(client);
                 }
                 reader.Close();

@@ -250,7 +250,6 @@
     <Compile Include="Controllers\ClientLoginController.cs" />
     <Compile Include="Model\ClientLoginRepo.cs" />
     <Compile Include="Model\ClientRepository.cs" />
-    <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Customer\ClienntLogin.cs">
       <SubType>Form</SubType>

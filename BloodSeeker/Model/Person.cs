@@ -17,8 +17,9 @@ namespace BloodSeeker.Class
         public string address { get; set; }
         public string sex { get; set; }
         public DateTime birthdate { get; set; }
+        public string photo { get; set; }
 
-        public Person(string username, string password, string firstname, string lastname, string email, string phone, string address, string sex, DateTime birthdate)
+        public Person(string username, string password, string firstname, string lastname, string email, string phone, string address, string sex, DateTime birthdate, string photo)
         {
             this.username = username;
             this.password = password;
@@ -29,6 +30,7 @@ namespace BloodSeeker.Class
             this.address = address;
             this.sex = sex;
             this.birthdate = birthdate;
+            this.photo = photo;
         }
     }
 }
