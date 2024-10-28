@@ -161,5 +161,37 @@ namespace BloodSeeker
             return dataTable;
         }
 
+        public string fncUpdateAdminPassword(string currentPassword, string newPassword)
+        {
+            string resultMessage = "Password update failed."; 
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_updateAdminPass", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                            // Add current and new password as parameters
+                            global.sqlCommand.Parameters.AddWithValue("@p_currentPassword", currentPassword);
+                            global.sqlCommand.Parameters.AddWithValue("@p_newPassword", newPassword);
+
+                            int rowsAffected = global.sqlCommand.ExecuteNonQuery();
+                            resultMessage = rowsAffected > 0 ? "Password updated successfully." : "Current password is incorrect.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMessage = "Error updating password: " + ex.Message;
+            }
+            return resultMessage;
+        }
+
     }
+
 }

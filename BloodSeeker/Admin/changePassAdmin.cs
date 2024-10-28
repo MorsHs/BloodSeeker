@@ -91,5 +91,28 @@ namespace BloodSeeker.Admin
             txt_newPass.Clear();
             txt_confirmPass.Clear();
         }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            SomeProcedure someProcedure = new SomeProcedure();
+
+            string currentPassword = txt_currentPass.Text.Trim();
+            string newPassword = txt_newPass.Text.Trim();
+            string confirmPassword = txt_confirmPass.Text.Trim();
+
+            if (newPassword != confirmPassword)
+            {
+                MessageBox.Show("New password and confirm password do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string resultMessage = someProcedure.fncUpdateAdminPassword(currentPassword, newPassword);
+
+            MessageBox.Show(resultMessage, "Password Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txt_currentPass.Clear();
+            txt_newPass.Clear();
+            txt_confirmPass.Clear();
+        }
     }
 }
