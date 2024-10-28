@@ -12,6 +12,9 @@ namespace BloodSeeker.Client
 {
     public partial class ClientChangePass : Form
     {
+
+        private int clientId;
+
         public ClientChangePass()
         {
             InitializeComponent();
@@ -61,6 +64,30 @@ namespace BloodSeeker.Client
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
+            txt_currentPass.Clear();
+            txt_newPass.Clear();
+            txt_confirmPass.Clear();
+        }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            clientId = 3;
+            SomeProcedure someProcedure = new SomeProcedure();
+
+            string currentPassword = txt_currentPass.Text.Trim();
+            string newPassword = txt_newPass.Text.Trim();
+            string confirmPassword = txt_confirmPass.Text.Trim();
+
+            if (newPassword != confirmPassword)
+            {
+                MessageBox.Show("New password and confirm password do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string resultMessage = someProcedure.fncUpdateClientPassword(currentPassword, newPassword, clientId);
+
+            MessageBox.Show(resultMessage, "Password Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             txt_currentPass.Clear();
             txt_newPass.Clear();
             txt_confirmPass.Clear();

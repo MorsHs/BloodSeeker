@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -173,7 +174,6 @@ namespace BloodSeeker
                         using (global.sqlCommand = new MySqlCommand("prc_displayClientAppHistory", global.conBloodbank))
                         {
                             global.sqlCommand.CommandType = CommandType.StoredProcedure;
-                            // Pass the client ID as a parameter
                             global.sqlCommand.Parameters.AddWithValue("@p_ClientID", clientId);
 
                             using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
@@ -220,6 +220,38 @@ namespace BloodSeeker
             }
             return resultMessage;
         }
+        public string fncUpdateClientPassword(string currentPassword, string newPassword, int clientId)
+        {
+            string resultMessage = "Password update failed.";
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_updateClientPassword", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                            // Add current and new password as parameters
+                            global.sqlCommand.Parameters.AddWithValue("@p_client_id", clientId);
+                            global.sqlCommand.Parameters.AddWithValue("@p_currentPassword", currentPassword);
+                            global.sqlCommand.Parameters.AddWithValue("@p_newPassword", newPassword);
+
+                            int rowsAffected = global.sqlCommand.ExecuteNonQuery();
+                            resultMessage = rowsAffected > 0 ? "Password updated successfully." : "Current password is incorrect.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMessage = "Error updating password: " + ex.Message;
+            }
+            return resultMessage;
+        }
+
         public string UpdateAdminInfo(int adminId, string firstName, string lastName, string address, string mobileNum, string emailAdd, string username, string photoPath)
         {
             string resultMessage = "Failed to update account information.";
