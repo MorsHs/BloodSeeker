@@ -94,6 +94,7 @@ namespace BloodSeeker.Admin
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
+
             SomeProcedure someProcedure = new SomeProcedure();
 
             string currentPassword = txt_currentPass.Text.Trim();

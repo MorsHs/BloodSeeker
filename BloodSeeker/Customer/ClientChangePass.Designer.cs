@@ -57,8 +57,9 @@
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.txt_currentPass);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1512, 535);
+            this.guna2Panel1.Size = new System.Drawing.Size(1134, 435);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btn_cancel
@@ -75,10 +76,9 @@
             this.btn_cancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(1128, 391);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancel.Location = new System.Drawing.Point(846, 318);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(123, 48);
+            this.btn_cancel.Size = new System.Drawing.Size(92, 39);
             this.btn_cancel.TabIndex = 61;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -97,12 +97,12 @@
             this.btn_submit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_submit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_submit.ForeColor = System.Drawing.Color.White;
-            this.btn_submit.Location = new System.Drawing.Point(900, 391);
-            this.btn_submit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_submit.Location = new System.Drawing.Point(675, 318);
             this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(123, 48);
+            this.btn_submit.Size = new System.Drawing.Size(92, 39);
             this.btn_submit.TabIndex = 60;
             this.btn_submit.Text = "Submit";
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // chk_newPass
             // 
@@ -111,10 +111,9 @@
             this.chk_newPass.CheckedState.BorderRadius = 0;
             this.chk_newPass.CheckedState.BorderThickness = 0;
             this.chk_newPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chk_newPass.Location = new System.Drawing.Point(1283, 141);
-            this.chk_newPass.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_newPass.Location = new System.Drawing.Point(962, 115);
             this.chk_newPass.Name = "chk_newPass";
-            this.chk_newPass.Size = new System.Drawing.Size(62, 20);
+            this.chk_newPass.Size = new System.Drawing.Size(53, 17);
             this.chk_newPass.TabIndex = 59;
             this.chk_newPass.Text = "Show";
             this.chk_newPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -130,10 +129,9 @@
             this.chc_ConfirmPass.CheckedState.BorderRadius = 0;
             this.chc_ConfirmPass.CheckedState.BorderThickness = 0;
             this.chc_ConfirmPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_ConfirmPass.Location = new System.Drawing.Point(647, 285);
-            this.chc_ConfirmPass.Margin = new System.Windows.Forms.Padding(4);
+            this.chc_ConfirmPass.Location = new System.Drawing.Point(485, 232);
             this.chc_ConfirmPass.Name = "chc_ConfirmPass";
-            this.chc_ConfirmPass.Size = new System.Drawing.Size(62, 20);
+            this.chc_ConfirmPass.Size = new System.Drawing.Size(53, 17);
             this.chc_ConfirmPass.TabIndex = 58;
             this.chc_ConfirmPass.Text = "Show";
             this.chc_ConfirmPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -149,10 +147,9 @@
             this.chc_currentPass.CheckedState.BorderRadius = 0;
             this.chc_currentPass.CheckedState.BorderThickness = 0;
             this.chc_currentPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chc_currentPass.Location = new System.Drawing.Point(647, 141);
-            this.chc_currentPass.Margin = new System.Windows.Forms.Padding(4);
+            this.chc_currentPass.Location = new System.Drawing.Point(485, 115);
             this.chc_currentPass.Name = "chc_currentPass";
-            this.chc_currentPass.Size = new System.Drawing.Size(62, 20);
+            this.chc_currentPass.Size = new System.Drawing.Size(53, 17);
             this.chc_currentPass.TabIndex = 57;
             this.chc_currentPass.Text = "Show";
             this.chc_currentPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -166,10 +163,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label2.Location = new System.Drawing.Point(747, 85);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(560, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.Size = new System.Drawing.Size(87, 15);
             this.label2.TabIndex = 56;
             this.label2.Text = "New Password:";
             // 
@@ -178,10 +174,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(111, 231);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(83, 188);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.Size = new System.Drawing.Size(106, 15);
             this.label1.TabIndex = 55;
             this.label1.Text = "Confirm Password:";
             // 
@@ -201,13 +196,13 @@
             this.txt_newPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_newPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_newPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_newPass.Location = new System.Drawing.Point(751, 121);
-            this.txt_newPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_newPass.Location = new System.Drawing.Point(563, 98);
+            this.txt_newPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_newPass.Name = "txt_newPass";
             this.txt_newPass.PasswordChar = '*';
             this.txt_newPass.PlaceholderText = "";
             this.txt_newPass.SelectedText = "";
-            this.txt_newPass.Size = new System.Drawing.Size(524, 42);
+            this.txt_newPass.Size = new System.Drawing.Size(393, 34);
             this.txt_newPass.TabIndex = 54;
             // 
             // txt_confirmPass
@@ -226,13 +221,13 @@
             this.txt_confirmPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_confirmPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_confirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_confirmPass.Location = new System.Drawing.Point(115, 265);
-            this.txt_confirmPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_confirmPass.Location = new System.Drawing.Point(86, 215);
+            this.txt_confirmPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_confirmPass.Name = "txt_confirmPass";
             this.txt_confirmPass.PasswordChar = '*';
             this.txt_confirmPass.PlaceholderText = "";
             this.txt_confirmPass.SelectedText = "";
-            this.txt_confirmPass.Size = new System.Drawing.Size(524, 42);
+            this.txt_confirmPass.Size = new System.Drawing.Size(393, 34);
             this.txt_confirmPass.TabIndex = 53;
             // 
             // label3
@@ -240,10 +235,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.label3.Location = new System.Drawing.Point(111, 85);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(83, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.Size = new System.Drawing.Size(102, 15);
             this.label3.TabIndex = 52;
             this.label3.Text = "Current Password:";
             // 
@@ -263,22 +257,23 @@
             this.txt_currentPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_currentPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.txt_currentPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_currentPass.Location = new System.Drawing.Point(115, 121);
-            this.txt_currentPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_currentPass.Location = new System.Drawing.Point(86, 98);
+            this.txt_currentPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_currentPass.Name = "txt_currentPass";
             this.txt_currentPass.PasswordChar = '*';
             this.txt_currentPass.PlaceholderText = "";
             this.txt_currentPass.SelectedText = "";
-            this.txt_currentPass.Size = new System.Drawing.Size(524, 42);
+            this.txt_currentPass.Size = new System.Drawing.Size(393, 34);
             this.txt_currentPass.TabIndex = 51;
             // 
             // ClientChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1512, 535);
+            this.ClientSize = new System.Drawing.Size(1134, 435);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClientChangePass";
             this.Text = "ClientChangePass";
             this.guna2Panel1.ResumeLayout(false);
