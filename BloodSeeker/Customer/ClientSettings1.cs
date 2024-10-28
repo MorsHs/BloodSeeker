@@ -53,33 +53,44 @@ namespace BloodSeeker.Client
         private void btn_editUsername_Click_1(object sender, EventArgs e)
         {
             txt_username.Enabled = true;
+            showButton();
         }
 
         private void btn_editFN_Click(object sender, EventArgs e)
         {
             txt_firstname.Enabled = true;
+            showButton();
+
         }
 
         private void btn_editLN_Click_1(object sender, EventArgs e)
         {
             txt_lastname.Enabled = true;
+            showButton();
+
         }
 
         private void btn_editAddress_Click_1(object sender, EventArgs e)
         {
             txt_address.Enabled = true;
+            showButton();
+
         }
 
         private void btn_editCN_Click_1(object sender, EventArgs e)
         {
             txt_contactNo.Enabled = true;
+            showButton();
+
         }
 
         private void btn_editEA_Click_1(object sender, EventArgs e)
         {
             txt_email.Enabled = true;
+            showButton();
+
         }
-       
+
 
         private void txt_username_TextChanged_1(object sender, EventArgs e)
         {
