@@ -17,10 +17,10 @@ namespace BloodSeeker.Client
         private DateTime selectedDate;
         private int loggedInDonorId; // to store donor_id
 
-        public ClientAppointment(int donorID)
+        public ClientAppointment(int client_id)
         {
             InitializeComponent();
-            loggedInDonorId = donorID;
+            loggedInDonorId = client_id;
         }
 
         private void ClientAppointment_Load(object sender, EventArgs e)
@@ -60,14 +60,14 @@ namespace BloodSeeker.Client
 
                 if (!duplicate)
                 {
-                    
-                     
-                    string status = "Scheduled"; 
 
-                   
+
+                    string status = "Scheduled";
+
+
                     InsertAppointmentIntoDatabase(loggedInDonorId, selectedDate, status);
 
-                    
+
                     FlowLayoutPanel appointmentEntry = new FlowLayoutPanel();
                     appointmentEntry.AutoSize = true;
 
@@ -108,7 +108,7 @@ namespace BloodSeeker.Client
             btn_Submit.Enabled = true;
         }
 
-        private void InsertAppointmentIntoDatabase(int donor_id, DateTime date, string status)
+        private void InsertAppointmentIntoDatabase(int loggedInDonorId, DateTime date, string status)
         {
             if (selectedDate == default(DateTime))
             {
@@ -122,7 +122,7 @@ namespace BloodSeeker.Client
                 using (MySqlCommand command = new MySqlCommand("prc_setAppointment", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@p_DonorID", donor_id);
+                    command.Parameters.AddWithValue("@p_ClientID", loggedInDonorId);
                     command.Parameters.AddWithValue("@p_AppointmentDate", date);
                     command.Parameters.AddWithValue("@p_AppointmentStatus", status);
                     connection.Open();
