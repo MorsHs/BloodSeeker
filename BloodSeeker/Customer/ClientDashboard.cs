@@ -13,12 +13,12 @@ namespace BloodSeeker.Client
 {
     public partial class ClientDashboard : Form
     {
-        private int donorID; // Assuming you have this value stored
+        private int clientId; 
 
-        public ClientDashboard(int loggedInDonorID)
+        public ClientDashboard(int loggedInClientID)
         {
             InitializeComponent();
-            donorID = loggedInDonorID;
+            clientId = loggedInClientID;
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace BloodSeeker.Client
 
         private void btn_appointment_Click(object sender, EventArgs e)
         {
-            changePanel(new ClientAppointment(donorID)); // Pass the donorID here
+            changePanel(new ClientAppointment(clientId)); // Pass the donorID here
             btn_appointment.FillColor = Color.FromArgb(20, 132, 205);
             btnHome.FillColor = Color.FromArgb(83, 0, 0);
             btn_info.FillColor = Color.FromArgb(83, 0, 0);
@@ -200,6 +200,11 @@ namespace BloodSeeker.Client
         private void btn_logout_MouseLeave(object sender, EventArgs e)
         {
             pnl_logout.Hide();
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

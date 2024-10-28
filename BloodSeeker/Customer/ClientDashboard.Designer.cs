@@ -109,11 +109,11 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-15, -5);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-11, -4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1848, 970);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1386, 788);
             this.guna2CustomGradientPanel1.TabIndex = 5;
+            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // guna2Panel4
             // 
@@ -121,9 +121,10 @@
             this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel4.Controls.Add(this.label2);
-            this.guna2Panel4.Location = new System.Drawing.Point(785, 34);
+            this.guna2Panel4.Location = new System.Drawing.Point(589, 28);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(497, 100);
+            this.guna2Panel4.Size = new System.Drawing.Size(373, 81);
             this.guna2Panel4.TabIndex = 30;
             // 
             // label3
@@ -131,9 +132,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(23, 50);
+            this.label3.Location = new System.Drawing.Point(17, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 20);
+            this.label3.Size = new System.Drawing.Size(272, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Be a blood donor, give blood and save lives!\r\n";
             // 
@@ -142,9 +144,10 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(395, 10);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(296, 8);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(88, 108);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 88);
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -153,9 +156,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(22, 10);
+            this.label2.Location = new System.Drawing.Point(16, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 26);
+            this.label2.Size = new System.Drawing.Size(234, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Donate Blood, Save a Life";
             // 
@@ -168,10 +172,9 @@
             this.guna2Panel1.Controls.Add(this.btn_history);
             this.guna2Panel1.Controls.Add(this.btn_info);
             this.guna2Panel1.Controls.Add(this.btn_appointment);
-            this.guna2Panel1.Location = new System.Drawing.Point(55, 185);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(41, 150);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(61, 247);
+            this.guna2Panel1.Size = new System.Drawing.Size(46, 201);
             this.guna2Panel1.TabIndex = 21;
             // 
             // btn_aboutme
@@ -190,12 +193,11 @@
             this.btn_aboutme.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_aboutme.Image = ((System.Drawing.Image)(resources.GetObject("btn_aboutme.Image")));
             this.btn_aboutme.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_aboutme.Location = new System.Drawing.Point(0, 351);
-            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_aboutme.Location = new System.Drawing.Point(0, 285);
             this.btn_aboutme.Name = "btn_aboutme";
             this.btn_aboutme.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_aboutme.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_aboutme.Size = new System.Drawing.Size(57, 52);
+            this.btn_aboutme.Size = new System.Drawing.Size(43, 42);
             this.btn_aboutme.TabIndex = 9;
             this.btn_aboutme.UseTransparentBackground = true;
             // 
@@ -215,12 +217,11 @@
             this.btnCreate.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
             this.btnCreate.ImageSize = new System.Drawing.Size(25, 23);
-            this.btnCreate.Location = new System.Drawing.Point(-1, 300);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreate.Location = new System.Drawing.Point(-1, 244);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCreate.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnCreate.Size = new System.Drawing.Size(57, 52);
+            this.btnCreate.Size = new System.Drawing.Size(43, 42);
             this.btnCreate.TabIndex = 8;
             this.btnCreate.UseTransparentBackground = true;
             // 
@@ -238,12 +239,11 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 4);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(0, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnHome.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnHome.Size = new System.Drawing.Size(57, 53);
+            this.btnHome.Size = new System.Drawing.Size(43, 43);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseTransparentBackground = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -266,12 +266,11 @@
             this.btn_history.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_history.Image = ((System.Drawing.Image)(resources.GetObject("btn_history.Image")));
             this.btn_history.ImageSize = new System.Drawing.Size(24, 20);
-            this.btn_history.Location = new System.Drawing.Point(0, 182);
-            this.btn_history.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_history.Location = new System.Drawing.Point(0, 148);
             this.btn_history.Name = "btn_history";
             this.btn_history.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_history.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_history.Size = new System.Drawing.Size(57, 52);
+            this.btn_history.Size = new System.Drawing.Size(43, 42);
             this.btn_history.TabIndex = 6;
             this.btn_history.UseTransparentBackground = true;
             this.btn_history.Click += new System.EventHandler(this.btn_history_Click);
@@ -293,12 +292,11 @@
             this.btn_info.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_info.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_info.Image = ((System.Drawing.Image)(resources.GetObject("btn_info.Image")));
-            this.btn_info.Location = new System.Drawing.Point(0, 123);
-            this.btn_info.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_info.Location = new System.Drawing.Point(0, 100);
             this.btn_info.Name = "btn_info";
             this.btn_info.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_info.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_info.Size = new System.Drawing.Size(57, 52);
+            this.btn_info.Size = new System.Drawing.Size(43, 42);
             this.btn_info.TabIndex = 5;
             this.btn_info.UseTransparentBackground = true;
             this.btn_info.Click += new System.EventHandler(this.btn_info_Click);
@@ -320,12 +318,11 @@
             this.btn_appointment.HoverState.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_appointment.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_appointment.Image = ((System.Drawing.Image)(resources.GetObject("btn_appointment.Image")));
-            this.btn_appointment.Location = new System.Drawing.Point(0, 64);
-            this.btn_appointment.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_appointment.Location = new System.Drawing.Point(0, 52);
             this.btn_appointment.Name = "btn_appointment";
             this.btn_appointment.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_appointment.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_appointment.Size = new System.Drawing.Size(57, 52);
+            this.btn_appointment.Size = new System.Drawing.Size(43, 42);
             this.btn_appointment.TabIndex = 1;
             this.btn_appointment.UseTransparentBackground = true;
             this.btn_appointment.Click += new System.EventHandler(this.btn_appointment_Click);
@@ -337,10 +334,9 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel2.Controls.Add(this.btn_logout);
             this.guna2Panel2.Controls.Add(this.btn_settings);
-            this.guna2Panel2.Location = new System.Drawing.Point(51, 613);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(38, 498);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(61, 118);
+            this.guna2Panel2.Size = new System.Drawing.Size(46, 96);
             this.guna2Panel2.TabIndex = 22;
             // 
             // btn_logout
@@ -359,12 +355,11 @@
             this.btn_logout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_logout.Location = new System.Drawing.Point(0, 63);
-            this.btn_logout.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_logout.Location = new System.Drawing.Point(0, 51);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_logout.Size = new System.Drawing.Size(57, 52);
+            this.btn_logout.Size = new System.Drawing.Size(43, 42);
             this.btn_logout.TabIndex = 9;
             this.btn_logout.UseTransparentBackground = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
@@ -387,12 +382,11 @@
             this.btn_settings.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btn_settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_settings.Image")));
             this.btn_settings.ImageSize = new System.Drawing.Size(25, 23);
-            this.btn_settings.Location = new System.Drawing.Point(0, 4);
-            this.btn_settings.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_settings.Location = new System.Drawing.Point(0, 3);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.PressedColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_settings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_settings.Size = new System.Drawing.Size(57, 52);
+            this.btn_settings.Size = new System.Drawing.Size(43, 42);
             this.btn_settings.TabIndex = 8;
             this.btn_settings.UseTransparentBackground = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
@@ -403,10 +397,9 @@
             // 
             this.pnl_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_logout.Controls.Add(this.label15);
-            this.pnl_logout.Location = new System.Drawing.Point(77, 676);
-            this.pnl_logout.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_logout.Location = new System.Drawing.Point(58, 549);
             this.pnl_logout.Name = "pnl_logout";
-            this.pnl_logout.Size = new System.Drawing.Size(155, 53);
+            this.pnl_logout.Size = new System.Drawing.Size(116, 43);
             this.pnl_logout.TabIndex = 28;
             // 
             // label15
@@ -414,10 +407,9 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(43, 14);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(32, 11);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 20);
+            this.label15.Size = new System.Drawing.Size(45, 15);
             this.label15.TabIndex = 1;
             this.label15.Text = "Logout";
             // 
@@ -425,10 +417,9 @@
             // 
             this.pnl_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_settings.Controls.Add(this.label14);
-            this.pnl_settings.Location = new System.Drawing.Point(77, 615);
-            this.pnl_settings.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_settings.Location = new System.Drawing.Point(58, 500);
             this.pnl_settings.Name = "pnl_settings";
-            this.pnl_settings.Size = new System.Drawing.Size(155, 53);
+            this.pnl_settings.Size = new System.Drawing.Size(116, 43);
             this.pnl_settings.TabIndex = 29;
             // 
             // label14
@@ -436,10 +427,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(37, 16);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(28, 13);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 20);
+            this.label14.Size = new System.Drawing.Size(50, 15);
             this.label14.TabIndex = 1;
             this.label14.Text = "Settings";
             // 
@@ -448,10 +438,9 @@
             this.pnl_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_history.BorderColor = System.Drawing.Color.White;
             this.pnl_history.Controls.Add(this.label13);
-            this.pnl_history.Location = new System.Drawing.Point(85, 371);
-            this.pnl_history.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_history.Location = new System.Drawing.Point(64, 301);
             this.pnl_history.Name = "pnl_history";
-            this.pnl_history.Size = new System.Drawing.Size(155, 53);
+            this.pnl_history.Size = new System.Drawing.Size(116, 43);
             this.pnl_history.TabIndex = 25;
             // 
             // label13
@@ -459,10 +448,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(39, 12);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(29, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 20);
+            this.label13.Size = new System.Drawing.Size(45, 15);
             this.label13.TabIndex = 1;
             this.label13.Text = "History";
             // 
@@ -471,10 +459,9 @@
             this.pnl_clientInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_clientInfo.BorderColor = System.Drawing.Color.White;
             this.pnl_clientInfo.Controls.Add(this.label12);
-            this.pnl_clientInfo.Location = new System.Drawing.Point(85, 311);
-            this.pnl_clientInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_clientInfo.Location = new System.Drawing.Point(64, 253);
             this.pnl_clientInfo.Name = "pnl_clientInfo";
-            this.pnl_clientInfo.Size = new System.Drawing.Size(155, 53);
+            this.pnl_clientInfo.Size = new System.Drawing.Size(116, 43);
             this.pnl_clientInfo.TabIndex = 26;
             // 
             // label12
@@ -482,10 +469,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(39, 14);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(29, 11);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 20);
+            this.label12.Size = new System.Drawing.Size(62, 15);
             this.label12.TabIndex = 1;
             this.label12.Text = "Client Info";
             // 
@@ -494,10 +480,9 @@
             this.pnl_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_home.BorderColor = System.Drawing.Color.White;
             this.pnl_home.Controls.Add(this.label9);
-            this.pnl_home.Location = new System.Drawing.Point(85, 190);
-            this.pnl_home.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_home.Location = new System.Drawing.Point(64, 154);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(155, 52);
+            this.pnl_home.Size = new System.Drawing.Size(116, 42);
             this.pnl_home.TabIndex = 23;
             // 
             // label9
@@ -505,10 +490,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(43, 11);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(32, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.Size = new System.Drawing.Size(40, 15);
             this.label9.TabIndex = 0;
             this.label9.Text = "Home";
             // 
@@ -517,10 +501,9 @@
             this.pnl_appointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pnl_appointment.BorderColor = System.Drawing.Color.White;
             this.pnl_appointment.Controls.Add(this.label11);
-            this.pnl_appointment.Location = new System.Drawing.Point(85, 250);
-            this.pnl_appointment.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_appointment.Location = new System.Drawing.Point(64, 203);
             this.pnl_appointment.Name = "pnl_appointment";
-            this.pnl_appointment.Size = new System.Drawing.Size(155, 53);
+            this.pnl_appointment.Size = new System.Drawing.Size(116, 43);
             this.pnl_appointment.TabIndex = 27;
             // 
             // label11
@@ -528,10 +511,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(35, 11);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(26, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 20);
+            this.label11.Size = new System.Drawing.Size(83, 15);
             this.label11.TabIndex = 1;
             this.label11.Text = "Appointments";
             // 
@@ -541,11 +523,10 @@
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1653, 37);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1240, 30);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(72, 65);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(54, 53);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 20;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -555,10 +536,9 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(45, 34);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(34, 28);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(59, 50);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(44, 41);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 19;
             this.guna2PictureBox2.TabStop = false;
@@ -569,10 +549,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(105, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(79, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 25);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "BloodSeeker";
             // 
@@ -582,20 +561,18 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(1516, 57);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(1137, 46);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 28);
+            this.label10.Size = new System.Drawing.Size(87, 21);
             this.label10.TabIndex = 11;
             this.label10.Text = "Hi Jamyca!";
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.Location = new System.Drawing.Point(271, 159);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Location = new System.Drawing.Point(203, 129);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1541, 738);
+            this.guna2Panel3.Size = new System.Drawing.Size(1156, 600);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2Elipse1
@@ -659,12 +636,11 @@
             // 
             // ClientDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1848, 970);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientDashboard";

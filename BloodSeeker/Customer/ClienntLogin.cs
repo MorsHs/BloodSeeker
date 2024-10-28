@@ -20,13 +20,11 @@ namespace BloodSeeker.Client
         {
             ClientLoginController controller = new ClientLoginController();
 
-            // Attempt to verify user and get donorID
-            int? donorID = controller.verifyUser(txt_name.Text.ToString(), txt_pass.Text.ToString());
+            int? clientId = controller.verifyUser(txt_name.Text.ToString(), txt_pass.Text.ToString());
 
-            if (donorID != null)
+            if (clientId != null)
             {
-                // Pass the donorID to the ClientDashboard constructor
-                ClientDashboard dash = new ClientDashboard(donorID.Value);
+                ClientDashboard dash = new ClientDashboard(clientId.Value);
                 dash.Show();
                 this.Dispose();
             }

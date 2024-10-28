@@ -13,7 +13,7 @@ namespace BloodSeeker.Client
 {
     public partial class ClientInformation : Form
     {
-        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=Risingup1924;";
+        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=jonald12345;";
 
         public ClientInformation()
         {
