@@ -289,6 +289,43 @@ namespace BloodSeeker
             }
             return resultMessage;
         }
+
+        public string UpdateClientInfo(int clientId, string firstName, string lastName, string address, string mobileNum, string emailAdd, string username, string bloodGroup, string photoPath)
+        {
+            string resultMessage = "Failed to update account information.";
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_editClientInfo", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                            global.sqlCommand.Parameters.AddWithValue("p_client_id", clientId);
+                            global.sqlCommand.Parameters.AddWithValue("p_first_name", firstName);
+                            global.sqlCommand.Parameters.AddWithValue("p_last_name", lastName);
+                            global.sqlCommand.Parameters.AddWithValue("p_address", address);
+                            global.sqlCommand.Parameters.AddWithValue("p_mobileNum", mobileNum);
+                            global.sqlCommand.Parameters.AddWithValue("p_emailAdd", emailAdd);
+                            global.sqlCommand.Parameters.AddWithValue("p_username", username);
+                            global.sqlCommand.Parameters.AddWithValue("p_bloodgroup", bloodGroup);
+                            global.sqlCommand.Parameters.AddWithValue("p_photo", photoPath);
+
+                            global.sqlCommand.ExecuteNonQuery();
+                            resultMessage = "Account information updated successfully!";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMessage = "Error updating account information: " + ex.Message;
+            }
+            return resultMessage;
+        }
         public DataTable GetAdminInfo(int adminId)
         {
             DataTable dataTable = new DataTable();
@@ -315,6 +352,36 @@ namespace BloodSeeker
             catch (Exception ex)
             {
                 MessageBox.Show("Error retrieving admin information: " + ex.Message);
+            }
+
+            return dataTable;
+        }
+        public DataTable GetClientInfo(int clientId)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (global.fncConnectToDatabase())
+                {
+                    using (global.conBloodbank = new MySqlConnection(global.strConnection))
+                    {
+                        global.conBloodbank.Open();
+                        using (global.sqlCommand = new MySqlCommand("prc_getClientInfo", global.conBloodbank))
+                        {
+                            global.sqlCommand.CommandType = CommandType.StoredProcedure;
+                            global.sqlCommand.Parameters.AddWithValue("@p_client_id", clientId);
+
+                            using (global.dataAdapter = new MySqlDataAdapter(global.sqlCommand))
+                            {
+                                global.dataAdapter.Fill(dataTable);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving client information: " + ex.Message);
             }
 
             return dataTable;

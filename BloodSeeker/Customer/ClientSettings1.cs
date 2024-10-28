@@ -13,11 +13,15 @@ namespace BloodSeeker.Client
     
     public partial class ClientSettings1 : Form
     {
+        private int clientId; 
+        private string photopath;  
+        private SomeProcedure someProcedure;
         public ClientSettings1()
         {
             InitializeComponent();
+            this.clientId = clientId;
+            someProcedure = new SomeProcedure();
         }
-        string photopath;
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -127,12 +131,75 @@ namespace BloodSeeker.Client
             }
         }
 
-        private void AccountInfo_Load(object sender, EventArgs e)
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            Global global = new Global();
+            clientId = 3;
+
+            string result = new SomeProcedure().UpdateClientInfo(
+                clientId,
+                txt_firstname.Text.Trim(),
+                txt_lastname.Text.Trim(),
+                txt_address.Text.Trim(),
+                txt_contactNo.Text.Trim(),
+                txt_email.Text.Trim(),
+                txt_username.Text.Trim(),
+                cmb_bloodGroup.Text.Trim(),
+                photopath
+            );
+
+            MessageBox.Show(result);
+        }
+        private void LoadClientInfo()
+        {
+            clientId = 3;
+            DataTable ClientInfo = someProcedure.GetClientInfo(clientId);
+            if (ClientInfo != null && ClientInfo.Rows.Count > 0)
+            {
+                txt_firstname.Text = ClientInfo.Rows[0]["first_name"].ToString();
+                txt_lastname.Text = ClientInfo.Rows[0]["last_name"].ToString();
+                txt_address.Text = ClientInfo.Rows[0]["address"].ToString();
+                txt_contactNo.Text = ClientInfo.Rows[0]["mobileNum"].ToString();
+                txt_email.Text = ClientInfo.Rows[0]["emailAdd"].ToString();
+                txt_username.Text = ClientInfo.Rows[0]["username"].ToString();
+                cmb_bloodGroup.Text = ClientInfo.Rows[0]["bloodGroup"].ToString();
+                string photoPath = ClientInfo.Rows[0]["photo"].ToString();
+                if (!string.IsNullOrEmpty(photoPath))
+                {
+                    img_pfp.Image = Image.FromFile(photoPath);
+                    photopath = photoPath;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No client information found.");
+            }
+        }
+        private void ResetFields()
+        {
+
+            txt_username.Enabled = false;
+            txt_firstname.Enabled = false;
+            txt_lastname.Enabled = false;
+            txt_address.Enabled = false;
+            txt_contactNo.Enabled = false;
+            txt_email.Enabled = false;
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            btn_Submit.Hide();
+            btn_cancel.Hide();
+            ResetFields();
+        }
+
+        private void ClientSettings1_Load(object sender, EventArgs e)
         {
             btn_cancel.Hide();
             btn_Submit.Hide();
+            LoadClientInfo();
         }
-
-
     }
 }
