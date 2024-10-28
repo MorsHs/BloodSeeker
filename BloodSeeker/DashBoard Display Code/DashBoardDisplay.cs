@@ -1,54 +1,27 @@
-﻿using BloodSeeker.DashBoard_Display_Code;
+﻿using BloodSeeker.Admin;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Security.Policy;
 
-namespace BloodSeeker.Admin
+namespace BloodSeeker.DashBoard_Display_Code
 {
-    public partial class Dashboard : Form
+    internal class DashBoardDisplay
     {
-       // DashBoardDisplay display = new DashBoardDisplay();
-        public Dashboard()
-        {
-            InitializeComponent();
-            store1();
-            getCountaplus();
-            getCountbplus();
-            getCountbminus();
-            getCountabplus();
-            getCountabminus();
-            getCountoplus();
-            getCountominus(); 
-        }
-        
+        private Global global = new Global();
+        public string bloodtype;
+        Dashboard dash = new Dashboard();
 
-        private void label6_Click(object sender, EventArgs e)
+        public DashBoardDisplay()
         {
-
+            
         }
-        private void InitializeDataGridView()
+        public void getCountaplus(string bt)
         {
-            dgv_aplus.Columns["quantity"].DataPropertyName = "quantity";
-            dgv_aminus.Columns["Aminusquantity"].DataPropertyName = "quantity";
-            dgv_bplus.Columns["Bplusquantity"].DataPropertyName = "quantity";
-            dgv_bminus.Columns["Bminusquantity"].DataPropertyName = "quantity";
-            dgv_abplus.Columns["ABplusquantity"].DataPropertyName = "quantity";
-            dgv_abminus.Columns["ABminusquantity"].DataPropertyName = "quantity";
-            dgv_oplus.Columns["Oplusquantity"].DataPropertyName = "quantity";
-            dgv_ominus.Columns["Ominusquantity"].DataPropertyName = "quantity";
-        }
-
-        public void store1()
-        {
-           
             try
             {
                 Global global = new Global();
@@ -56,25 +29,22 @@ namespace BloodSeeker.Admin
                 global.sqlCommand.Parameters.Clear();
                 global.sqlCommand.CommandText = "prc_inventoryCount";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "A-");
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
                 global.sqlCommand.ExecuteNonQuery();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable data = new DataTable();
                 adapter.SelectCommand = global.sqlCommand;
                 data.Clear();
                 adapter.Fill(data);
-                dgv_aminus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_aminus.Rows[0].Cells[1].Value);
-                lbl_AminnusCount.Text = cellValue;
-
-            }
-            catch (Exception ex)
-            {
+                dash.dgv_aplus.DataSource = data;
                
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + " ");
+            }
         }
-
-        public void getCountaplus()
+        public void getCountaminus(string bt)
         {
             try
             {
@@ -83,49 +53,47 @@ namespace BloodSeeker.Admin
                 global.sqlCommand.Parameters.Clear();
                 global.sqlCommand.CommandText = "prc_inventoryCount";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "A+");
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
                 global.sqlCommand.ExecuteNonQuery();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable data = new DataTable();
                 adapter.SelectCommand = global.sqlCommand;
                 data.Clear();
                 adapter.Fill(data);
-                dgv_aplus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_aplus.Rows[0].Cells[1].Value);
-                lbl_AplusCount.Text = cellValue;
+                dash.dgv_aminus.DataSource = data;
+                
 
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex + " ");
+            }
+        }
+        public void getCountbplus(string bt)
+        {
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_inventoryCount";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
+                global.sqlCommand.ExecuteNonQuery();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                DataTable data = new DataTable();
+                adapter.SelectCommand = global.sqlCommand;
+                data.Clear();
+                adapter.Fill(data);
+                dash.dgv_bplus.DataSource = data;
                 
             }
-        }
-        public void getCountbplus()
-        {
-            try
-            {
-                Global global = new Global();
-                global.fncConnectToDatabase();
-                global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_inventoryCount";
-                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "B+");
-                global.sqlCommand.ExecuteNonQuery();
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                DataTable data = new DataTable();
-                adapter.SelectCommand = global.sqlCommand;
-                data.Clear();
-                adapter.Fill(data);
-                dgv_bplus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_bplus.Rows[0].Cells[1].Value);
-                lbl_BplusCount.Text = cellValue;
-            }
             catch (Exception ex)
             {
-                
+                MessageBox.Show(ex + " ");
             }
         }
-        public void getCountbminus()
+        public void getCountbminus(string bt)
         {
             try
             {
@@ -134,24 +102,71 @@ namespace BloodSeeker.Admin
                 global.sqlCommand.Parameters.Clear();
                 global.sqlCommand.CommandText = "prc_inventoryCount";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "B-");
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
                 global.sqlCommand.ExecuteNonQuery();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable data = new DataTable();
                 adapter.SelectCommand = global.sqlCommand;
                 data.Clear();
                 adapter.Fill(data);
-                dgv_bminus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_bminus.Rows[0].Cells[1].Value);
-                lbl_BminusCount.Text = cellValue;
+                dash.dgv_bminus.DataSource = data;
+               
 
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex + " ");
+            }
+        }
+        public void getCountabplus(string bt)
+        {
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_inventoryCount";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
+                global.sqlCommand.ExecuteNonQuery();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                DataTable data = new DataTable();
+                adapter.SelectCommand = global.sqlCommand;
+                data.Clear();
+                adapter.Fill(data);
+                dash.dgv_abplus.DataSource = data;
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + " ");
+            }
+        }
+        public void getCountabminus(string bt)
+        {
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_inventoryCount";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
+                global.sqlCommand.ExecuteNonQuery();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                DataTable data = new DataTable();
+                adapter.SelectCommand = global.sqlCommand;
+                data.Clear();
+                adapter.Fill(data);
+                dash.dgv_abminus.DataSource = data;
                
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + " ");
+            }
         }
-        public void getCountabplus()
+        public void getCountoplus(string bt)
         {
             try
             {
@@ -160,120 +175,45 @@ namespace BloodSeeker.Admin
                 global.sqlCommand.Parameters.Clear();
                 global.sqlCommand.CommandText = "prc_inventoryCount";
                 global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "AB+");
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
                 global.sqlCommand.ExecuteNonQuery();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 DataTable data = new DataTable();
                 adapter.SelectCommand = global.sqlCommand;
                 data.Clear();
                 adapter.Fill(data);
-                dgv_abplus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_abplus.Rows[0].Cells[1].Value);
-                lbl_ABplusCount.Text = cellValue;
-            }
-            catch (Exception ex)
-            {
-                
-            }
-        }
-        public void getCountabminus()
-        {
-            try
-            {
-                Global global = new Global();
-                global.fncConnectToDatabase();
-                global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_inventoryCount";
-                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "AB-");
-                global.sqlCommand.ExecuteNonQuery();
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                DataTable data = new DataTable();
-                adapter.SelectCommand = global.sqlCommand;
-                data.Clear();
-                adapter.Fill(data);
-                dgv_abminus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_abminus.Rows[0].Cells[1].Value);
-                lbl_ABminusCount.Text = cellValue;
-            }
-            catch (Exception ex)
-            {
-                
-            }
-        }
-        public void getCountoplus()
-        {
-            try
-            {
-                Global global = new Global();
-                global.fncConnectToDatabase();
-                global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_inventoryCount";
-                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "O+");
-                global.sqlCommand.ExecuteNonQuery();
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                DataTable data = new DataTable();
-                adapter.SelectCommand = global.sqlCommand;
-                data.Clear();
-                adapter.Fill(data);
-                dgv_oplus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_oplus.Rows[0].Cells[1].Value);
-                lbl_OplusCount.Text = cellValue;
-
-            }
-            catch (Exception ex)
-            {
-                
-            }
-        }
-        public void getCountominus()
-        {
-            try
-            {
-                Global global = new Global();
-                global.fncConnectToDatabase();
-                global.sqlCommand.Parameters.Clear();
-                global.sqlCommand.CommandText = "prc_inventoryCount";
-                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", "O-");
-                global.sqlCommand.ExecuteNonQuery();
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                DataTable data = new DataTable();
-                adapter.SelectCommand = global.sqlCommand;
-                data.Clear();
-                adapter.Fill(data);
-                dgv_ominus.DataSource = data;
-                var cellValue = Convert.ToString(dgv_ominus.Rows[0].Cells[1].Value);
-                lbl_OminusCount.Text = cellValue;
-            }
-            catch (Exception ex)
-            {
+                dash.dgv_oplus.DataSource = data;
                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + " ");
             }
         }
-
-        public void store()
+        public void getCountominus(string bt)
         {
-            DashBoardDisplay display = new DashBoardDisplay();
-             display.getCountaplus("A+");
-            var cellValue = Convert.ToString(dgv_aplus.Rows[0].Cells[1].Value);
-            lbl_AplusCount.Text = cellValue;
+            try
+            {
+                Global global = new Global();
+                global.fncConnectToDatabase();
+                global.sqlCommand.Parameters.Clear();
+                global.sqlCommand.CommandText = "prc_inventoryCount";
+                global.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                global.sqlCommand.Parameters.AddWithValue("p_bloodtype", bt);
+                global.sqlCommand.ExecuteNonQuery();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                DataTable data = new DataTable();
+                adapter.SelectCommand = global.sqlCommand;
+                data.Clear();
+                adapter.Fill(data);
+                dash.dgv_ominus.DataSource = data;
 
-        }
-
-        
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + " ");
+            }
         }
     }
-
-}
+} 
