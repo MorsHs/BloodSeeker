@@ -13,7 +13,8 @@ namespace BloodSeeker.Client
 {
     public partial class ClientInformation : Form
     {
-
+        private int clientId;
+        private readonly SomeProcedure someProcedure = new SomeProcedure();
         public ClientInformation()
         {
             InitializeComponent();
