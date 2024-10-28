@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,7 @@ namespace BloodSeeker.Components.Client_Information
             clientphonelbl.Text = _phone;
         }
 
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Form background = new Form();
@@ -69,6 +71,11 @@ namespace BloodSeeker.Components.Client_Information
                 background.Dispose();
             }
             
+        }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
