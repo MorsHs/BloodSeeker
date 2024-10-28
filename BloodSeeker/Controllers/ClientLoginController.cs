@@ -9,7 +9,7 @@ namespace BloodSeeker.Model
 {
     internal class ClientLoginController
     {
-        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=jamycalubay@@@22;";
+        private string connectionString = "Server=127.0.0.1;Database=bloodbank;Uid=root;Pwd=jonald123456;";
 
         public ClientLoginController()
         {
