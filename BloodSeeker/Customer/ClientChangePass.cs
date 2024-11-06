@@ -15,9 +15,10 @@ namespace BloodSeeker.Client
 
         private int clientId;
 
-        public ClientChangePass()
+        public ClientChangePass(int clientId)
         {
             InitializeComponent();
+            this.clientId = clientId;
         }
 
         private void chc_currentPass_CheckedChanged(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace BloodSeeker.Client
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            clientId = 3;
+
             SomeProcedure someProcedure = new SomeProcedure();
 
             string currentPassword = txt_currentPass.Text.Trim();
@@ -91,6 +92,11 @@ namespace BloodSeeker.Client
             txt_currentPass.Clear();
             txt_newPass.Clear();
             txt_confirmPass.Clear();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

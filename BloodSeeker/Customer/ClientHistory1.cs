@@ -14,10 +14,11 @@ namespace BloodSeeker.Client
     public partial class ClientHistory1 : Form
     {
         private int clientId;
-        public ClientHistory1()
+        public ClientHistory1(int clientId)
         {
             InitializeComponent();
             this.Load += ClientHistory1_Load;
+            this.clientId = clientId;
         }
 
         private void ClientHistory1_Load(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace BloodSeeker.Client
 
         public void DisplayAppointment()
         {
-            clientId = 3;
+            
             try
             {
                 SomeProcedure procedure = new SomeProcedure();
@@ -60,6 +61,11 @@ namespace BloodSeeker.Client
             }
         }
         private void dgv_appointments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

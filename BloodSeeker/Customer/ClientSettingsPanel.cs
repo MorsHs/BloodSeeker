@@ -13,9 +13,11 @@ namespace BloodSeeker.Client
 {
     public partial class ClientSettingsPanel : Form
     {
-        public ClientSettingsPanel()
+        private int clientId;
+        public ClientSettingsPanel(int clientId)
         {
             InitializeComponent();
+            this.clientId = clientId;
         }
         bool menuExpand = false;
 
@@ -33,21 +35,21 @@ namespace BloodSeeker.Client
         {
             btn_secu.FillColor = Color.FromArgb(155, 0, 0);
             btn_acc.FillColor = Color.OrangeRed;
-            changePanel(new ClientSettings1());
+            changePanel(new ClientSettings1(clientId));
 
         }
 
         private void ClientSettingsPanel_Load_1(object sender, EventArgs e)
         {
             btn_acc.FillColor = Color.OrangeRed;
-            changePanel(new ClientSettings1());
+            changePanel(new ClientSettings1(clientId));
         }
 
         private void btn_secu_Click_1(object sender, EventArgs e)
         {
             btn_secu.FillColor = Color.OrangeRed;
             btn_acc.FillColor = Color.FromArgb(155, 0, 0);
-            changePanel(new ClientChangePass());
+            changePanel(new ClientChangePass(clientId));
 
         }
 
@@ -55,9 +57,12 @@ namespace BloodSeeker.Client
         {
             btn_secu.FillColor = Color.FromArgb(155, 0, 0);
             btn_acc.FillColor = Color.OrangeRed;
-            changePanel(new ClientSettings1());
+            changePanel(new ClientSettings1(clientId));
         }
 
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }
