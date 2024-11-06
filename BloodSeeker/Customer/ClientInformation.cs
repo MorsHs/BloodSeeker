@@ -15,11 +15,11 @@ namespace BloodSeeker.Client
     {
         private int clientId;
         private readonly SomeProcedure someProcedure = new SomeProcedure();
-        public ClientInformation()
+        public ClientInformation(int clientId)
         {
             InitializeComponent();
             this.Load += ClientInformation_Load;
-            this.clientId = clientId;
+            this.clientId = clientId;    
         }
 
 
@@ -33,7 +33,7 @@ namespace BloodSeeker.Client
         {
             try
             {
-                DataTable dt = someProcedure.GetClientsInfo(clientId = 3);
+                DataTable dt = someProcedure.GetClientsInfo(clientId);
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];

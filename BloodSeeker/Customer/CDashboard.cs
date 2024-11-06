@@ -14,7 +14,8 @@ namespace BloodSeeker.Customer
 {
     public partial class CDashboard : Form
     {
-        public CDashboard()
+        private int clientId;
+        public CDashboard(int clientId)
         {
             InitializeComponent();
             store1();
@@ -25,6 +26,7 @@ namespace BloodSeeker.Customer
             getCountabminus();
             getCountoplus();
             getCountominus();
+            this.clientId = clientId;
         }
 
         private void CDashboard_Load(object sender, EventArgs e)

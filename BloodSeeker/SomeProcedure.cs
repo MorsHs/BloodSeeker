@@ -234,13 +234,19 @@ namespace BloodSeeker
                         {
                             global.sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                            // Add current and new password as parameters
                             global.sqlCommand.Parameters.AddWithValue("@p_client_id", clientId);
                             global.sqlCommand.Parameters.AddWithValue("@p_currentPassword", currentPassword);
                             global.sqlCommand.Parameters.AddWithValue("@p_newPassword", newPassword);
 
-                            int rowsAffected = global.sqlCommand.ExecuteNonQuery();
-                            resultMessage = rowsAffected > 0 ? "Password updated successfully." : "Current password is incorrect.";
+                            try
+                            {
+                                int rowsAffected = global.sqlCommand.ExecuteNonQuery();
+                                resultMessage = "Password updated successfully.";
+                            }
+                            catch (MySqlException ex) when (ex.Number == 1644)
+                            {
+                                resultMessage = "Current password is incorrect.";
+                            }
                         }
                     }
                 }

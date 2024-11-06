@@ -16,7 +16,7 @@ namespace BloodSeeker.Client
         private int clientId; 
         private string photopath;  
         private SomeProcedure someProcedure;
-        public ClientSettings1()
+        public ClientSettings1(int clientId)
         {
             InitializeComponent();
             this.clientId = clientId;
@@ -179,7 +179,7 @@ namespace BloodSeeker.Client
         }
         private void LoadClientInfo()
         {
-            clientId = 3;
+       
             DataTable ClientInfo = someProcedure.GetClientInfo(clientId);
             if (ClientInfo != null && ClientInfo.Rows.Count > 0)
             {
